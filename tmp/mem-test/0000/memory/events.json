@@ -1,0 +1,43 @@
+[
+  {
+    "event_id": "event-s-0000-0000_sample0",
+    "event_type": "medical_visit",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-001"
+    ],
+    "event_summary": "去社区医院复查血糖，医生指出早上血糖偏高，建议注意晚餐碳水化合物摄入",
+    "tags": [
+      "medical"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "event_id": "event-s-0000-0000_sample0-1",
+    "event_type": "life_event",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-023",
+      "t-s-0000-0000_sample0-029"
+    ],
+    "event_summary": "决定采用语音记录血糖并由助手生成周报分享至家庭群，每周一次",
+    "tags": [
+      "medical",
+      "family"
+    ],
+    "confidence": 0.88
+  },
+  {
+    "event_id": "event-s-0000-0000_sample0",
+    "event_type": "medical_visit",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-001"
+    ],
+    "event_summary": "去社区医院复查血糖，医生提醒注意晚饭",
+    "tags": [
+      "medical"
+    ],
+    "confidence": 0.95
+  }
+]

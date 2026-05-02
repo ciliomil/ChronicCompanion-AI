@@ -1,0 +1,572 @@
+[
+  {
+    "item_id": "need-t-s-0000-0000_sample0-002",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-001",
+      "t-s-0000-0000_sample0-002"
+    ],
+    "inferred_need": "如何落实晚饭注意事项",
+    "ai_solution_summary": "引导用户从晚餐内容、种类和分量等具体细节入手，细化医生建议",
+    "related_tags": [
+      "diet",
+      "lifestyle"
+    ],
+    "preference": "需要具体可操作的建议，避免笼统指导",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-4f8d9b5c"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-004",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-003",
+      "t-s-0000-0000_sample0-004"
+    ],
+    "inferred_need": "碳水化合物控制的具体方法",
+    "ai_solution_summary": "建议主食减量或换杂粮、薯类，如米饭盛小半碗或改杂粮饭，面条换红薯或玉米。",
+    "related_tags": [
+      "diet"
+    ],
+    "preference": "希望具体可操作、不改变家常饮食结构，明确步骤。",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-fd89bfde"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-006",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-005",
+      "t-s-0000-0000_sample0-006"
+    ],
+    "inferred_need": "更具体的饮食控制方法",
+    "ai_solution_summary": "建议煮汤面时少放面条，多加青菜、蘑菇、豆腐或鸡蛋，使营养更均衡且利于控糖。",
+    "related_tags": [
+      "diet"
+    ],
+    "preference": "喜欢形象具体、易于操作的家庭做法，自己能尝试执行",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-f591e252"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-008",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-007",
+      "t-s-0000-0000_sample0-008"
+    ],
+    "inferred_need": "调整面条比例控血糖",
+    "ai_solution_summary": "建议简单记录饮食与第二天空腹血糖对照，摸索适合的搭配",
+    "related_tags": [
+      "diet",
+      "lifestyle"
+    ],
+    "preference": "偏好改动小、容易执行的方案，不增加额外负担",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-f591e252"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-010",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-009",
+      "t-s-0000-0000_sample0-010"
+    ],
+    "inferred_need": "免记录调整饮食的方法",
+    "ai_solution_summary": "建议用户不勉强记录，先尝试调整主食和配菜的具体方法控制血糖",
+    "related_tags": [
+      "diet",
+      "medical"
+    ],
+    "preference": "避免需要看小字和写字的记录方式，尽量不增加额外负担",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-735b627f"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-012",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-011",
+      "t-s-0000-0000_sample0-012"
+    ],
+    "inferred_need": "理解血糖记录的整体趋势",
+    "ai_solution_summary": "建议用大白话概括血糖值的整体情况，如大部分时间正常或某些早晨偏高，而非逐个数数字。",
+    "related_tags": [
+      "medical",
+      "family"
+    ],
+    "preference": "偏好简单易懂、不纠结具体数值的总结性解释",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-4f8d9b5c"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-014",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-013",
+      "t-s-0000-0000_sample0-014"
+    ],
+    "inferred_need": "血糖高与症状关联解读",
+    "ai_solution_summary": "将血糖数值与眼睛模糊、腿麻等症状及医生建议结合，解释偏高含义并给出应对措施",
+    "related_tags": [
+      "medical",
+      "emotion"
+    ],
+    "preference": "用通俗语言解释数字与症状的关联，给出可操作建议，避免单纯数字",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-4f8d9b5c"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-016",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-015",
+      "t-s-0000-0000_sample0-016"
+    ],
+    "inferred_need": "了解血糖偏高的具体影响与注意",
+    "ai_solution_summary": "说明空腹血糖超过7.5需留意，并提示回顾晚餐主食是否过多或不合适",
+    "related_tags": [
+      "medical"
+    ],
+    "preference": "希望得到具体、直接、可操作的指导，而非仅仅知道数字",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-f591e252"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-018",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-017",
+      "t-s-0000-0000_sample0-018"
+    ],
+    "inferred_need": "简化血糖值解释方法",
+    "ai_solution_summary": "用红绿灯比喻血糖值：4-7为绿灯区，7.5以上为黄灯区，黄灯时反思饮食调整",
+    "related_tags": [
+      "medical"
+    ],
+    "preference": "偏好直观、生活化的比喻，避免抽象数字和复杂操作",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-780035b3"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-020",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-019",
+      "t-s-0000-0000_sample0-020"
+    ],
+    "inferred_need": "血糖变化直观理解",
+    "ai_solution_summary": "用红绿灯比喻血糖水平，帮助用户直观理解并指导饮食调整",
+    "related_tags": [
+      "medical",
+      "lifestyle"
+    ],
+    "preference": "喜欢形象直观、易记的比喻，方便理解与记忆",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-780035b3"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-022",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-021",
+      "t-s-0000-0000_sample0-022"
+    ],
+    "inferred_need": "用语音记血糖值",
+    "ai_solution_summary": "用户可直接口述血糖数值，AI负责记录和整理，方便回顾与家人沟通",
+    "related_tags": [
+      "medical",
+      "lifestyle"
+    ],
+    "preference": "省事、不用看不用写、像聊天一样简单",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-fd89bfde"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-024",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-023",
+      "t-s-0000-0000_sample0-024"
+    ],
+    "inferred_need": "语音记录血糖并分享给子女",
+    "ai_solution_summary": "建议用户测后语音说血糖值，AI自动保存并生成清晰大表格，子女可一键查看。",
+    "related_tags": [
+      "medical",
+      "family"
+    ],
+    "preference": "操作极度简单，像发微信语音一样，无需学习复杂APP，且能直观呈现给家人。",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-4f8d9b5c"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-026",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-025",
+      "t-s-0000-0000_sample0-026"
+    ],
+    "inferred_need": "语音记录血糖并分享给孩子",
+    "ai_solution_summary": "设置成按住说话发送语音，系统自动整理后定期发到家庭微信群，像发微信语音一样简单。",
+    "related_tags": [
+      "medical",
+      "family",
+      "lifestyle"
+    ],
+    "preference": "简单易用、不增加孩子负担、不用学新东西",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-4f8d9b5c"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-028",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-027",
+      "t-s-0000-0000_sample0-028"
+    ],
+    "inferred_need": "在微信群分享血糖又不打扰群聊",
+    "ai_solution_summary": "每周发一次图片式健康周报，选在周末白天，避免打扰群聊",
+    "related_tags": [
+      "medical",
+      "family",
+      "emotion"
+    ],
+    "preference": "低打扰、周报形式、不干扰群聊",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-4f8d9b5c"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-002",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-001",
+      "t-s-0000-0000_sample0-002"
+    ],
+    "inferred_need": "晚饭如何具体注意控制空腹血糖",
+    "ai_solution_summary": "解释需要细化到晚饭食物种类和数量等具体细节，帮助用户明确‘注意’的含义",
+    "related_tags": [
+      "diet",
+      "medical"
+    ],
+    "preference": "偏好具体可操作的细节指导，避免模糊建议",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-4f8d9b5c"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-004",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-003",
+      "t-s-0000-0000_sample0-004"
+    ],
+    "inferred_need": "理解碳水化合物控制方法",
+    "ai_solution_summary": "建议将白米饭换成小半碗或杂粮饭，白面条换成红薯或玉米，既饱腹又稳血糖。",
+    "related_tags": [
+      "diet"
+    ],
+    "preference": "倾向具体、可操作的主食替换方案，无需复杂计算",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-fd89bfde"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-006",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-005",
+      "t-s-0000-0000_sample0-006"
+    ],
+    "inferred_need": "晚餐汤面改良控糖",
+    "ai_solution_summary": "建议煮汤面时少放一半面条，多加青菜、蘑菇、豆腐或鸡蛋，营养均衡且控糖。",
+    "related_tags": [
+      "diet",
+      "medical"
+    ],
+    "preference": "偏好具体量词、家中常有食材、简单可操作",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-f591e252"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-008",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-007",
+      "t-s-0000-0000_sample0-008"
+    ],
+    "inferred_need": "调整面条做法降血糖",
+    "ai_solution_summary": "建议记录晚餐饮食与次日早血糖对照，摸索适合搭配",
+    "related_tags": [
+      "diet",
+      "lifestyle"
+    ],
+    "preference": "偏好简单可行的小改动，不增加负担，注重心理踏实感",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-f591e252"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-010",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-009",
+      "t-s-0000-0000_sample0-010"
+    ],
+    "inferred_need": "省事控糖不记录",
+    "ai_solution_summary": "建议放弃繁琐记录，先试用调整主食和配菜的方法",
+    "related_tags": [
+      "diet",
+      "lifestyle"
+    ],
+    "preference": "省事、不费眼、不依赖记录，在家就能操作",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-735b627f"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-012",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-011",
+      "t-s-0000-0000_sample0-012"
+    ],
+    "inferred_need": "解释血糖记录的整体含义",
+    "ai_solution_summary": "用大白话总结血糖值整体情况，如大部分正常或某几天偏高",
+    "related_tags": [
+      "medical",
+      "family"
+    ],
+    "preference": "希望不依赖具体数字，用通俗语言解释，适合老花眼老人理解",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-4f8d9b5c"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-014",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-013",
+      "t-s-0000-0000_sample0-014"
+    ],
+    "inferred_need": "理解血糖高与症状的关系",
+    "ai_solution_summary": "建议将血糖数值与身体感觉、医生建议关联，并给出具体应对措施",
+    "related_tags": [
+      "medical",
+      "lifestyle"
+    ],
+    "preference": "希望得到直观、关联性强的解释，不关心具体数值",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-4f8d9b5c"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-016",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-015",
+      "t-s-0000-0000_sample0-016"
+    ],
+    "inferred_need": "理解血糖高的具体影响",
+    "ai_solution_summary": "解释空腹血糖超过7.5需要留意，并建议回顾晚餐主食是否过量或不当",
+    "related_tags": [
+      "medical",
+      "diet",
+      "lifestyle"
+    ],
+    "preference": "喜欢具体、可操作的指导，能直接关联日常饮食习惯",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-f591e252"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-018",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-017",
+      "t-s-0000-0000_sample0-018"
+    ],
+    "inferred_need": "血糖标准直观易懂的解释",
+    "ai_solution_summary": "用红绿灯比喻血糖值：绿灯4-7表示平稳，黄灯7.5以上提醒注意，并关联饮食调整。",
+    "related_tags": [
+      "medical",
+      "lifestyle"
+    ],
+    "preference": "不依赖复杂参照，喜欢简单形象的比喻",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-780035b3"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-020",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-019",
+      "t-s-0000-0000_sample0-020"
+    ],
+    "inferred_need": "血糖管理的直观比喻",
+    "ai_solution_summary": "用红绿灯比喻血糖变化，帮助记忆和调整饮食",
+    "related_tags": [
+      "medical",
+      "lifestyle"
+    ],
+    "preference": "喜欢生动形象、易记忆的比喻，便于日常应用",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-780035b3"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-022",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-021",
+      "t-s-0000-0000_sample0-022"
+    ],
+    "inferred_need": "口述记录血糖数据",
+    "ai_solution_summary": "建议用户通过口述血糖数值，AI帮忙记录并整理，方便回顾和子女了解",
+    "related_tags": [
+      "medical",
+      "lifestyle"
+    ],
+    "preference": "不用看不用写，像聊天一样简单省事",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-fd89bfde"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-024",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-023",
+      "t-s-0000-0000_sample0-024"
+    ],
+    "inferred_need": "语音记录血糖并共享给家人",
+    "ai_solution_summary": "用户可通过语音指令让系统自动记录血糖数据，并生成清晰大表格供子女随时查看，无需手动操作。",
+    "related_tags": [
+      "medical",
+      "lifestyle",
+      "family"
+    ],
+    "preference": "操作极其简单，像发语音一样，且结果清晰易读，不增加家人负担。",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-4f8d9b5c"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-026",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-025",
+      "t-s-0000-0000_sample0-026"
+    ],
+    "inferred_need": "简化语音记录操作步骤",
+    "ai_solution_summary": "像发微信语音一样按住说话记录血糖，自动整理后定期发微信群，无需额外学习",
+    "related_tags": [
+      "medical",
+      "family"
+    ],
+    "preference": "偏好像微信语音一样简单、不需额外打开应用、能自动分享给家人",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-4f8d9b5c"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-028",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-027",
+      "t-s-0000-0000_sample0-028"
+    ],
+    "inferred_need": "分享血糖记录不打扰家人",
+    "ai_solution_summary": "生成一周血糖健康周报图片，周末白天发一次，避免频繁打扰",
+    "related_tags": [
+      "medical",
+      "family"
+    ],
+    "preference": "倾向不打扰家人、简洁不频繁、在家庭群中自然分享",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-4f8d9b5c"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-030",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-029",
+      "t-s-0000-0000_sample0-030"
+    ],
+    "inferred_need": "简洁血糖周报沟通",
+    "ai_solution_summary": "建议每周一次语音汇报血糖，并顺便提及腿麻、视力变化等异常症状，便于医生全面掌握情况。",
+    "related_tags": [
+      "medical",
+      "lifestyle",
+      "family"
+    ],
+    "preference": "用户偏好简单不打扰家人的方式，觉得像发微信语音一样易操作，且愿意同步记录其他症状。",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-4f8d9b5c"
+  },
+  {
+    "item_id": "need-t-s-0000-0000_sample0-032",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-031",
+      "t-s-0000-0000_sample0-032"
+    ],
+    "inferred_need": "专注血糖记录",
+    "ai_solution_summary": "简化血糖记录和分享方式，只记录血糖，其他症状暂不处理",
+    "related_tags": [
+      "medical",
+      "lifestyle"
+    ],
+    "preference": "省心简单，避免混杂其他症状",
+    "quality_score": null,
+    "status": "awaiting_feedback",
+    "feedback_turn_ids": [],
+    "cluster_id": "cluster-780035b3"
+  }
+]

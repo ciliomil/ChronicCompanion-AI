@@ -1,0 +1,1 @@
+"""ChronicCompanion prototype package."""
