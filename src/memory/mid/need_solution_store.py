@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from src.memory.schemas import NeedSolutionItem
+from src.memory.schemas import NeedItem
 from src.storage.json_store import JsonStore
 
 
@@ -13,7 +13,7 @@ class NeedSolutionStore:
         self.json_store = json_store
         self.path = "memory/need_solutions.json"
 
-    def append(self, item: NeedSolutionItem) -> None:
+    def append(self, item: NeedItem) -> None:
         items = self.json_store.read_json(self.path, default=[])
         items.append(item.to_dict())
         self.json_store.write_json(self.path, items)

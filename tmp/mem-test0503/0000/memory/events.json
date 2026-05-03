@@ -1,0 +1,648 @@
+[
+  {
+    "event_id": "event-0000_sample0-1",
+    "event_type": "health_medical",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample0-001",
+      "turn-0000_sample0-003"
+    ],
+    "event_summary": "今天去社区医院复查，医生提示早上血糖偏高，需注意晚饭，并提到注意碳水化合物摄入。",
+    "tags": [
+      "medical_visit",
+      "glucose"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "event_id": "event-0000_sample0-2",
+    "event_type": "self_management",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample0-005"
+    ],
+    "event_summary": "计划尝试调整晚餐主食，如米饭改为小半碗或换杂粮饭。",
+    "tags": [
+      "diet"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample0-3",
+    "event_type": "self_management",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample0-007"
+    ],
+    "event_summary": "计划在吃汤面时少放面条，多加青菜、蘑菇、豆腐等。",
+    "tags": [
+      "diet"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample0-4",
+    "event_type": "self_management",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample0-009"
+    ],
+    "event_summary": "因眼睛不好，对记录血糖和饮食感到困难，认为麻烦。",
+    "tags": [
+      "monitoring",
+      "symptom"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample0-5",
+    "event_type": "family_social",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample0-011"
+    ],
+    "event_summary": "女儿将血糖记录本拍照发到家庭群，用户因老花眼看不清照片上的数字。",
+    "tags": [
+      "family",
+      "monitoring"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample0-6",
+    "event_type": "health_medical",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample0-013",
+      "turn-0000_sample0-031"
+    ],
+    "event_summary": "自述有时眼睛模糊、晚上腿麻，症状时有时无。",
+    "tags": [
+      "symptom"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0000_sample0-7",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample0-015"
+    ],
+    "event_summary": "对血糖数值高感到心慌，希望了解对身体的实质影响和应对方法。",
+    "tags": [
+      "emotion"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0000_sample0-8",
+    "event_type": "self_management",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample0-021",
+      "turn-0000_sample0-023"
+    ],
+    "event_summary": "计划通过语音告诉助手记录血糖数值，像发微信语音一样简单。",
+    "tags": [
+      "monitoring"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample0-9",
+    "event_type": "self_management",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample0-027",
+      "turn-0000_sample0-029"
+    ],
+    "event_summary": "接受并计划由助手将血糖记录整理成健康周报每周一次发到家庭群。",
+    "tags": [
+      "monitoring",
+      "family"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample0-10",
+    "event_type": "self_management",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample0-031"
+    ],
+    "event_summary": "决定暂时不记录其他症状，先专注血糖记录，避免混乱。",
+    "tags": [
+      "monitoring",
+      "symptom"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample1-1",
+    "event_type": "health_medical",
+    "timestamp": "2025-02-18T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample1-001"
+    ],
+    "event_summary": "用户感觉脚麻，担心与糖尿病有关",
+    "tags": [
+      "symptom",
+      "glucose"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample1-2",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-02-18T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample1-001"
+    ],
+    "event_summary": "用户因脚麻感到担忧和不安",
+    "tags": [
+      "emotion"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample1-3",
+    "event_type": "family_social",
+    "timestamp": "2025-02-18T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample1-003"
+    ],
+    "event_summary": "小女儿已预约下周带用户去医院看脚麻问题",
+    "tags": [
+      "family",
+      "medical_visit"
+    ],
+    "confidence": 0.92
+  },
+  {
+    "event_id": "event-0000_sample1-4",
+    "event_type": "health_medical",
+    "timestamp": "2025-02-18T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample1-007"
+    ],
+    "event_summary": "用户自述记忆力越来越差",
+    "tags": [
+      "symptom"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0000_sample1-5",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-02-18T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample1-007"
+    ],
+    "event_summary": "用户担心频繁联系会影响工作忙碌的女儿们",
+    "tags": [
+      "emotion",
+      "family"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0000_sample1-6",
+    "event_type": "health_medical",
+    "timestamp": "2025-02-18T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample1-021"
+    ],
+    "event_summary": "用户感觉眼睛看东西费劲",
+    "tags": [
+      "symptom"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample1-7",
+    "event_type": "health_medical",
+    "timestamp": "2025-02-18T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample1-021",
+      "turn-0000_sample1-023"
+    ],
+    "event_summary": "用户自述最近老是没精神，下午尤其乏力",
+    "tags": [
+      "symptom"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0000_sample1-8",
+    "event_type": "interest_activity",
+    "timestamp": "2025-02-18T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample1-023"
+    ],
+    "event_summary": "用户因眼睛问题放弃了针线活，目前只有听戏和偶尔叠纸鹤",
+    "tags": [
+      "hobby",
+      "symptom"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample1-9",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-02-18T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample1-023",
+      "turn-0000_sample1-027"
+    ],
+    "event_summary": "用户感觉心里发闷，常坐着发呆",
+    "tags": [
+      "emotion"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0000_sample1-10",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-02-18T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample1-027"
+    ],
+    "event_summary": "用户担心跟孩子说脚麻等担心会让孩子们更加担心",
+    "tags": [
+      "emotion",
+      "family"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0000_sample2-1",
+    "event_type": "self_management",
+    "timestamp": "2025-02-24T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample2-001",
+      "turn-0000_sample2-003"
+    ],
+    "event_summary": "用户记录就诊信息有困难（手写凌乱、语音识别错误）",
+    "tags": [
+      "other"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample2-2",
+    "event_type": "self_management",
+    "timestamp": "2025-02-24T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample2-005"
+    ],
+    "event_summary": "用户决定采用微信语音和拍照记录就诊信息",
+    "tags": [
+      "monitoring"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample2-3",
+    "event_type": "self_management",
+    "timestamp": "2025-02-24T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample2-009",
+      "turn-0000_sample2-011"
+    ],
+    "event_summary": "用户存在漏服降糖药和降血脂药的情况",
+    "tags": [
+      "adherence",
+      "medication"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample2-4",
+    "event_type": "health_medical",
+    "timestamp": "2025-02-24T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample2-009"
+    ],
+    "event_summary": "用户出现脚麻症状",
+    "tags": [
+      "symptom"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample2-5",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-02-24T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample2-009",
+      "turn-0000_sample2-013"
+    ],
+    "event_summary": "用户担心脚麻症状与药物有关",
+    "tags": [
+      "emotion",
+      "medication"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0000_sample2-6",
+    "event_type": "health_medical",
+    "timestamp": "2025-02-24T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample2-013"
+    ],
+    "event_summary": "用户糖尿病病程较长，医生曾建议注意脚和眼睛",
+    "tags": [
+      "medical_visit",
+      "complication"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0000_sample2-7",
+    "event_type": "interest_activity",
+    "timestamp": "2025-02-24T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample2-019"
+    ],
+    "event_summary": "用户视力下降，无法继续针线活爱好",
+    "tags": [
+      "hobby",
+      "symptom"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample2-8",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-02-24T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample2-019"
+    ],
+    "event_summary": "用户因活动受限感到无聊、情绪低落",
+    "tags": [
+      "emotion"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0000_sample2-9",
+    "event_type": "interest_activity",
+    "timestamp": "2025-02-24T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample2-021"
+    ],
+    "event_summary": "用户平时喜欢听戏、叠纸鹤",
+    "tags": [
+      "hobby"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample2-10",
+    "event_type": "interest_activity",
+    "timestamp": "2025-02-24T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample2-023"
+    ],
+    "event_summary": "用户计划尝试在家进行触摸石子、玩扑克排序等活动",
+    "tags": [
+      "hobby"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample3-1",
+    "event_type": "health_medical",
+    "timestamp": "2025-02-28T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample3-001"
+    ],
+    "event_summary": "用户计划下周由女儿陪同检查脚部",
+    "tags": [
+      "medical_visit"
+    ],
+    "confidence": 0.92
+  },
+  {
+    "event_id": "event-0000_sample3-2",
+    "event_type": "family_social",
+    "timestamp": "2025-02-28T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample3-005"
+    ],
+    "event_summary": "用户与女儿约定每周探视时进行脚部检查",
+    "tags": [
+      "family",
+      "medical_visit"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0000_sample3-3",
+    "event_type": "self_management",
+    "timestamp": "2025-02-28T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample3-007"
+    ],
+    "event_summary": "用户反映手机吃药提醒常被误按或失效，带来困扰",
+    "tags": [
+      "medication",
+      "adherence",
+      "emotion"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample3-4",
+    "event_type": "self_management",
+    "timestamp": "2025-02-28T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample3-015"
+    ],
+    "event_summary": "用户曾尝试女儿推荐的凉拌魔芋丝",
+    "tags": [
+      "diet"
+    ],
+    "confidence": 0.88
+  },
+  {
+    "event_id": "event-0000_sample3-5",
+    "event_type": "self_management",
+    "timestamp": "2025-02-28T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample3-017"
+    ],
+    "event_summary": "用户有记录晚餐内容和餐后血糖的习惯",
+    "tags": [
+      "monitoring",
+      "diet",
+      "glucose"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample3-6",
+    "event_type": "self_management",
+    "timestamp": "2025-02-28T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample3-019",
+      "turn-0000_sample3-021"
+    ],
+    "event_summary": "用户计划尝试先吃凉拌菜并记录，今晚购买魔芋丝和木耳",
+    "tags": [
+      "diet",
+      "monitoring"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample3-7",
+    "event_type": "self_management",
+    "timestamp": "2025-02-28T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample3-023"
+    ],
+    "event_summary": "用户偏好直接蒸南瓜替代主食，认为更简单",
+    "tags": [
+      "diet"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0000_sample3-8",
+    "event_type": "interest_activity",
+    "timestamp": "2025-02-28T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample3-027"
+    ],
+    "event_summary": "用户习惯在家听戏、叠纸鹤，常久坐",
+    "tags": [
+      "hobby"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample3-9",
+    "event_type": "health_medical",
+    "timestamp": "2025-02-28T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample3-031"
+    ],
+    "event_summary": "用户下午易乏力、视力模糊",
+    "tags": [
+      "symptom"
+    ],
+    "confidence": 0.92
+  },
+  {
+    "event_id": "event-0000_sample3-10",
+    "event_type": "interest_activity",
+    "timestamp": "2025-02-28T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample3-037",
+      "turn-0000_sample3-039"
+    ],
+    "event_summary": "用户计划在听戏时尝试随戏曲节奏拍腿活动",
+    "tags": [
+      "activity",
+      "hobby"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample4-1",
+    "event_type": "health_medical",
+    "timestamp": "2025-03-10T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample4-013",
+      "turn-0000_sample4-025",
+      "turn-0000_sample4-029",
+      "turn-0000_sample4-033"
+    ],
+    "event_summary": "有糖尿病、高血脂；近期出现乏力（下午明显）和腿麻（晚上有时有），担心与药物有关；偶尔乏力。",
+    "tags": [
+      "glucose",
+      "symptom",
+      "medication",
+      "emotion"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample4-2",
+    "event_type": "self_management",
+    "timestamp": "2025-03-10T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample4-005",
+      "turn-0000_sample4-021"
+    ],
+    "event_summary": "曾在生鲜平台购买血糖试纸；常去社区卫生站测量血压。",
+    "tags": [
+      "monitoring",
+      "medical_visit"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0000_sample4-3",
+    "event_type": "self_management",
+    "timestamp": "2025-03-10T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample4-035"
+    ],
+    "event_summary": "计划购买日历，用于打勾记录早晚饭药，以提醒服药。",
+    "tags": [
+      "medication",
+      "adherence"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0000_sample4-4",
+    "event_type": "family_social",
+    "timestamp": "2025-03-10T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample4-005",
+      "turn-0000_sample4-007",
+      "turn-0000_sample4-027"
+    ],
+    "event_summary": "独居，女儿们忙，不想总麻烦她们；小女儿曾帮忙设置手机提醒但被误操作取消。",
+    "tags": [
+      "family",
+      "living_alone",
+      "caregiver"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0000_sample4-5",
+    "event_type": "daily_life",
+    "timestamp": "2025-03-10T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample4-003",
+      "turn-0000_sample4-025",
+      "turn-0000_sample4-027"
+    ],
+    "event_summary": "记性不如从前，下午容易犯困，经常快用完试纸才想起购买。",
+    "tags": [
+      "other"
+    ],
+    "confidence": 0.8
+  },
+  {
+    "event_id": "event-0000_sample4-6",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-03-10T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample4-029"
+    ],
+    "event_summary": "担心乏力、腿麻与药物有关，怕耽误病情。",
+    "tags": [
+      "emotion",
+      "symptom"
+    ],
+    "confidence": 0.85
+  }
+]

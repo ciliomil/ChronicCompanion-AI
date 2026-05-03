@@ -19,7 +19,7 @@ All three converge on the same surface so the orchestrator can swap them.
 from __future__ import annotations
 
 import logging
-from typing import Any, Iterable
+from typing import Any
 
 from src.llm.llm import LLMClient, get_default_llm_client
 from src.memory.schemas import RawTurn, TopicWindow
@@ -38,14 +38,6 @@ _DEFAULT_RULE_WINDOW = 4  # turns per fallback chunk (≈2 user/assistant pairs)
 # ---------------------------------------------------------------------------
 
 
-def _shape_topic_label(value: Any) -> str:
-    text = " ".join(str(value or "").split())
-    text = text.strip(" \t\r\n\"'`“”‘’《》（）()[]【】")
-    if not text:
-        return "未命名话题"
-    return text[:12]
-
-
 def _coerce_window_payload(
     response: Any,
     *,
@@ -58,7 +50,7 @@ def _coerce_window_payload(
     silently dropping turns. Invariants:
 
     - response must be a dict with a list ``windows``;
-    - each window has ``window_id``, ``topic_label``, ``turn_ids: list[str]``;
+    - each window has ``window_id`` and ``turn_ids: list[str]``;
     - turn_ids span exactly the input set (same ids, no extras, no missing);
     - turn order across windows must match the input order.
     """
@@ -88,7 +80,6 @@ def _coerce_window_payload(
         out.append(
             TopicWindow(
                 window_id=str(raw.get("window_id") or f"w-{idx + 1}").strip(),
-                topic_label=_shape_topic_label(raw.get("topic_label")),
                 turn_ids=ids,
             )
         )
@@ -152,12 +143,7 @@ class LLMTopicSegmenter:
 
 
 class RuleTopicSegmenter:
-    """Group every ``window_size`` turns into one chunk; deterministic.
-
-    The default ``window_size`` is 4 turns (~2 user/assistant pairs). Topic
-    labels are populated with the first user turn's leading text so they're
-    at least informative.
-    """
+    """Group every ``window_size`` turns into one chunk; deterministic."""
 
     def __init__(self, window_size: int = _DEFAULT_RULE_WINDOW) -> None:
         self._window_size = max(2, window_size)
@@ -170,24 +156,15 @@ class RuleTopicSegmenter:
         idx = 1
         while i < len(turns):
             chunk = turns[i : i + self._window_size]
-            label = _first_user_text_snippet(chunk) or f"片段 {idx}"
             windows.append(
                 TopicWindow(
                     window_id=f"w-{idx}",
-                    topic_label=label,
                     turn_ids=[t.turn_id for t in chunk],
                 )
             )
             i += self._window_size
             idx += 1
         return windows
-
-
-def _first_user_text_snippet(turns: Iterable[RawTurn], *, max_len: int = 12) -> str:
-    for t in turns:
-        if t.role == "user" and t.text.strip():
-            return t.text.strip()[:max_len]
-    return ""
 
 
 # ---------------------------------------------------------------------------
@@ -271,24 +248,16 @@ def windows_from_dataset_topics(
     # Build windows from contiguous index ranges.
     boundaries = list(starts) + [len(turns)]
     windows: list[TopicWindow] = []
-    for idx, ((topic_key, payload), lo) in enumerate(zip(ordered_topics, starts), start=1):
+    for idx, ((_topic_key, _payload), lo) in enumerate(zip(ordered_topics, starts), start=1):
         hi = boundaries[idx] if idx < len(boundaries) - 1 else len(turns)
         if hi <= lo:
             hi = lo + 1
         slice_turns = turns[lo:hi]
         if not slice_turns:
             continue
-        # Prefer the dataset's topic key as label when LLM-style label is
-        # missing; otherwise derive a 4–10 char snippet from user_query.
-        label = _shape_topic_label(
-            payload.get("topic_label")
-            or payload.get("user_query", "")
-            or topic_key
-        )
         windows.append(
             TopicWindow(
                 window_id=f"w-{idx}",
-                topic_label=label,
                 turn_ids=[t.turn_id for t in slice_turns],
             )
         )

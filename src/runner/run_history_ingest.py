@@ -8,10 +8,14 @@ at run time).
 Usage::
 
     PYTHONPATH=. python -m src.runner.run_history_ingest \
-        --dataset data/ChronicCompanion-set/dialogue/history/input.json \
-        --data-dir runs/exp1 \
+        --dataset ./data/ChronicCompanion-set/dialogue/history/input.json \
+        --data-dir ./tmp/mem-test0503 \
         --use-gold-topics \
-        --user 0000
+        --max-samples-per-user 5 \
+        --user 0000 \
+        --debug \
+        2>ingest-debug4.log
+
 
 Append ``--debug`` to mirror flattening tables, segmentation JSON, extractor
 artifacts, and each LLM system/user prompt plus parsed responses on stderr
@@ -76,7 +80,7 @@ def run(
     selected_users: Iterable[str] | None = None,
     use_gold_topics: bool = False,
     max_samples_per_user: int | None = None,
-    n_clusters: int = 5,
+    cluster_min_size: int = 3,
     window_days: int = 14,
     min_items_to_cluster: int = 5,
     debug: bool = False,
@@ -101,7 +105,7 @@ def run(
             if not isinstance(dialogue, dict) or not dialogue:
                 continue
             sample_id = str(sample.get("sample_id") or f"sample-{idx}")
-            session_id = f"s-{user_id}-{sample_id}"
+            session_id = f"{sample_id}"
             gold_topics = sample.get("topics") if use_gold_topics else None
 
             report = ingest_session(
@@ -111,7 +115,7 @@ def run(
                 **stores,
                 session_id=session_id,
                 gold_topics=gold_topics if isinstance(gold_topics, dict) else None,
-                n_clusters=n_clusters,
+                cluster_min_size=cluster_min_size,
                 window_days=window_days,
                 min_items_to_cluster=min_items_to_cluster,
                 debug=debug,
@@ -158,10 +162,14 @@ def main(argv: list[str] | None = None) -> int:
         help="Cap the number of history samples ingested per user (smoke runs).",
     )
     parser.add_argument(
-        "--n-clusters",
+        "--cluster-min-size",
         type=int,
-        default=5,
-        help="Target K for need-preference clustering at profile-update time.",
+        default=3,
+        metavar="M",
+        help=(
+            "HDBSCAN min_cluster_size for need-preference bootstrap (smallest "
+            "dense group). Not a fixed cluster count K."
+        ),
     )
     parser.add_argument(
         "--window-days",
@@ -214,7 +222,7 @@ def main(argv: list[str] | None = None) -> int:
         selected_users=args.user,
         use_gold_topics=args.use_gold_topics,
         max_samples_per_user=args.max_samples_per_user,
-        n_clusters=args.n_clusters,
+        cluster_min_size=args.cluster_min_size,
         window_days=args.window_days,
         min_items_to_cluster=args.min_items_to_cluster,
         debug=args.debug,

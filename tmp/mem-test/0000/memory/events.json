@@ -6,7 +6,7 @@
     "source_turn_ids": [
       "t-s-0000-0000_sample0-001"
     ],
-    "event_summary": "去社区医院复查血糖，医生指出早上血糖偏高，建议注意晚餐碳水化合物摄入",
+    "event_summary": "社区医院复查血糖，医生提示早上血糖偏高需注意晚饭",
     "tags": [
       "medical"
     ],
@@ -17,27 +17,182 @@
     "event_type": "life_event",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "source_turn_ids": [
-      "t-s-0000-0000_sample0-023",
+      "t-s-0000-0000_sample0-005"
+    ],
+    "event_summary": "决定尝试调整晚餐主食，如小半碗米饭或杂粮饭，少放面条加配菜",
+    "tags": [
+      "diet"
+    ],
+    "confidence": 0.8
+  },
+  {
+    "event_id": "event-s-0000-0000_sample0-2",
+    "event_type": "life_event",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample0-021",
       "t-s-0000-0000_sample0-029"
     ],
-    "event_summary": "决定采用语音记录血糖并由助手生成周报分享至家庭群，每周一次",
+    "event_summary": "同意使用语音记录血糖，并每周生成周报分享到家庭微信群",
+    "tags": [
+      "medical",
+      "family",
+      "other"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-s-0000-0000_sample1",
+    "event_type": "medical_visit",
+    "timestamp": "2025-02-18T13:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample1-003"
+    ],
+    "event_summary": "小女儿约好下周带去看医生",
     "tags": [
       "medical",
       "family"
     ],
-    "confidence": 0.88
+    "confidence": 0.9
   },
   {
-    "event_id": "event-s-0000-0000_sample0",
-    "event_type": "medical_visit",
-    "timestamp": "2025-02-06T13:00:00+00:00",
+    "event_id": "event-s-0000-0000_sample2",
+    "event_type": "life_event",
+    "timestamp": "2025-02-24T14:00:00+00:00",
     "source_turn_ids": [
-      "t-s-0000-0000_sample0-001"
+      "t-s-0000-0000_sample2-003"
     ],
-    "event_summary": "去社区医院复查血糖，医生提醒注意晚饭",
+    "event_summary": "用户尝试用语音记录早饭后血糖，但识别错误成其他内容",
     "tags": [
-      "medical"
+      "medical",
+      "other"
+    ],
+    "confidence": 0.8
+  },
+  {
+    "event_id": "event-s-0000-0000_sample2-1",
+    "event_type": "life_event",
+    "timestamp": "2025-02-24T14:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample2-009"
+    ],
+    "event_summary": "用户有时因忙碌忘记服用降糖药和降脂药",
+    "tags": [
+      "medical",
+      "lifestyle"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-s-0000-0000_sample2-2",
+    "event_type": "life_event",
+    "timestamp": "2025-02-24T14:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample2-011"
+    ],
+    "event_summary": "女儿曾设置手机闹钟提醒服药，但用户误按取消",
+    "tags": [
+      "medical",
+      "family"
     ],
     "confidence": 0.95
+  },
+  {
+    "event_id": "event-s-0000-0000_sample2-3",
+    "event_type": "life_event",
+    "timestamp": "2025-02-24T14:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample2-019"
+    ],
+    "event_summary": "用户因视力下降，不再做针线活",
+    "tags": [
+      "activity",
+      "emotion"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-s-0000-0000_sample2-4",
+    "event_type": "life_event",
+    "timestamp": "2025-02-24T14:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample2-021"
+    ],
+    "event_summary": "用户平时以听戏和叠纸鹤作为休闲活动",
+    "tags": [
+      "activity",
+      "other"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-s-0000-0000_sample2-5",
+    "event_type": "life_event",
+    "timestamp": "2025-02-24T14:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample2-023"
+    ],
+    "event_summary": "用户计划在家尝试触摸石头和分类扑克牌活动",
+    "tags": [
+      "activity",
+      "other"
+    ],
+    "confidence": 0.6
+  },
+  {
+    "event_id": "event-s-0000-0000_sample3",
+    "event_type": "medical_visit",
+    "timestamp": "2025-02-28T12:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample3-001"
+    ],
+    "event_summary": "计划下周由女儿陪同去医院检查脚部",
+    "tags": [
+      "medical",
+      "family"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "event_id": "event-s-0000-0000_sample3-1",
+    "event_type": "life_event",
+    "timestamp": "2025-02-28T12:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample3-019"
+    ],
+    "event_summary": "尝试先吃凉拌菜再吃主食并语音记录餐后感受",
+    "tags": [
+      "diet",
+      "lifestyle"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-s-0000-0000_sample3-2",
+    "event_type": "life_event",
+    "timestamp": "2025-02-28T12:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample3-039"
+    ],
+    "event_summary": "听戏时随节奏拍打大腿小腿以活动手脚",
+    "tags": [
+      "activity",
+      "lifestyle"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-s-0000-0000_sample4",
+    "event_type": "life_event",
+    "timestamp": "2025-03-10T21:00:00+00:00",
+    "source_turn_ids": [
+      "t-s-0000-0000_sample4-035"
+    ],
+    "event_summary": "用户计划购买一本台历，用于在餐桌上记录每日服药情况",
+    "tags": [
+      "lifestyle",
+      "other"
+    ],
+    "confidence": 0.85
   }
 ]

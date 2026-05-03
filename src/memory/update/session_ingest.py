@@ -13,15 +13,19 @@ module drives the whole memory pipeline:
 3. Persist turns to :class:`RawStore` window-by-window.
 4. Run :class:`LLMEventExtractor` over the **whole session** in a single
    call, persist the resulting events to :class:`EventStore`.
-5. Run :meth:`LLMNeedSolutionExtractor.extract_pair` **once per topic window**
-   (full window transcript → all user→assistant rows plus preference /
-   ``quality_score`` in one LLM call), persist each :class:`NeedSolutionItem`
+5. Run :meth:`LLMNeedSolutionExtractor.extract_item` **once per topic window**,
+   passing **this session’s** events (from step 4) so the model can fill
+   ``context`` / ``context_event_ids`` on each :class:`NeedItem`. Persist each
+   item
    to :class:`NeedSolutionStore`.
 6. Once the session is fully written, call
    :func:`update_profile_from_mid_memory` with a :class:`FixedClock` anchored
-   at the session's ``dialogue_timestamp``; persist the new profile and
-   write back ``cluster_id`` onto each affected need-solution item via
-   :meth:`NeedSolutionStore.update_item`.
+   at the session's ``dialogue_timestamp``. Need clustering (on ``inferred_need``)
+   is driven mainly by **this session's** freshly extracted :class:`NeedItem`
+   rows (each without ``cluster_id`` yet); if ``force_recluster=True``, **all**
+   persisted need rows are passed so :meth:`NeedClusterer.initialize` can rebuild
+   globally. Persist the new profile and write back ``cluster_id`` onto each
+   affected item via :meth:`NeedSolutionStore.update_item`.
 
 The orchestrator returns a small ``IngestReport`` summary (window/event/item
 counts and the final cluster sizes) that callers can log or aggregate.
@@ -32,7 +36,7 @@ from __future__ import annotations
 import json
 import logging
 import sys
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from typing import Any, TextIO
 
 from src.llm.debug_llm import DebuggingLLMClient
@@ -45,7 +49,7 @@ from src.memory.profile.profile_store import ProfileStore
 from src.memory.raw.raw_store import RawStore
 from src.memory.schemas import (
     EventItem,
-    NeedSolutionItem,
+    NeedItem,
     RawTurn,
     TopicWindow,
 )
@@ -87,7 +91,7 @@ def _debug_flat_turn_table(
         if len(preview) > text_preview_chars:
             preview = preview[: text_preview_chars] + " …"
         s.write(
-            f"{t.turn_id}\t{t.role}\tchunk_id={t.chunk_id}\ttopic_id={t.topic_id}\t{preview}\n"
+            f"{t.turn_id}\t{t.role}\tchunk_id={t.chunk_id}\t{preview}\n"
         )
     s.write(f"(total_turns={len(turns)})\n")
 
@@ -95,7 +99,7 @@ def _debug_flat_turn_table(
 def _debug_windows_json(stream: TextIO | None, windows: list[TopicWindow]) -> None:
     _debug_banner(stream, "topic_windows (segmentation)")
     s = _dbg_out(stream)
-    payload = [{"window_id": w.window_id, "topic_label": w.topic_label, "turn_ids": w.turn_ids} for w in windows]
+    payload = [{"window_id": w.window_id, "turn_ids": w.turn_ids} for w in windows]
     s.write(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
 
 
@@ -106,8 +110,8 @@ def _debug_events_json(stream: TextIO | None, events: list[EventItem]) -> None:
     s.write(json.dumps(rows, ensure_ascii=False, indent=2) + "\n")
 
 
-def _debug_need_items_json(stream: TextIO | None, items: list[NeedSolutionItem]) -> None:
-    _debug_banner(stream, "need_solution_extract (stored NeedSolutionItem dicts)")
+def _debug_need_items_json(stream: TextIO | None, items: list[NeedItem]) -> None:
+    _debug_banner(stream, "need_solution_extract (stored NeedItem dicts)")
     s = _dbg_out(stream)
     rows = [it.to_dict() for it in items]
     s.write(json.dumps(rows, ensure_ascii=False, indent=2) + "\n")
@@ -207,7 +211,7 @@ def _flatten_dialogue(
             if not content:
                 continue
             seq += 1
-            turn_id = f"t-{session_id}-{seq:03d}"
+            turn_id = f"turn-{session_id}-{seq:03d}"
             turns.append(
                 RawTurn(
                     session_id=session_id,
@@ -215,7 +219,6 @@ def _flatten_dialogue(
                     role=role,
                     text=content,
                     timestamp=timestamp_iso,
-                    topic_id="general",   # filled in once segmentation runs
                     chunk_id="chunk-0",  # filled in once segmentation runs
                 )
             )
@@ -262,7 +265,11 @@ def _stamp_turns_with_window(
     turns: list[RawTurn],
     windows: list[TopicWindow],
 ) -> list[RawTurn]:
-    """Set each turn's ``chunk_id`` / ``topic_id`` from its enclosing window."""
+    """Set each turn's ``chunk_id`` / ``topic_id`` from its enclosing window.
+
+    Both use ``window_id`` so topic chunking scopes raw turns without a separate
+    human-readable topic phrase field.
+    """
     by_turn: dict[str, TopicWindow] = {}
     for w in windows:
         for tid in w.turn_ids:
@@ -280,7 +287,6 @@ def _stamp_turns_with_window(
                 role=t.role,
                 text=t.text,
                 timestamp=t.timestamp,
-                topic_id=w.topic_label,
                 chunk_id=w.window_id,
             )
         )
@@ -309,7 +315,7 @@ def ingest_session(
     predefined_windows: list[TopicWindow] | None = None,
     gold_topics: dict[str, dict[str, Any]] | None = None,
     session_id: str | None = None,
-    n_clusters: int = 5,
+    cluster_min_size: int = 3,
     window_days: int = 14,
     min_items_to_cluster: int = 5,
     force_recluster: bool = False,
@@ -328,7 +334,7 @@ def ingest_session(
             ignored.
         dialogue_timestamp: External clock anchor for this session — copied
             verbatim into every :class:`RawTurn`/:class:`EventItem`/
-            :class:`NeedSolutionItem`, and used as :class:`FixedClock` for
+            :class:`NeedItem`, and used as :class:`FixedClock` for
             ``recent_status`` window-cutoff and all ``updated_at`` writes.
         predefined_windows: Caller-supplied :class:`TopicWindow`s; takes
             priority over ``gold_topics``. Useful for unit tests where you
@@ -393,7 +399,7 @@ def ingest_session(
 
     if debug:
         _debug_windows_json(debug_stream, windows)
-        _debug_flat_turn_table(debug_stream, f"stamped_turns (chunk_id + topic_id applied) [{sid}]", stamped_turns)
+        _debug_flat_turn_table(debug_stream, f"stamped_turns [{sid}]", stamped_turns)
 
     # Step 3: persist raw turns, walking window-by-window so the on-disk
     # ordering matches the topic structure.
@@ -408,17 +414,25 @@ def ingest_session(
             n_turns_written += 1
 
     # Step 4: events over the whole session in one call.
-    events = event_ex.extract_from_window(stamped_turns, window_id=sid)
+    events = event_ex.extract_from_session(stamped_turns, session_id=sid)
     if debug:
         _debug_events_json(debug_stream, events)
     for ev in events:
         event_store.append(ev)
 
-    # Step 5: need-solution pairs per window.
-    need_items: list[NeedSolutionItem] = []
+    session_event_dicts = [ev.to_dict() for ev in events]
+
+    # Step 5: need rows per window. 
+    need_items: list[NeedItem] = []
+    need_session_idx = 0
     for w in windows:
         window_turns = [turn_by_id[tid] for tid in w.turn_ids if tid in turn_by_id]
-        for item in need_ex.extract_pair(window_turns):
+        for item in need_ex.extract_item(
+            window_turns,
+            session_events=session_event_dicts,
+        ):
+            need_session_idx += 1
+            item = replace(item, item_id=f"need-{sid}-{need_session_idx}")
             need_solution_store.append(item)
             need_items.append(item)
 
@@ -432,15 +446,26 @@ def ingest_session(
         clock = FixedClock(timestamp_dt)
         profile_dict = profile_store.load()
         all_events = event_store.list_all()
-        all_items = need_solution_store.list_all()
+        new_need_dicts = [it.to_dict() for it in need_items]
+        existing_clusters = profile_dict.get("need_preferences") or []
+        if not isinstance(existing_clusters, list):
+            existing_clusters = []
+        # Incremental clustering only considers rows without ``cluster_id``, so
+        # passing this session's items is enough. Full re-init must see the
+        # whole store because :meth:`NeedClusterer.initialize` replaces clusters.
+        need_rows_for_profile = (
+            need_solution_store.list_all()
+            if force_recluster or not existing_clusters
+            else new_need_dicts
+        )
         profile, mapping = update_profile_from_mid_memory(
             profile_dict,
             all_events,
-            all_items,
+            need_rows_for_profile,
             embedder=emb,
             llm_client=llm,
             clock=clock,
-            n_clusters=n_clusters,
+            cluster_min_size=cluster_min_size,
             window_days=window_days,
             min_items_to_cluster=min_items_to_cluster,
             force_recluster=force_recluster,

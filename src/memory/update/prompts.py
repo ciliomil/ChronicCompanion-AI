@@ -41,27 +41,36 @@ NEED_TAXONOMY: tuple[str, ...] = (
 )
 
 EVENT_TYPES: tuple[str, ...] = (
-    "medical_visit",
-    "life_event",
-)
-
-EVENT_TAGS: tuple[str, ...] = (
-    "medical",
-    "lifestyle",
-    "family",
-    "emotion",
-    "diet",
-    "sleep",
-    "activity",
+    "health_medical",
+    "self_management",
+    "family_social",
+    "mental_emotional",
+    "interest_activity",
+    "daily_life",
     "other",
 )
 
-# Tags that should land in the "medical / body" bucket when summarising
-# recent_status. Diet / sleep / activity also affect blood-sugar control so we
-# count them as health-relevant for diabetic users.
-_MEDICAL_BUCKET_TAGS = {"medical", "diet", "sleep", "activity"}
-_LIFE_BUCKET_TAGS = {"family", "emotion", "lifestyle", "other"}
-
+EVENT_TAGS: tuple[str, ...] = (
+    "glucose",
+    "medication",
+    "medical_visit",
+    "symptom",
+    "complication",
+    "diet",
+    "sleep",
+    "activity",
+    "monitoring",
+    "adherence",
+    "family",
+    "caregiver",
+    "living_alone",
+    "social",
+    "emotion",
+    "stress",
+    "hobby",
+    "safety_risk",
+    "other",
+)
 
 def _vocab_str(values: tuple[str, ...]) -> str:
     return ", ".join(values)
@@ -80,15 +89,13 @@ EVENT_EXTRACT_SYSTEM: str = load_prompt(
 # need_infer no longer takes a controlled need taxonomy.
 NEED_INFER_SYSTEM: str = load_prompt("memory/need_infer/system")
 
-# need_solution inferred_need are free-form; tags still controlled. Prompt is
-# topic-window — one call covers every user→assistant pair in that window plus
-# preference / quality_score / feedback_turn_ids in the same structured output.
+# need extract: inferred_need free-form; tags controlled. items[] ≈ NeedItem:
+# inferred_need, related_tags, context, context_event_ids, solutions[] rows
+# (ai_solution_summary, feedback_turn_ids, quality_score, preference, confidence).
 NEED_SOLUTION_EXTRACT_SYSTEM: str = load_prompt(
     "memory/need_solution_extract/system",
     event_tags=_vocab_str(EVENT_TAGS),
 )
-
-FEEDBACK_ANALYZE_SYSTEM: str = load_prompt("memory/feedback_analyze/system")
 
 RECENT_STATUS_SUMMARIZE_SYSTEM: str = load_prompt("memory/recent_status_summarize/system")
 NEED_CLUSTER_LABEL_SYSTEM: str = load_prompt("memory/need_cluster_label/system")
@@ -131,25 +138,75 @@ def render_event_lines(events: Iterable[dict[str, Any]]) -> str:
     return "\n".join(lines) if lines else "(无)"
 
 
+def _event_tags(ev: dict[str, Any]) -> set[str]:
+    raw = ev.get("tags")
+    if not isinstance(raw, list):
+        return set()
+    return {str(t).strip() for t in raw if str(t).strip()}
+
+
+def _event_type(ev: dict[str, Any]) -> str:
+    return str(ev.get("event_type", "")).strip()
+
+
 def split_events_by_bucket(
     events: Iterable[dict[str, Any]],
-) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
-    """Split events into ``(medical_bucket, life_bucket)`` lists.
+) -> tuple[
+    list[dict[str, Any]],
+    list[dict[str, Any]],
+    list[dict[str, Any]],
+    list[dict[str, Any]],
+    list[dict[str, Any]],
+    list[dict[str, Any]],
+]:
+    """Split events for :func:`summarize_recent_status`.
 
-    Buckets are decided by ``event_type`` first (``medical_visit`` always goes
-    medical) and by tag overlap with :data:`_MEDICAL_BUCKET_TAGS` otherwise.
-    Events that match neither bucket-tag set fall into the life bucket.
+    An event may appear in multiple lists. Returns:
+
+    ``(health, self_management, mental, family_social, interest, risk_hint)``
+
+    ``risk_hint`` lists events tagged ``safety_risk`` to ground ``risk_flags``.
     """
-    medical: list[dict[str, Any]] = []
-    life: list[dict[str, Any]] = []
+    health_events: list[dict[str, Any]] = []
+    self_management_events: list[dict[str, Any]] = []
+    mental_events: list[dict[str, Any]] = []
+    family_social_events: list[dict[str, Any]] = []
+    interest_events: list[dict[str, Any]] = []
+    risk_hint_events: list[dict[str, Any]] = []
+
+    health_tags = {"glucose", "medication", "medical_visit", "symptom", "complication"}
+    self_tags = {"diet", "sleep", "activity", "monitoring", "adherence"}
+    mental_tags = {"emotion", "stress"}
+    family_tags = {"family", "caregiver", "living_alone", "social"}
+    interest_tags = {"hobby", "activity"}
+
     for ev in events:
-        tags = set(ev.get("tags", []) or [])
-        et = str(ev.get("event_type", ""))
-        if et == "medical_visit" or (tags & _MEDICAL_BUCKET_TAGS):
-            medical.append(ev)
-        else:
-            life.append(ev)
-    return medical, life
+        if not isinstance(ev, dict):
+            continue
+        tags = _event_tags(ev)
+        et = _event_type(ev)
+
+        if et == "health_medical" or (tags & health_tags):
+            health_events.append(ev)
+        if et == "self_management" or (tags & self_tags):
+            self_management_events.append(ev)
+        if et == "mental_emotional" or (tags & mental_tags):
+            mental_events.append(ev)
+        if et == "family_social" or (tags & family_tags):
+            family_social_events.append(ev)
+        if et == "interest_activity" or (tags & interest_tags):
+            interest_events.append(ev)
+        if "safety_risk" in tags:
+            risk_hint_events.append(ev)
+
+    return (
+        health_events,
+        self_management_events,
+        mental_events,
+        family_social_events,
+        interest_events,
+        risk_hint_events,
+    )
 
 
 def build_event_extract_prompt(turns: list[dict[str, Any]]) -> str:
@@ -174,43 +231,38 @@ def build_need_infer_prompt(
 
 def build_need_solution_extract_prompt(
     window_turns: list[dict[str, Any]],
+    *,
+    session_events: list[dict[str, Any]] | None = None,
 ) -> str:
     transcript = render_turns(window_turns)
     return load_prompt(
         "memory/need_solution_extract/user",
         window_transcript=transcript,
+        session_events=render_event_lines(session_events or []),
     )
 
-
-def build_feedback_analyze_prompt(
-    item: dict[str, Any],
-    follow_up_turns: list[dict[str, Any]],
-) -> str:
-    inferred_need = item.get("inferred_need", "")
-    ai_solution = item.get("ai_solution_summary", "")
-    item_id = item.get("item_id", "")
-    follow_up = render_turns(follow_up_turns)
-    return load_prompt(
-        "memory/feedback_analyze/user",
-        item_id=item_id,
-        inferred_need=inferred_need,
-        ai_solution_summary=ai_solution,
-        follow_up=follow_up,
-    )
 
 
 def build_recent_status_summarize_prompt(
     *,
     old_recent_status: dict[str, Any],
-    medical_events: list[dict[str, Any]],
-    life_events: list[dict[str, Any]],
+    health_events: list[dict[str, Any]],
+    self_management_events: list[dict[str, Any]],
+    mental_events: list[dict[str, Any]],
+    family_social_events: list[dict[str, Any]],
+    interest_events: list[dict[str, Any]],
+    risk_hint_events: list[dict[str, Any]],
     window_days: int,
 ) -> str:
     return load_prompt(
         "memory/recent_status_summarize/user",
         old_recent_status=json.dumps(old_recent_status, ensure_ascii=False),
-        medical_events=render_event_lines(medical_events),
-        life_events=render_event_lines(life_events),
+        health_events=render_event_lines(health_events),
+        self_management_events=render_event_lines(self_management_events),
+        mental_events=render_event_lines(mental_events),
+        family_social_events=render_event_lines(family_social_events),
+        interest_events=render_event_lines(interest_events),
+        risk_hint_events=render_event_lines(risk_hint_events),
         window_days=window_days,
     )
 

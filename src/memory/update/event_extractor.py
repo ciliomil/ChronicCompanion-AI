@@ -9,7 +9,7 @@ Two extractors are provided:
 Both expose the same surface:
 
     extract_from_turn(turn) -> EventItem | None
-    extract_from_window(turns) -> list[EventItem]
+    extract_from_session(turns) -> list[EventItem]
 
 """
 
@@ -50,16 +50,24 @@ class RuleEventExtractor:
         if not text:
             return None
 
-        event_type = "life_event"
+        event_type = "daily_life"
         tags: list[str] = []
 
         if any(token in text for token in ("医院", "复诊", "看病", "化验", "就诊")):
-            event_type = "medical_visit"
-            tags.append("medical")
-        if any(token in text for token in ("散步", "饮食", "睡眠", "运动")):
-            tags.append("lifestyle")
+            event_type = "health_medical"
+            tags.append("medical_visit")
+        if any(token in text for token in ("散步", "运动")):
+            tags.append("activity")
+        if any(token in text for token in ("饮食",)):
+            tags.append("diet")
+        if any(token in text for token in ("睡眠",)):
+            tags.append("sleep")
         if any(token in text for token in ("家人", "孩子", "老伴")):
             tags.append("family")
+
+        tags = [t for t in tags if t in EVENT_TAGS]
+        if not tags:
+            tags = ["other"]
 
         return EventItem(
             event_id=f"event-{turn.turn_id}",
@@ -67,11 +75,11 @@ class RuleEventExtractor:
             timestamp=turn.timestamp,
             source_turn_ids=[turn.turn_id],
             event_summary=text[:80],
-            tags=tags or ["other"],
+            tags=tags,
             confidence=None,
         )
 
-    def extract_from_window(
+    def extract_from_session(
         self,
         turns: list[RawTurn],
         *,
@@ -118,14 +126,14 @@ class LLMEventExtractor:
     def extract_from_turn(self, turn: RawTurn) -> EventItem | None:
         if turn.role != "user" or not turn.text.strip():
             return None
-        events = self.extract_from_window([turn])
+        events = self.extract_from_session([turn])
         return events[0] if events else None
 
-    def extract_from_window(
+    def extract_from_session(
         self,
         turns: list[RawTurn],
         *,
-        window_id: str | None = None,
+        session_id: str | None = None,
     ) -> list[EventItem]:
         turn_dicts = [t.to_dict() for t in turns if t.text.strip()]
         if not turn_dicts:
@@ -137,13 +145,13 @@ class LLMEventExtractor:
                 prompt,
                 system_prompt=EVENT_EXTRACT_SYSTEM,
             )
-            return self._build_events(response, turns, window_id=window_id)
+            return self._build_events(response, turns, session_id=session_id)
         except Exception as err:  # noqa: BLE001 — defensive fallback
             _logger.warning(
                 "LLMEventExtractor failed (%s); falling back to rule extractor.",
                 err,
             )
-            return self._fallback.extract_from_window(list(turns))
+            return self._fallback.extract_from_session(list(turns))
 
     # -- helpers ------------------------------------------------------------
 
@@ -152,7 +160,7 @@ class LLMEventExtractor:
         response: dict[str, Any],
         turns: list[RawTurn],
         *,
-        window_id: str | None,
+        session_id: str | None,
     ) -> list[EventItem]:
         raw_events = response.get("events") if isinstance(response, dict) else None
         if not isinstance(raw_events, list):
@@ -169,7 +177,7 @@ class LLMEventExtractor:
             event = LLMEventExtractor._coerce_event(
                 raw,
                 index=index,
-                window_id=window_id,
+                session_id=session_id,
                 valid_turn_ids=valid_turn_ids,
                 timestamp_by_turn=timestamp_by_turn,
                 last_timestamp=last_timestamp,
@@ -188,7 +196,7 @@ class LLMEventExtractor:
         raw: Any,
         *,
         index: int,
-        window_id: str | None,
+        session_id: str | None,
         valid_turn_ids: set[str],
         timestamp_by_turn: dict[str, str],
         last_timestamp: str,
@@ -202,7 +210,7 @@ class LLMEventExtractor:
             return None
 
         source_turn_ids = _coerce_str_list(raw.get("source_turn_ids"))
-        # Restrict source_turn_ids to those actually present in the window.
+        # Restrict source_turn_ids to those actually present in the session.
         # If the model hallucinated ids, drop them; if everything is dropped,
         # fall back to the latest turn's id when available.
         filtered = [tid for tid in source_turn_ids if tid in valid_turn_ids]
@@ -225,8 +233,8 @@ class LLMEventExtractor:
         ) or last_timestamp
 
         primary = filtered[0]
-        suffix = f"-{index}" if index > 0 else ""
-        anchor = window_id or primary
+        suffix = f"-{index+1}" if index >= 0 else ""
+        anchor = session_id or primary
         event_id = f"event-{anchor}{suffix}"
 
         return EventItem(
@@ -272,7 +280,7 @@ def extract_events_from_window(
     window_id: str | None = None,
 ) -> list[EventItem]:
     """Convenience wrapper for window-level extraction."""
-    return _get_default_extractor().extract_from_window(list(turns), window_id=window_id)
+    return _get_default_extractor().extract_from_session(list(turns), window_id=window_id)
 
 
 # ---------------------------------------------------------------------------

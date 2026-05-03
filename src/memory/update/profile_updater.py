@@ -3,9 +3,9 @@
 Two periodic updates are implemented:
 
 1. **Recent status summary** — LLM-driven summary over events within a
-   sliding ``window_days`` window, with health-related and life/family
-   buckets handled separately so the resulting ``recent_status`` foregrounds
-   the patient's recent disease trajectory.
+   sliding ``window_days`` window. Events are split into health, self-management,
+   mental, family/social, interest, and risk-hint buckets; the resulting
+   ``recent_status`` matches :func:`src.memory.schemas._empty_recent_status`.
 2. **Need preference clusters** — Items previously without a ``cluster_id`` are
    incrementally assigned & refined; clusters are bootstrapped from scratch
    via :meth:`NeedClusterer.initialize` when none exist yet (or when the
@@ -13,7 +13,7 @@ Two periodic updates are implemented:
 
 The orchestrator returns ``(updated_profile, item_id_to_cluster_id)``. The
 caller is responsible for persisting ``cluster_id`` back onto each
-:class:`~src.memory.schemas.NeedSolutionItem` via
+:class:`~src.memory.schemas.NeedItem` via
 :meth:`NeedSolutionStore.update_item`.
 """
 
@@ -27,7 +27,9 @@ from src.llm.embedder import Embedder, get_default_embedder
 from src.llm.llm import LLMClient, get_default_llm_client
 from src.memory.schemas import (
     NeedCluster,
+    NeedClusterSample,
     UserProfile,
+    _empty_recent_status,
 )
 from src.memory.update.need_clustering import NeedClusterer
 from src.memory.update.prompts import (
@@ -107,6 +109,25 @@ def _filter_events_by_window(
 # ---------------------------------------------------------------------------
 
 
+def _event_id_list(ev_list: list[dict[str, Any]]) -> list[str]:
+    out: list[str] = []
+    for ev in ev_list:
+        eid = ev.get("event_id")
+        if eid:
+            out.append(str(eid))
+    return out
+
+
+def _join_event_summaries(evlist: list[dict[str, Any]], *, max_chars: int = 200) -> str:
+    parts = [
+        str(ev.get("event_summary", "")).strip()
+        for ev in evlist[-3:]
+        if ev.get("event_summary")
+    ]
+    joined = "; ".join(parts)
+    return joined[:max_chars] if joined else ""
+
+
 def summarize_recent_status(
     profile_dict: dict[str, Any],
     recent_events: list[dict[str, Any]],
@@ -118,77 +139,137 @@ def summarize_recent_status(
     """Return a structured ``recent_status`` dict for the given profile.
 
     Strategy: filter events to the last ``window_days`` (anchored at
-    ``clock.now()``), split them into a medical bucket and a life bucket,
-    ask the LLM for a structured summary, and fall back to a deterministic
-    rule summary if the LLM call fails.
+    ``clock.now()``), split them into per-field buckets, call the LLM, and
+    fall back to stitching event summaries per bucket if the model fails.
     """
 
     clock = clock or RealClock()
     in_window, window_start, window_end = _filter_events_by_window(
         recent_events, window_days=window_days, clock=clock,
     )
-    medical, life = split_events_by_bucket(in_window)
+    (
+        health_events,
+        self_management_events,
+        mental_events,
+        family_social_events,
+        interest_events,
+        risk_hint_events,
+    ) = split_events_by_bucket(in_window)
     old_recent = profile_dict.get("recent_status") or {}
 
-    # Start from the previous summary so we keep historical text the new
-    # window doesn't refresh (per the prompt's "if no new info, keep old").
-    summary: dict[str, Any] = {
-        "health_status": str(old_recent.get("health_status", "")),
-        "family_status": str(old_recent.get("family_status", "")),
-        "interest_changes": list(old_recent.get("interest_changes", []) or []),
-        "window_start": window_start,
-        "window_end": window_end,
-        "source_event_ids": [
-            ev.get("event_id") for ev in in_window if ev.get("event_id")
-        ],
+    summary: dict[str, Any] = _empty_recent_status()
+    for key in (
+        "health_status",
+        "self_management_status",
+        "mental_status",
+        "family_social_status",
+    ):
+        if old_recent.get(key):
+            summary[key] = str(old_recent[key])
+    if isinstance(old_recent.get("interest_changes"), list):
+        summary["interest_changes"] = [
+            str(x).strip() for x in old_recent["interest_changes"] if str(x).strip()
+        ][:12]
+    if isinstance(old_recent.get("risk_flags"), list):
+        summary["risk_flags"] = [
+            str(x).strip() for x in old_recent["risk_flags"] if str(x).strip()
+        ][:12]
+
+    summary["window_start"] = window_start
+    summary["window_end"] = window_end
+    summary["field_source_event_ids"] = {
+        "health_status": _event_id_list(health_events),
+        "self_management_status": _event_id_list(self_management_events),
+        "mental_status": _event_id_list(mental_events),
+        "family_social_status": _event_id_list(family_social_events),
+        "interest_changes": _event_id_list(interest_events),
+        "risk_flags": _event_id_list(risk_hint_events),
     }
 
     if not in_window:
         return summary
 
+    old_for_prompt = {
+        "health_status": summary["health_status"],
+        "self_management_status": summary["self_management_status"],
+        "mental_status": summary["mental_status"],
+        "family_social_status": summary["family_social_status"],
+        "interest_changes": summary["interest_changes"],
+        "risk_flags": summary["risk_flags"],
+    }
+
     try:
         prompt = build_recent_status_summarize_prompt(
-            old_recent_status={
-                "health_status": summary["health_status"],
-                "family_status": summary["family_status"],
-                "interest_changes": summary["interest_changes"],
-            },
-            medical_events=medical,
-            life_events=life,
+            old_recent_status=old_for_prompt,
+            health_events=health_events,
+            self_management_events=self_management_events,
+            mental_events=mental_events,
+            family_social_events=family_social_events,
+            interest_events=interest_events,
+            risk_hint_events=risk_hint_events,
             window_days=window_days,
         )
         resp = llm_client.generate_json(prompt, system_prompt=RECENT_STATUS_SUMMARIZE_SYSTEM)
         if isinstance(resp, dict):
-            summary["health_status"] = str(
-                resp.get("health_status", summary["health_status"]) or ""
-            )[:200]
-            summary["family_status"] = str(
-                resp.get("family_status", summary["family_status"]) or ""
-            )[:200]
+            for key in (
+                "health_status",
+                "self_management_status",
+                "mental_status",
+                "family_social_status",
+            ):
+                if key in resp:
+                    summary[key] = str(resp.get(key) or "")[:200]
             ic = resp.get("interest_changes")
             if isinstance(ic, list):
                 summary["interest_changes"] = [
                     str(x).strip() for x in ic if str(x).strip()
-                ][:8]
+                ][:12]
+            rf = resp.get("risk_flags")
+            if isinstance(rf, list):
+                summary["risk_flags"] = [
+                    str(x).strip() for x in rf if str(x).strip()
+                ][:12]
             return summary
     except Exception as err:  # noqa: BLE001 — defensive fallback
         _logger.warning(
             "summarize_recent_status: LLM failed (%s); using rule fallback.", err,
         )
 
-    # Rule fallback: stitch the latest summaries from each bucket together.
-    if medical:
-        joined = "; ".join(
-            ev.get("event_summary", "").strip() for ev in medical[-3:] if ev.get("event_summary")
-        )
-        if joined:
-            summary["health_status"] = joined[:200]
-    if life:
-        joined = "; ".join(
-            ev.get("event_summary", "").strip() for ev in life[-3:] if ev.get("event_summary")
-        )
-        if joined:
-            summary["family_status"] = joined[:200]
+    if health_events:
+        t = _join_event_summaries(health_events)
+        if t:
+            summary["health_status"] = t
+    if self_management_events:
+        t = _join_event_summaries(self_management_events)
+        if t:
+            summary["self_management_status"] = t
+    if mental_events:
+        t = _join_event_summaries(mental_events)
+        if t:
+            summary["mental_status"] = t
+    if family_social_events:
+        t = _join_event_summaries(family_social_events)
+        if t:
+            summary["family_social_status"] = t
+    if interest_events:
+        phrases = [
+            str(ev.get("event_summary", "")).strip()[:10]
+            for ev in interest_events[-5:]
+            if ev.get("event_summary")
+        ]
+        phrases = [p for p in phrases if p][:8]
+        if phrases:
+            summary["interest_changes"] = phrases
+    if risk_hint_events:
+        phrases = [
+            str(ev.get("event_summary", "")).strip()[:12]
+            for ev in risk_hint_events[-5:]
+            if ev.get("event_summary")
+        ]
+        phrases = [p for p in phrases if p][:8]
+        if phrases:
+            summary["risk_flags"] = phrases
+
     return summary
 
 
@@ -197,17 +278,51 @@ def summarize_recent_status(
 # ---------------------------------------------------------------------------
 
 
+def _cluster_sample_from_dict(raw: dict[str, Any]) -> NeedClusterSample:
+    """Rebuild :class:`~src.memory.schemas.NeedClusterSample` from JSON/store dict."""
+    vec_raw = raw.get("vector")
+    vector: list[float] | None = None
+    if isinstance(vec_raw, list):
+        vector = [float(x) for x in vec_raw]
+
+    conf_raw = raw.get("confidence")
+    confidence: float | None = None
+    if conf_raw is not None:
+        try:
+            confidence = float(conf_raw)
+        except (TypeError, ValueError):
+            confidence = None
+
+    return NeedClusterSample(
+        item_id=str(raw.get("item_id", "")),
+        need=str(raw.get("need", "")),
+        preference=str(raw.get("preference", "")),
+        vector=vector,
+        timestamp=str(raw.get("timestamp", "")),
+        confidence=confidence,
+    )
+
+
 def _cluster_from_dict(d: dict[str, Any], *, clock: Clock) -> NeedCluster:
+    samples_raw = d.get("representative_samples") or []
+    representative_samples: list[NeedClusterSample] = []
+    if isinstance(samples_raw, list):
+        for s in samples_raw:
+            if isinstance(s, dict):
+                representative_samples.append(_cluster_sample_from_dict(s))
+
+    status = str(d.get("status", "") or "pending")
+
     return NeedCluster(
         cluster_id=str(d.get("cluster_id", "")),
         need_type=str(d.get("need_type", "")),
         preference_principle=str(d.get("preference_principle", "")),
         centroid=[float(x) for x in (d.get("centroid") or [])],
         member_item_ids=[str(x) for x in (d.get("member_item_ids") or [])],
-        sample_needs=[str(x) for x in (d.get("sample_needs") or [])],
-        sample_preferences=[str(x) for x in (d.get("sample_preferences") or [])],
+        representative_samples=representative_samples,
         size=int(d.get("size", 0) or 0),
         updated_at=str(d.get("updated_at", "") or clock.now_iso()),
+        status=status,
     )
 
 
@@ -224,23 +339,16 @@ def update_profile_from_mid_memory(
     embedder: Embedder | None = None,
     llm_client: LLMClient | None = None,
     clock: Clock | None = None,
-    n_clusters: int = 5,
+    cluster_min_size: int = 3,
     window_days: int = 14,
     min_items_to_cluster: int = 5,
     force_recluster: bool = False,
 ) -> tuple[UserProfile, dict[str, str]]:
     """Periodic top-layer update.
-
-    Args:
-        clock: Source of "now" for the recent-status window cutoff,
-            ``cluster.updated_at`` and ``profile.updated_at``. Defaults to
-            :class:`RealClock`; pass a :class:`FixedClock` (anchored at the
-            session's ``dialogue_timestamp``) when replaying the dataset.
-
     Returns:
         ``(updated_profile, item_id_to_cluster_id)``. The caller should
         persist the cluster-id mapping onto the corresponding
-        :class:`NeedSolutionItem`s via :meth:`NeedSolutionStore.update_item`.
+        :class:`NeedItem`s via :meth:`NeedSolutionStore.update_item`.
 
     Behaviour:
         - When the profile has no clusters yet (or ``force_recluster=True``),
@@ -269,7 +377,7 @@ def update_profile_from_mid_memory(
     clusterer = NeedClusterer(
         embedder=emb,
         llm_client=llm,
-        n_clusters=n_clusters,
+        cluster_min_size=cluster_min_size,
         min_items_to_cluster=min_items_to_cluster,
         now_iso=clk.now_iso(),
     )

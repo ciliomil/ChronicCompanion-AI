@@ -1,1295 +1,1295 @@
 [
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-001",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-001",
     "role": "user",
     "text": "小助手啊，今天去社区医院复查，医生说我早上测的血糖有时候会高一点，让我多注意晚饭。可这‘注意晚饭’到底该咋注意呢？",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-002",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-002",
     "role": "assistant",
     "text": "李阿姨您好。听起来医生给了个方向，但具体怎么落实到您每天的晚饭里，您可能有点拿不准，是吗？比如，平时晚饭都吃些什么，哪些东西算‘需要注意’的，大概吃多少合适，这些细节您是不是希望能更清楚一点？",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-003",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-003",
     "role": "user",
     "text": "对对对，就是这个意思！医生说注意‘碳水化合物’，这个词我听着就迷糊。我晚饭就是家常便饭，米饭、面条啥的，这‘注意’是让我少吃点？还是换点别的？具体该怎么做，心里没谱。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-004",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-004",
     "role": "assistant",
     "text": "我明白了。咱们可以试试从主食上做个小小的调整。比如，您今晚要是打算吃米饭，就盛小半碗，或者换成同样大小的一小碗杂粮饭。要是想吃点面食，可以试试把白面条换成一小块蒸红薯或者玉米。这样既不会觉得没吃饱，又能让第二天早上的血糖更稳当一些。您看这样具体吗？",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-005",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-005",
     "role": "user",
     "text": "嗯，这个说法好！‘小半碗’、‘一小块’，我一下就懂了，比医生说的‘注意摄入量’明白多了。杂粮饭家里也有，红薯也爱吃，这个法子我能试试。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-006",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-006",
     "role": "assistant",
     "text": "太好了，您能接受我就放心了。再跟您分享一个很多叔叔阿姨觉得有用的办法：如果您晚上习惯吃汤面，下次煮的时候，可以试着少放一半面条，多抓几把您喜欢的青菜、蘑菇，或者切几块豆腐、打个鸡蛋进去。这样一碗下来，内容丰富，营养也更均衡，对控制血糖也有帮助。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-007",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-007",
     "role": "user",
     "text": "这个主意也不错！我有时候晚上图省事就下碗面。少放一半面，多加点菜，这个改动不大，我肯定能做到。这样既吃了面，心里也踏实点。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-008",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-008",
     "role": "assistant",
     "text": "看到您这么有行动力，真为您高兴。另外，为了更好地找到规律，您可以试着简单记一下，比如‘昨晚吃了半碗杂粮饭，配了炒青菜和鱼’，然后第二天早上测完血糖后对照看看。这样慢慢摸索，您就能更清楚哪些食物搭配能让您的身体感觉更舒服、血糖更平稳。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-009",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-009",
     "role": "user",
     "text": "唉，这个记录……听起来就麻烦。我眼睛本来就不太好，看小字费劲，还得拿笔写，写完了放哪儿也容易忘。之前用本子记血糖都嫌麻烦，这再记吃了啥，更弄不来了。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-010",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-010",
     "role": "assistant",
     "text": "好的李阿姨，我完全理解。记录确实会增加负担，尤其对眼睛不太友好的时候。咱们不勉强，前面两个关于调整主食和配菜的具体方法，您先试着用起来，看看效果怎么样。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-011",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-011",
     "role": "user",
     "text": "对了，说到记录，我女儿把我那个血糖本子拍成照片发到家庭微信群里了，说方便看。可我瞅着那照片上一堆数字，密密麻麻的，我老花眼，根本看不清哪个对哪个。你能帮我简单说说，这些数字大概啥意思吗？",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-012",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-012",
     "role": "assistant",
     "text": "李阿姨，您是不是希望我别跟您念叨那些具体的数字和日期，而是用大白话告诉您，这些血糖值整体上说明了什么情况？比如，是大部分时候都挺好，还是确实有几天早上起来测的数值不太理想？",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-013",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-013",
     "role": "user",
     "text": "对对，就是这样！我不用知道每个数是几点几，你就告诉我，是不是像医生说的，有几天早上确实高了？高了又代表啥呢？跟我有时候觉得眼睛模糊、晚上腿麻有没有关系？",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-014",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-014",
     "role": "assistant",
     "text": "我明白了。您不只是想听数字好坏，更想把这些数字和您身体的感觉、还有医生给的建议连起来看，是吧？想知道如果数字‘偏高’，咱们具体该做点啥来应对，心里好有个数。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-015",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-015",
     "role": "user",
     "text": "是这么个理儿！光说数字高，我听了心慌。你得告诉我，这‘高’了，对我这身体有啥影响，我该怎么注意，这才有用嘛。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-016",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-016",
     "role": "assistant",
     "text": "好的。那我根据您女儿上传的记录简单说说。医生提到的‘偶尔偏高’，通常指的是您早上测的空腹血糖，如果连续好几天都超过了7.5，就属于需要我们留神的情况了。这时候，咱们就得回头想想，是不是前几天的晚餐，特别是主食，吃得稍微多了一点或者不太合适。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-017",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-017",
     "role": "user",
     "text": "你这说的我还是得去瞅那些照片啊！‘连续好几天’、‘超过7.5’，我上哪儿对着照片去找是不是‘连续’？照片乱糟糟的，我看着就眼晕。你还是没给我说明白。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-018",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-018",
     "role": "assistant",
     "text": "抱歉，是我没表达好。咱们换个更形象的说法，就像看红绿灯。我们把血糖值也分成“绿灯区”和“黄灯区”。“绿灯区”大概是4到7，说明血糖比较平稳；“黄灯区”呢，比如7.5以上，就像黄灯亮了，提醒我们该注意了。如果早上测的血糖亮“黄灯”，咱们不用急着慌，就想想‘哎呀，昨晚那顿饭是不是主食多了点？下次得调整一下’。这样把数字和咱们马上能做的事连起来，您看是不是清楚点？",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-019",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-019",
     "role": "user",
     "text": "哎，这个好！红黄绿，跟路口红绿灯一样，我一下就懂了。‘黄灯’亮了，就知道该想想晚饭了，具体该咋调整，你前面也教过我了。这个说法好，明白！",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-020",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-020",
     "role": "assistant",
     "text": "您能觉得明白就好！用‘红黄绿’来打比方，就是希望能帮您更直观地理解。以后咱们就按这个‘交通信号’的思路来看待血糖变化。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-021",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-021",
     "role": "user",
     "text": "听你这么一说，我觉着还是得把血糖记清楚点，好知道啥时候是‘黄灯’。可那本子吧，女儿拍的照片我看不清，我自己写吧，眼神不好也费劲。我有个想法，我对着手机，把本子上的数念给你听，你能帮我记下来不？这样孩子问起来，我也能说清楚。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-022",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-022",
     "role": "assistant",
     "text": "李阿姨，您是想找个特别省事的法子，不用您看不用您写，就像平时跟人聊天说话那样，把血糖数告诉我，我这边就能帮您存好、整理好，这样既方便您自己回顾，也方便孩子们了解情况，是吗？",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-023",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-023",
     "role": "user",
     "text": "没错！我就是这个意思！最好能像发微信语音那么简单，我可学不来那些复杂的APP。能存好，还能让孩子们一眼就看明白，那就最好了。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-024",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-024",
     "role": "assistant",
     "text": "这个完全可以。您不用做任何复杂操作。以后您测完血糖，就像现在跟我说话一样，对着手机说‘记一下，今天早上血糖6.8’或者‘晚饭后两小时血糖8.1’，我听到后就会自动帮您存好。我还能把这些记录整理成一张特别清楚、字很大的表格，您女儿点开一下就能看到全部，再也不用在杂乱的聊天记录里翻照片了。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-025",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-025",
     "role": "user",
     "text": "能生成大表格给孩子看？这个好！她们工作忙，这样省得她们再费劲看了。就是……这‘对着手机说’，是得打开你这个助手才能说吧？会不会很麻烦？",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-026",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-026",
     "role": "assistant",
     "text": "不麻烦的，李阿姨。为了让您用着最顺手，我们可以设置成：您就像平时在微信里给女儿发语音消息那样，按住说话，直接说‘记录：早上空腹血糖5.9’，说完松开就行。我收到后会自动帮您整理好，然后定期（比如每周）把整理好的清晰记录，直接发到您家的那个微信群里。这样，您和女儿们都在一个群里看，大家都方便，您也不用额外学新东西。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-027",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-027",
     "role": "user",
     "text": "直接发到微信群里？那敢情好！就跟平时聊天一样，她们肯定能看到。不过……这会不会太打扰她们？群里有时候聊别的家事。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-028",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-028",
     "role": "assistant",
     "text": "您考虑得真周到。我们可以这样：我生成的是一个单独的、像图片一样的健康周报，上面只有您这一周的血糖记录，看起来一目了然。一周只发一次，而且会选一个大家都比较方便的时间（比如周末白天），这样既不会频繁刷屏打扰聊天，又能让女儿们定期、清晰地了解您的情况，她们也更放心。您看这样安排合适吗？",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-029",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-029",
     "role": "user",
     "text": "合适，太合适了！一周一次，像周报一样，还不打扰她们聊天。这个法子好，就用这个！就跟发微信语音一样简单，我肯定能行。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-030",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-030",
     "role": "assistant",
     "text": "太好了。另外，既然咱们建立了这么方便的沟通方式，除了血糖，如果您哪天感觉腿麻的情况比平时明显些，或者眼睛看东西模糊感有变化，也可以在报血糖的时候顺便提一句，比如‘今天早上血糖6.2，另外昨晚腿有点麻’。我一起记下来，这样您下次去医院复查时，跟医生聊起来就更全面了，医生也能更好地了解您平时的状况。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-031",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-031",
     "role": "user",
     "text": "哎，这个……先不用了。我现在就想着先把血糖这个事儿弄明白、记清楚。腿麻眼花的，有时候有有时候没有，我自己都说不准，再一起记，我怕弄混了，更乱。你就先帮我把血糖记好就行，别的以后再说。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample0",
-    "turn_id": "t-s-0000-0000_sample0-032",
+    "session_id": "0000_sample0",
+    "turn_id": "turn-0000_sample0-032",
     "role": "assistant",
     "text": "好的，李阿姨，完全听您的。咱们就一步一步来，先把血糖记录和分享这件事用最省心的方式做好。您有任何其他需要，随时跟我说。",
     "timestamp": "2025-02-06T13:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-001",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-001",
     "role": "user",
     "text": "我今天下午感觉脚有点麻，心里有点打鼓。这和我这个糖尿病有关系吗？平时我自己在家能怎么注意一下呢？",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-002",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-002",
     "role": "assistant",
     "text": "听您这么说，心里一定挺担心的。您提到脚麻，又联想到之前医生提过要注意并发症，是不是特别想搞清楚，现在这个情况是得马上去医院，还是可以先在家观察，心里好有个底？",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-003",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-003",
     "role": "user",
     "text": "是啊，小女儿是约了下周带我去看，可这一周我心里总不踏实。就想着，万一有什么不对劲的苗头，我也能早点知道，别耽误了。",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-004",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-004",
     "role": "assistant",
     "text": "我理解您想提前发现变化的用心。一个比较直观的方法是，可以请女儿每周来探望的时候，帮您拍两张双脚的照片，正面和脚底各一张，然后存到手机里一个固定的相册里。这样每周的照片放一起，皮肤有没有破皮、颜色有没有变化，一眼就能对比出来。",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-005",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-005",
     "role": "user",
     "text": "哎呀，这个办法太麻烦了。孩子们来一趟时间紧，还得惦记着给我拍照，我手机用得不溜，自己又不会整理相册，到时候照片东一张西一张更乱了。我不想什么事都非得靠她们盯着才能做。",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-006",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-006",
     "role": "assistant",
     "text": "嗯，您说得对，总依赖孩子帮忙确实可能不方便，也给您增加了心理负担。很抱歉这个建议没考虑到您操作的实际情况。那咱们看看有没有更简单直接的办法。",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-007",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-007",
     "role": "user",
     "text": "对了，说到孩子，还有件事。我记性越来越差，女儿们工作又忙，我总不好老发语音打扰她们。怎么才能让她们知道我什么时候该去复查、平时该注意什么，又不用我老去说呢？",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-008",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-008",
     "role": "assistant",
     "text": "您是不是希望有个办法，能稳稳当当地把重要事情提醒给女儿们，但又不用像之前设手机提醒那样，操作复杂还老是被不小心关掉？想要一种更简单、更不容易出错的方式？",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-009",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-009",
     "role": "user",
     "text": "对对对，就是这个意思！之前让小女儿弄过，搞得太复杂，我自己也不会弄，有时候不小心就按没了。就想找个稳稳当当的，别老出岔子。",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-010",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-010",
     "role": "assistant",
     "text": "明白了。除了提醒，您是不是也希望，像下次去医院要跟医生说什么、自己最近脚的感觉、血糖情况这些零零碎碎的事，能提前归置好，清清楚楚地让女儿们知道？这样她们心里有数，您也不用在电话里着急忙慌地想，或者一件事跟两个女儿说两遍了。",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-011",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-011",
     "role": "user",
     "text": "哎哟，你可说到我心坎里去了！我就是这个意思。有时候大女儿问，小女儿也问，我自己都记混了。要是能有个条理，她们一看就明白，我也省心。",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-012",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-012",
     "role": "assistant",
     "text": "嗯，那我们可以试试利用微信里大家都有的功能。比如，可以请女儿帮您把“周三提醒测空腹血糖”、“下周五医院复查”这些重要事项，列在微信的‘待办’清单里，然后分享给她们。这样她们都能看到清单，每完成一项，您点一下确认，她们那边也能看到进度，感觉怎么样？",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-013",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-013",
     "role": "user",
     "text": "还得我每做完一件事就去点一下啊？我有时候做着做着就忘了，回头一看，哎，又没点。这不是又给我添了个要记着的事吗？",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-014",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-014",
     "role": "assistant",
     "text": "您考虑得很对，如果总需要手动确认，确实可能忘记，反而增加了负担。那咱们的目的是让信息同步，而不是增加您的操作步骤。",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-015",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-015",
     "role": "user",
     "text": "是啊，我不想老得去点那个确认。我就想安安静静的，该提醒的时候它提醒，该让女儿知道的时候她们自然就知道，别让我再多操一份心。",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-016",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-016",
     "role": "assistant",
     "text": "那换一个思路，我们可以用手机的日历。请女儿一次性帮您把未来几个月所有复查、取药的日子都在日历上标记好，并且设置成共享给她们。这样到了日子，不光您的手机，她们的手机也会自动弹出提醒。您完全不用自己记日子，她们那边也能提前知道，您看这个方式呢？",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-017",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-017",
     "role": "user",
     "text": "手机日历？我平时都不用那个。而且之前设提醒就是，不知道怎么就关掉了，或者不响了。这个共享听着就更复杂了，我肯定搞不来，万一我又给按错了怎么办？",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-018",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-018",
     "role": "assistant",
     "text": "您说得对，如果功能本身用起来不顺手、不稳定，反而容易让人焦虑。我们确实需要一个更‘皮实’、更不容易被误操作影响的方式。",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-019",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-019",
     "role": "user",
     "text": "就是这个理！我就想要个简单的、笨办法，别整那些花里胡哨我玩不转的。这两个法子听着都挺好，可都不太适合我这老太婆。",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-020",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-020",
     "role": "assistant",
     "text": "嗯，我理解您的感受了。很抱歉，我提出的这两个建议都忽略了您对操作简单和稳定性的核心要求，让您觉得更麻烦了。谢谢您这么耐心地告诉我您的想法。",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-021",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-021",
     "role": "user",
     "text": "唉，说着说着又觉得心里有点闷了。最近老是没精神，眼睛看东西也费劲。除了听听戏，你说我这情况，还能干点啥不费眼睛、又轻轻松松的事呢？",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-022",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-022",
     "role": "assistant",
     "text": "感觉您最近身体上有些不舒服，像眼睛累、容易乏，加上一个人在家，是不是觉得以前喜欢的针线活做不了，生活有点空落落的，想找点现在力所能及、又能让心里舒坦点的事儿做做？",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-023",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-023",
     "role": "user",
     "text": "可不是嘛！眼睛不行了，针线是彻底放下了。就剩下听戏和偶尔叠个纸鹤，有时候下午乏得慌，连戏都听不进去，光坐着发呆，心里就更闷了。",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-024",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-024",
     "role": "assistant",
     "text": "这种时候确实需要放松。我有个小建议，您可以每天午后感觉疲乏的时候，试着安静地坐好，做几次慢慢的深呼吸。吸气的时候在心里默念‘放松’，呼气的时候默念‘烦恼走’。这样重复几次，也许能让心情平静一些。",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-025",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-025",
     "role": "user",
     "text": "这听着怎么像完成任务似的，还得默念这个那个的。我就是心里闷，想找点事分散一下，或者有人说说话，不是想做功课。",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-026",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-026",
     "role": "assistant",
     "text": "您说得对，放松不该像完成任务。如果心里觉得闷，没地方说，您可以随时像现在这样，跟我聊聊。想到什么就说什么，脚麻的担心也好，一个人没意思也好，我都会认真听。很多和您一样的糖友都有过类似的感受，您不是一个人在面对这些。",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-027",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-027",
     "role": "user",
     "text": "哎，你这么说我就觉得舒坦点了。有时候这些担心跟孩子说吧，怕她们忙，也怕她们更担心。能有个地方随时说说，不用琢磨该不该说，好不好，就觉得轻松不少。",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample1",
-    "turn_id": "t-s-0000-0000_sample1-028",
+    "session_id": "0000_sample1",
+    "turn_id": "turn-0000_sample1-028",
     "role": "assistant",
     "text": "能听您这么说，我也很高兴。陪伴和倾听本就是我们应该做的。您随时想聊都可以，我都在这里。",
     "timestamp": "2025-02-18T13:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-001",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-001",
     "role": "user",
     "text": "我最近总想把看医生的过程记下来，自己拿本子写吧，字又乱又看不清，手机语音输入吧，它老听错，可麻烦了。有什么方便一点的办法吗？",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-002",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-002",
     "role": "assistant",
     "text": "听您这么说，您是想找一种既不用费力手写，又能避开语音识别错误的方法，把看病的时间、医生说的话、还有检查结果这些零散信息都规规矩矩地记在一起，方便以后自己看或者给医生看，对吗？",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-003",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-003",
     "role": "user",
     "text": "对对对，就是这个意思！上次用语音记‘早饭后测血糖’，它给我记成‘找后测血糖’，还混着戏曲的词儿，真气人。我就是想找个不这么容易乱套的法子。",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-004",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-004",
     "role": "assistant",
     "text": "我理解您的困扰。其实有个现成又简单的方法，如果您会用微信发语音和拍照的话。您可以建一个只有自己的聊天窗口，每次看完病，就在里面发几条消息。比如拍一下药盒或者检查单的照片，再用语音说几句医生叮嘱了什么。这样所有信息都会按时间顺序自动排好，找起来也方便，不用您手动整理。",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-005",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-005",
     "role": "user",
     "text": "哎，这个法子好！微信我会用，发语音、拍照片都行。这样我不用打字，也不用怕它听错了我还得改，照片和话都在一起，回头翻起来也清楚。这个行，我感觉能坚持下来。",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-006",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-006",
     "role": "assistant",
     "text": "您能接受这个方式太好了。另外，如果您觉得需要更规整的格式，也可以请女儿帮忙，在手机备忘录里专门建一个‘就医记录本’，用大字体分好条，比如‘时间’、‘症状’、‘医生建议’、‘下次复诊时间’，这样每次回来照着填，看起来可能更一目了然。",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-007",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-007",
     "role": "user",
     "text": "这个不行。又要麻烦孩子，她们都忙。再说了，我自己眼睛不好，对着那些条条框框打字多费劲啊，跟填表似的，我肯定弄不来。还是刚才那个微信的法子适合我。",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-008",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-008",
     "role": "assistant",
     "text": "明白了，让您自己操作复杂的模板确实不方便，也容易有压力。还是用您觉得顺手的微信方式更好，能坚持记录才是最重要的。",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-009",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-009",
     "role": "user",
     "text": "对了，还有个事。我每天吃的降糖药和降血脂的药，有时候一忙活就给忘了。还有啊，我这脚麻的毛病，跟我吃的这些药有关系吗？心里老是有点嘀咕。",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-010",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-010",
     "role": "assistant",
     "text": "您这是两个担心。一个是怕忘了吃药，想要个特别简单的法子提醒自己或者记下来，省得老惦记；另一个是担心脚麻这些不舒服是不是吃药引起的，想心里有个底，对吗？我们先说说第一个，关于怎么记吃药的事？",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-011",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-011",
     "role": "user",
     "text": "是，记药这个事挺要紧。之前女儿给我设过手机闹钟，但我不小心就给按掉了，后来也懒得再弄。那些复杂的健康软件我看着就头大。我就想要个特别省事的办法。",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-012",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-012",
     "role": "assistant",
     "text": "嗯，简单省事是关键。那关于您第二个担心，脚麻和视物模糊，您是想了解一下，这些在糖尿病朋友里常见的情况，和您长期吃的药通常有没有直接关系，好知道该更注意观察什么，或者什么时候需要特别告诉医生，是这样吗？",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-013",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-013",
     "role": "user",
     "text": "对对，就是这个意思！我糖尿病年头也不短了，医生也让我多注意脚和眼睛。我就想弄明白，这跟我天天吃的药关系大不大，要不要紧。",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-014",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-014",
     "role": "assistant",
     "text": "我明白您的担忧。关于记录和初步了解症状，有一个方法是：您可以准备一个专门的本子，每天吃完药就在上面打个勾，同时简单写两句身体感觉，比如‘今天午饭后脚有点麻’、‘看东西好像比昨天模糊一点’。这样坚持记录，等到复诊时带给医生看，就能帮医生更全面地了解您这段时间的情况，包括用药和症状的变化。",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-015",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-015",
     "role": "user",
     "text": "啊？又要拿本子写啊？我眼睛不行，写多了累，而且每天都写，感觉像个任务，压力大。之前记血糖我都嫌麻烦，这再加个药和感觉，我怕我坚持不了几天。",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-016",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-016",
     "role": "assistant",
     "text": "您说的对，每天手写记录对视力负担大，也容易变成心理负担。那我们可以简化一下，不用写得很详细。或者，结合刚才聊的，您试试在用微信记录看病信息时，也顺便用语音说一句‘今天药吃了’或者‘今天脚有点麻’，这样是不是更轻松，和记录就诊也合在一起了？",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-017",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-017",
     "role": "user",
     "text": "一开始说的那个本子的法子，我真的不行，太费劲了。不过你后面说的，跟微信记录合在一起，这个思路还行。但你还是没告诉我，脚麻到底跟吃药关系大不大啊？",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-018",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-018",
     "role": "assistant",
     "text": "抱歉，让您觉得麻烦了。关于脚麻和药物的关系，这是一个需要医生根据您具体情况判断的专业问题。我无法给您确定的答案。但可以告诉您的是，下肢麻木和视物模糊都是糖尿病患者需要警惕的信号，可能和病情发展有关。您能主动关注这些症状非常好。最稳妥的做法是，把您对药物的这个担心，以及症状出现的频率、感觉，都记下来（比如用您觉得方便的微信语音），下次复诊时详细咨询主治医生，他才能给您最准确的判断和建议。",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-019",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-019",
     "role": "user",
     "text": "唉，说到这些事就有点闷。我现在眼睛越来越不好，以前最喜欢的缝缝补补的针线活早就不敢碰了，怕扎着手。一天天待着挺没意思的，有没有什么活动，既能让我解解闷，又对我这身体有点好处的？",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-020",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-020",
     "role": "assistant",
     "text": "您是想找一些不用费眼睛、操作简单安全，又能打发时间、让心情好一点的活动，来替代以前的针线活，对吧？",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-021",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-021",
     "role": "user",
     "text": "没错！最好手能有点事做，但又不像做针线那么费眼神。我平时就听听戏，叠叠纸鹤，还想找点别的。",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-022",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-022",
     "role": "assistant",
     "text": "叠纸鹤就很好啊，说明您喜欢手部活动。顺着这个思路，您可以试试一些靠手摸和简单思维的活动。比如，找一些大小、形状不同的光滑石子或者有纹理的贝壳，用手触摸着去分辨、分类；或者用大号的字块、扑克牌玩简单的排序游戏。这些对视力要求很低，主要靠触觉和动脑，也能让手不闲着，应该比对着复杂说明书的活动轻松有趣。",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-023",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-023",
     "role": "user",
     "text": "这个听着有意思！摸摸石头、分分牌，不用怎么看，还能动动手动动脑，像玩游戏似的，不像那些正儿八经的‘康复训练’。这个我可以试试，自己在家就能弄。",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-024",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-024",
     "role": "assistant",
     "text": "您喜欢在家自己活动也很好。另外，如果有时候想换换环境，也可以留意一下社区里有没有适合老年人的‘健康拍拍操’或者‘八段锦’小组。动作都很慢很柔和，和大家一起练练，说说话，既能活动身体，也能热闹一点，排解一下独居的寂寞。",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-025",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-025",
     "role": "user",
     "text": "这个算了算了。我本来就不爱往人堆里扎，跟不熟悉的人一起活动，我觉得不自在。而且叫什么‘健康小组’，感觉又是那种有任务似的，我嫌麻烦。还是自己在家摸摸石头、叠叠纸鹤自在。",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample2",
-    "turn_id": "t-s-0000-0000_sample2-026",
+    "session_id": "0000_sample2",
+    "turn_id": "turn-0000_sample2-026",
     "role": "assistant",
     "text": "好的，完全理解。还是以您自己感觉舒适、没有压力的方式为主最重要。在家做些喜欢的手工和触摸游戏，能放松心情就好。",
     "timestamp": "2025-02-24T14:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-001",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-001",
     "role": "user",
     "text": "下周女儿要带我去检查脚，我想趁这个机会，和她们一起商量个办法，让日常管理能长期坚持下去。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-002",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-002",
     "role": "assistant",
     "text": "阿姨，听您这么说，您是希望把健康管理变成一个能和女儿们一起参与、不那么费劲，还能让家人多关心您的事，对吧？这样既有人监督鼓励，您心里也踏实。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-003",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-003",
     "role": "user",
     "text": "对对对，就是这个意思。我一个人有时候坚持不下来，手机提醒也弄不明白。就想借着她们来看我、带我去检查的机会，把这事儿变成我们娘仨的一个小约定，简单点，别太麻烦。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-004",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-004",
     "role": "assistant",
     "text": "您看这样行不行？下周检查完，就可以和女儿们约定好，以后她们每周来看您的时候，除了聊天，再加一个“温馨查脚”的环节。您坐着，让她们帮您看看脚底和脚趾缝有没有小伤口、颜色对不对，您呢，就顺便跟她们聊聊这一周脚有没有麻、有没有不舒服。这样就把专业检查延伸成家里的关心了，不用您自己操作手机，女儿们也参与了。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-005",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-005",
     "role": "user",
     "text": "这个法子好！又简单又暖心。就是我想的那种，把看病的事儿变成家里的家常，她们也容易记住，我也不用费劲去弄什么提醒。就这么定了，我下周就跟她们说。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-006",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-006",
     "role": "assistant",
     "text": "阿姨您能接受真是太好了。为了让您平时也能感受到女儿的关心，还有个办法：可以请女儿录一段鼓励的话，比如“妈，记得活动活动脚哦”，然后设定在您平时该活动的时间自动播放，这样提醒就有了家人的温度。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-007",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-007",
     "role": "user",
     "text": "自动播放？这个……怎么设定啊？我之前让小女儿帮我设过手机吃药提醒，她设好了，可我有时候不小心就按掉了，或者手机没声了，搞得我更烦。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-008",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-008",
     "role": "assistant",
     "text": "您说得对，这个确实需要先在手机上设置好定时播放，可能对您来说操作上有点复杂，万一没设置好或者误关了，反而会打断。看来咱们得找更简单直接、不用依赖复杂手机功能的方法。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-009",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-009",
     "role": "user",
     "text": "算了算了，这个不行。我弄不来这些，别再给我添乱了。我就想要那种不用动手机、自然而然就能得到反馈的办法。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-010",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-010",
     "role": "assistant",
     "text": "明白您的顾虑了。那咱们换个思路，利用您已经会用微信发语音这个习惯。可以建个家庭小群，您每天吃完晚饭或者活动完，就用语音说一句“今天脚感觉还行”或者“活动做完了”，女儿们看到了就回您一个点赞或者加油的表情。这样算是一种轻量的日常互动和鼓励，您看呢？",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-011",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-011",
     "role": "user",
     "text": "哎呀，这个感觉又成每天的任务了。脚感觉怎么样，有时候也没啥特别要说的，非得每天汇报一句，压力就来了。而且万一她们忙忘了回，我心里还惦记。我不想把这点小事也变成必须打卡的“作业”。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-012",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-012",
     "role": "assistant",
     "text": "抱歉，阿姨，是我没考虑周全。您说得对，把日常感受变成每日打卡，确实容易增加心理负担，失去原本轻松的意义。那我们还是回到最初那个“每周探望时温馨查脚”的约定吧，那个更自然，也符合您和女儿的互动节奏。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-013",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-013",
     "role": "user",
     "text": "对了，脚的事有办法了。还有个事想问问你。我想调整下晚饭，少吃点米饭馒头这类主食，但又怕吃不饱，或者做出来的菜没滋没味的。有没有什么适合我们这种老糖友、做起来又简单的家常办法？",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-014",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-014",
     "role": "assistant",
     "text": "阿姨，您是想找一些具体、好操作的家常菜来替换部分主食，而不是听大道理，对吧？最好是用家里常有的东西，步骤别太复杂，味道还得合口。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-015",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-015",
     "role": "user",
     "text": "没错！大道理我都懂，就是不知道该怎么做。我女儿之前给我发过几个食谱链接，我试着做过那个凉拌魔芋丝，感觉还行，但光一个菜也不够啊。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-016",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-016",
     "role": "assistant",
     "text": "嗯，除了具体做法，您是不是也希望这种调整能顺其自然地变成习惯，并且能大概感觉到它带来的好处，比如饭后没那么撑了，或者第二天精神好一点？这样您才更有信心坚持下去。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-017",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-017",
     "role": "user",
     "text": "是这么个理儿！我得知道这么费劲调了有没有用。我现在偶尔会用手机录一下晚饭吃了啥、餐后血糖怎么样，但也不知道怎么跟换菜联系起来看。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-018",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-018",
     "role": "assistant",
     "text": "那我们可以从您觉得还行的“凉拌”思路扩展。比如，把魔芋丝或者提前泡软的木耳丝，跟黄瓜丝、胡萝卜丝（可以焯一下水）拌在一起，放点蒜末、醋、一点点生抽和香油，做成一道爽口的凉菜。吃饭的时候，先吃这一大盘“主食菜”，然后再吃其他的菜和少量的米饭，这样既容易饱，口味也清爽。您之前记录餐食和血糖的习惯正好能用上，可以特别留意一下，这么吃的那天，饭后两小时血糖和饱腹感是不是更理想一些。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-019",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-019",
     "role": "user",
     "text": "这个听着挺靠谱，都是家里常有的东西，拌一拌就行。先吃这个凉菜，也是个好主意，能占点肚子。那我试试看，用语音记的时候就多说一句“今天先吃了凉拌菜”。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-020",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-020",
     "role": "assistant",
     "text": "对，您可以在语音记录里特意提一下这个变化。这样过一段时间回听，就能对比出规律。比如，是不是先吃了这类富含膳食纤维的凉菜后，整体的主食量自然就减少了，而且餐后感觉更轻松。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-021",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-021",
     "role": "user",
     "text": "嗯，这个办法好，具体、简单，还能跟我原来的记录接上。我今晚就去买点魔芋丝和木耳试试。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-022",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-022",
     "role": "assistant",
     "text": "太好了。另外，像南瓜、紫薯蒸熟了也可以当主食。您还可以试试把它们压成泥，和一点全麦面粉和在一起，做成小饼煎一下，口感软糯带点甜，也是个不错的主食替换选择。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-023",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-023",
     "role": "user",
     "text": "还要压成泥、和面、再煎？这听着就有点麻烦了。全麦面粉我也得特意去买。我就想图个省事，蒸个南瓜直接吃就挺好，搞这么复杂，做两次我就不想弄了。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-024",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-024",
     "role": "assistant",
     "text": "您提醒得对。对于咱们日常居家做饭来说，步骤越简单越好坚持。蒸熟了直接吃，或者切块和米饭一起蒸，都是更省心的方法。全麦面粉如果家里不常备，确实没必要特意添置。咱们的核心是找到顺手就能做的替换，而不是增加烹饪负担。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-025",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-025",
     "role": "user",
     "text": "就是嘛，我就想要那种“顺手”就能做的。你后来这个摊饼的建议，不太适合我。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-026",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-026",
     "role": "assistant",
     "text": "好的阿姨，是我考虑不周。那咱们就重点实践“先吃凉拌菜”和“蒸薯类直接替代部分米饭”这些更简便的方法。您先试试看，有什么感受随时可以跟我说。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-027",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-027",
     "role": "user",
     "text": "嗯，吃的我心里有谱了。再问你个事啊，我平时在家就爱听听戏，或者叠叠纸鹤，一坐就老半天。怎么能把这些闲工夫，和活动活动腿脚、缓解疲劳结合起来呢？我不想专门再抽时间做操，太像任务了。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-028",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-028",
     "role": "assistant",
     "text": "阿姨，我理解您的意思。您是希望在做这些喜欢的事情时，能顺便、不费力地就把对身体有益的小动作给做了，让它成为听戏、叠纸鹤的一部分，而不是额外增加一件事，对吧？",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-029",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-029",
     "role": "user",
     "text": "对对对，就是这个意思！最好是听着戏、手里叠着纸鹤，不知不觉就把活动做了，这样才容易长久。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-030",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-030",
     "role": "assistant",
     "text": "那您看这样行不行？比如，您每叠完一只纸鹤，就起身去给窗台上的花浇点水，或者慢慢走到客厅门口再走回来，利用这个自然的停顿完成一次短距离的走动，活动一下久坐的身体。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-031",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-031",
     "role": "user",
     "text": "每叠一只就起来走一趟？我这下午本来就容易乏，眼睛看东西也模糊，这么频繁地起来坐下、走来走去，头都晕了。而且正叠得入神呢，老是打断，感觉就不好了。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-032",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-032",
     "role": "assistant",
     "text": "您考虑得周全，频繁起身走动对您目前的身体状况来说，可能确实不太方便，也破坏了休闲的连贯性。那咱们得找那种不需要大幅移动、坐着或稍微动动手脚就能完成的活动。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-033",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-033",
     "role": "user",
     "text": "是啊，这个办法太折腾了，不行不行。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-034",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-034",
     "role": "assistant",
     "text": "那咱们换个更静态一点的。您可以设定一个小目标，比如每叠完三只纸鹤，就暂停一下，双手向上伸个大大的懒腰，深吸一口气，再慢慢呼气把手放下。这样也能缓解一下久坐的疲惫。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-035",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-035",
     "role": "user",
     "text": "还要数着“叠完三只”？这不又成任务了吗？我叠纸鹤就是想放松，还得记着数到没到三，心里就总惦记着这个事，反而累得慌。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-036",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-036",
     "role": "assistant",
     "text": "您说得对，额外的计数会增加心理负担。那不如完全跟着您喜欢的戏曲节奏来。您选几段特别熟悉、旋律舒缓的唱段，在听的时候，就随着那戏曲的拍子，用手轻轻拍打自己的大腿两侧，可以从大腿慢慢拍到小腿。这样既活动了手臂，又通过拍打促进了腿脚的血液循环，对您说的下肢偶尔发麻也有好处，而且完全不用心里记数，听着戏自然而然就做了。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-037",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-037",
     "role": "user",
     "text": "这个听着有点意思。拍腿？就跟着戏的拍子来？不用站起来，也不用数数？",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-038",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-038",
     "role": "assistant",
     "text": "对，完全不用站起来，坐着就能做。也不用刻意数拍子，就是听着您熟悉的旋律，感觉那个节奏，手跟着节奏轻轻拍打就行。力度以自己感觉舒服为准，从大腿外侧慢慢拍到小腿，来回几次。这样既不打断您听戏，又能活动到，特别安全。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-039",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-039",
     "role": "user",
     "text": "这个好！这个好！又简单又安全，还跟我爱听戏绑在一块儿了。我下午听《贵妃醉酒》的时候就可以试试。这才是我想要的，不添乱、顺带着就把事办了。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample3",
-    "turn_id": "t-s-0000-0000_sample3-040",
+    "session_id": "0000_sample3",
+    "turn_id": "turn-0000_sample3-040",
     "role": "assistant",
     "text": "太好了，阿姨您能喜欢这个办法我真高兴。就是希望这些小小的调整，能像春雨一样，慢慢融入您的生活里，让您感觉更轻松、更舒服。您先试试看，有任何感觉或问题，随时找我聊。",
     "timestamp": "2025-02-28T12:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-001",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-001",
     "role": "user",
     "text": "唉，我最近补充血糖试纸有点手忙脚乱，总怕忘了买。你们能帮忙提醒我这类东西什么时候该买吗？",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-002",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-002",
     "role": "assistant",
     "text": "李阿姨，听您这么说，您是希望能有个更主动、更省心的提醒，提前告诉您试纸快用完了，好让您能提前准备，别像上次那样临到监测了才发现不够，对吧？",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-003",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-003",
     "role": "user",
     "text": "对对，就是这个意思。我老是快用完了才想起来，一着急就容易忘事。最好能跟我每天吃药那个事儿放一块儿提醒，不然东一个西一个的，更乱。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-004",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-004",
     "role": "assistant",
     "text": "明白了，您不光想要提醒，还希望提醒之后补货的步骤也简单点，最好别太麻烦，能直接买到或者联系上，这样您心里就不慌了，也省得临时到处找办法，是吗？",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-005",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-005",
     "role": "user",
     "text": "是呀是呀！上次我用买菜那个软件买的试纸，倒是挺方便。我就想，要是提醒和买能连起来，或者告诉我该找谁，那就最好了。我女儿们忙，我也不想总麻烦她们弄手机，她们设的闹钟我都给按错过。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-006",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-006",
     "role": "assistant",
     "text": "嗯，理解您不想总麻烦孩子。那您看这样行不行？下次女儿来看您的时候，可以请她帮个忙，把买试纸的提醒设置在您手机里最常用的那个闹钟App里，就放在您吃药闹钟的旁边。这样每天吃药闹钟响的时候，买试纸的提醒也跟着一起响，您就可以一起处理了。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-007",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-007",
     "role": "user",
     "text": "哎呀，这个办法不好！上次我小女儿就是给我手机里设了一堆提醒，又是吃药又是这个那个的，界面花里胡哨的，我一不小心就点错了，全给关掉了。我对这些App真是搞不明白，越弄越心烦。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-008",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-008",
     "role": "assistant",
     "text": "好的好的，我明白您的顾虑了，用不惯手机App确实容易着急。那我们换个更简单的法子。您可以准备一个专门放试纸的小盒子，比如饼干盒、茶叶罐都行。在盒子外面贴一张显眼的纸条，写上‘剩半盒时联系社区卫生站’。这样，您每次打开盒子拿试纸的时候，都能看到这个提示，简单又直接。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-009",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-009",
     "role": "user",
     "text": "哎，这个法子听起来靠谱！贴个纸条，看得见摸得着，我一开盒子就能想起来。而且联系社区我也熟，上次去量血压还问过他们呢。这个好，不用碰手机。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-010",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-010",
     "role": "assistant",
     "text": "您能接受这个办法太好了！另外，既然您提到用生鲜平台买试纸很方便，其实还有个更省事的办法。您可以在那个平台上试试‘周期购’功能，选好您常用的试纸品牌型号，设定好送货间隔，比如一个月一次。这样到了时间它自动就给您送上门了，连‘联系社区’这一步都省了，完全不用您惦记。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-011",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-011",
     "role": "user",
     "text": "自动送上门？这个好！这个太好了！我上次买就是自己点的，要是能自动送，那我可真是一点心都不用操了。这个‘周期购’听起来就适合我，回头我就在那个买菜软件里找找看。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-012",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-012",
     "role": "assistant",
     "text": "太好了，李阿姨！您觉得这个‘周期购’方便就好。希望这样能让您管理试纸更轻松，不用再为临时短缺着急了。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-1"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-013",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-013",
     "role": "user",
     "text": "对了，说到买药买试纸，我还有个事儿想问问。我听老姐妹们聊天，说有些慢性病买药有补贴或者更方便的办法，不用老跑医院。像我这种情况，有糖尿病，血脂也高，该怎么弄呢？",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-014",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-014",
     "role": "assistant",
     "text": "李阿姨，您是想了解一下，像您这样需要长期吃降糖药、降脂药的情况，有没有什么医保的优惠政策，或者社区里有没有更便捷的拿药途径，好减轻一些负担，也省点事儿，对吗？",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-015",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-015",
     "role": "user",
     "text": "对对，就是这个意思。年纪大了，总往医院跑也累，能省点钱、省点事当然好。我听说社区好像能帮忙，但具体怎么弄不清楚。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-016",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-016",
     "role": "assistant",
     "text": "嗯，我理解。那您是不是希望了解的办法，步骤最好简单点，说得清楚明白，最好就像您用生鲜软件买东西那样，照着做就行，别太复杂，免得学不会或者操作起来麻烦？",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-017",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-017",
     "role": "user",
     "text": "太对了！我手机就会打个电话、发个语音，那些太复杂的我可弄不来。你就告诉我最简单、最直接的办法就行。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-018",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-018",
     "role": "assistant",
     "text": "好的，李阿姨。那您可以先把您常吃的药，像二甲双胍、他汀这些药的全名记下来。然后等女儿下次来看您的时候，请她帮忙在您手机上下载一个本地的政务服务App，比如‘随申办’或者‘粤省事’，在里面搜索‘慢病特药’或者‘长处方’这些关键词，看看有什么政策和办理流程。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-019",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-019",
     "role": "user",
     "text": "这不行，这太麻烦了！药名那么长我哪记得住？还得让闺女下新的App，还要搜什么关键词……我一听头就大了。上次弄个提醒都那么费劲，这个肯定更搞不定。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-020",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-020",
     "role": "assistant",
     "text": "您别急，李阿姨。那我们不想那么复杂的。您不是常去社区卫生站测血压吗？下次去的时候，直接把您的医保卡和平时吃的药盒带上，见到工作人员就问一句：‘医生/同志，您看我这个糖尿病、高血脂的药，咱们社区有没有方便点的拿药办法，或者能报销一些的政策呀？’这样当面问，最清楚不过了。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-021",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-021",
     "role": "user",
     "text": "哦！这个办法好！带卡带药盒，直接问，这个我会。我本来就常去那儿，问起来也方便。对对，我上次去还拿了个他们服务的单子呢，正好可以问问这个。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-022",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-022",
     "role": "assistant",
     "text": "您觉得当面问方便就好。另外，也可以让女儿帮忙，用您的微信关注一下咱们本地医保的公众号，里面经常会发一些关于‘慢病购药’怎么办理的文章，让女儿找到后读给您听，或者把重要的内容截图发给您看看。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-023",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-023",
     "role": "user",
     "text": "哎呀，这个又绕回去了。关注公众号、找文章、再读给我听……这一圈下来多麻烦我闺女，我也记不住那么多。还是直接去社区问最省心，问不明白我还能多问两遍。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-024",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-024",
     "role": "assistant",
     "text": "好的李阿姨，明白您的意思了。直接去社区咨询确实是最直接、最适合您的方式。如果后续在社区了解政策时还有什么不清楚的，您随时可以再问我。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-2"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-025",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-025",
     "role": "user",
     "text": "唉，说到吃药，我最近吃完药总觉得有点没力气，不知道跟吃药有没有关系？另外，我这记性也不如从前了，有时候怕忘了吃，你们有没有什么好办法让我记得更牢？",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-026",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-026",
     "role": "assistant",
     "text": "李阿姨，您一个人住，怕忘了吃药，是希望有个特别简单、一看就懂、一学就会的办法来提醒自己按时吃药，而且这个办法最好别用手机，免得像上次设闹钟那样容易出错，对吗？",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-027",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-027",
     "role": "user",
     "text": "对对，就是这个意思！简单点，最好别用手机。我下午容易犯困，万一忘了就麻烦了。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-028",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-028",
     "role": "assistant",
     "text": "嗯，记药的事我们待会儿说。您先说说，除了没力气，还有没有别的感觉？比如您之前提过的腿麻，是偶尔还是经常？您是不是有点担心这些不舒服，会不会和吃的药有关，想知道什么时候该特别注意、该去问问医生？",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-029",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-029",
     "role": "user",
     "text": "是有点担心。腿麻晚上有时候有，乏力下午明显点。我就琢磨，是不是吃这些药引起的？但又说不准，怕是自己瞎想，又怕真有问题给耽误了。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-030",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-030",
     "role": "assistant",
     "text": "李阿姨，您有这些顾虑很正常。乏力、腿麻的原因确实比较多。一个办法是，您下次再感觉特别乏力的时候，可以顺便测一下当时的血糖，然后把测出来的血糖值和‘感觉乏力’这个情况简单记在一张小纸片上。等下次复诊的时候，把这些记录一起拿给医生看，帮助医生判断。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-031",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-031",
     "role": "user",
     "text": "啊？还要专门记下来啊？我一没力气就更不想动了，还得找笔找纸，测血糖，再写下来……这太麻烦了，我肯定坚持不了几天。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-032",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-032",
     "role": "assistant",
     "text": "我理解，增加额外的记录任务确实会让人觉得有负担。那这样，我们不要求您每次都详细记录。您就留意一下，如果这种乏力感或者腿麻变得很频繁、很明显，或者出现了新的不舒服，比如心慌、看东西更模糊，这些就是比较重要的‘信号’，那时候就一定要记着去告诉医生了，好吗？",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-033",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-033",
     "role": "user",
     "text": "嗯，你这么说我就明白了。就是感觉特别不对劲了，就赶紧去看医生。平时偶尔有点乏，我先观察观察，不自己瞎记了，太麻烦。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-034",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-034",
     "role": "assistant",
     "text": "好的。那我们回到怎么记牢吃药的事。给您想个特别简单的法子：您去买一本老式的台历，就放在餐桌上。每天吃完早上的药和晚上的药之后，就在当天的日期上打个勾。吃饭的时候一眼就能看到，打了勾就是吃了，没打勾就是还没吃，一目了然。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-035",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-035",
     "role": "user",
     "text": "这个法子好！就在日历上打个勾，简单！我每天在餐桌吃饭，肯定能看到。这个比什么都强，我回头就买本日历去。",
     "timestamp": "2025-03-10T21:00:00+00:00",
     "chunk_id": "w-3"
   },
   {
-    "session_id": "s-0000-0000_sample4",
-    "turn_id": "t-s-0000-0000_sample4-036",
+    "session_id": "0000_sample4",
+    "turn_id": "turn-0000_sample4-036",
     "role": "assistant",
     "text": "太好了，李阿姨！希望这个打勾的小方法能让您吃药更安心。身体如果出现明显的新变化或不适，一定记得及时咨询医生。祝您一切顺利！",
     "timestamp": "2025-03-10T21:00:00+00:00",
