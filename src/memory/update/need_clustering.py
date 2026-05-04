@@ -1,5 +1,4 @@
-"""Mem-PAL-style clustering for the top-layer ``need_preferences`` memory.
-
+"""
 Implements two operations:
 
 - :meth:`NeedClusterer.initialize` — bootstrap: embed inferred needs only ,

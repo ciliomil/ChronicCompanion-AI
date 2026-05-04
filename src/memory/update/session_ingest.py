@@ -20,12 +20,15 @@ module drives the whole memory pipeline:
    to :class:`NeedSolutionStore`.
 6. Once the session is fully written, call
    :func:`update_profile_from_mid_memory` with a :class:`FixedClock` anchored
-   at the session's ``dialogue_timestamp``. Need clustering (on ``inferred_need``)
-   is driven mainly by **this session's** freshly extracted :class:`NeedItem`
-   rows (each without ``cluster_id`` yet); if ``force_recluster=True``, **all**
-   persisted need rows are passed so :meth:`NeedClusterer.initialize` can rebuild
-   globally. Persist the new profile and write back ``cluster_id`` onto each
-   affected item via :meth:`NeedSolutionStore.update_item`.
+   at the session's ``dialogue_timestamp``. Inside that call: ``recent_status``
+   is summarised, then need preference clustering runs (driven mainly by **this
+   session's** freshly extracted :class:`NeedItem` rows when incremental; if
+   ``force_recluster=True``, **all** persisted need rows are passed so
+   :meth:`NeedClusterer.initialize` can rebuild globally). **basic_info** is
+   updated last from the previous profile plus **this session's** events and
+   need items (``session_events`` / ``session_need_items``). Persist the new
+   profile and write back ``cluster_id`` onto each affected item via
+   :meth:`NeedSolutionStore.update_item`.
 
 The orchestrator returns a small ``IngestReport`` summary (window/event/item
 counts and the final cluster sizes) that callers can log or aggregate.
@@ -469,6 +472,8 @@ def ingest_session(
             window_days=window_days,
             min_items_to_cluster=min_items_to_cluster,
             force_recluster=force_recluster,
+            session_events=session_event_dicts,
+            session_need_items=new_need_dicts,
         )
         profile_store.save(profile)
         for item_id, cluster_id in mapping.items():

@@ -9,12 +9,12 @@ Usage::
 
     PYTHONPATH=. python -m src.runner.run_history_ingest \
         --dataset ./data/ChronicCompanion-set/dialogue/history/input.json \
-        --data-dir ./tmp/mem-test0503 \
+        --data-dir ./tmp/mem-test0504 \
         --use-gold-topics \
         --max-samples-per-user 5 \
         --user 0000 \
         --debug \
-        2>ingest-debug4.log
+        2>ingest-debug5.log
 
 
 Append ``--debug`` to mirror flattening tables, segmentation JSON, extractor

@@ -42,15 +42,8 @@ _logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 # Free-form need phrase shaping
 # ---------------------------------------------------------------------------
-# Filled in :func:`src.memory.update.session_ingest.ingest_session` as
-# "{session_id}-need-{n}" before persisting. Used as a placeholder beforehand.
+
 _NEED_ITEM_ID_PLACEHOLDER = "need-pending-ingest"
-#
-# The LLM is now allowed to return arbitrary short Chinese phrases for
-# ``inferred_need`` / ``primary_need``. We still want to keep them roughly the
-# same shape as the prompt asks for: a 4–12-character phrase, no whitespace,
-# no quote noise. The constants below cap the length and provide a sensible
-# default when the model returns nothing usable.
 
 _DEFAULT_NEED = "日常陪伴"
 _MAX_NEED_LEN = 24

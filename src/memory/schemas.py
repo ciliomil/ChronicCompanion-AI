@@ -10,7 +10,6 @@ from typing import Any
 def utc_now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
 
-
 @dataclass
 class RawTurn:
     session_id: str
@@ -83,12 +82,82 @@ class NeedItem:
 # ---------------------------------------------------------------------------
 # Top-layer profile schemas
 # ---------------------------------------------------------------------------
+
+BASIC_INFO_CATEGORIES: tuple[str, ...] = (
+    "medical_care",
+    "family",
+    "health",
+    "leisure",
+)
+
+BASIC_INFO_CLAIM_TYPES: tuple[str, ...] = (
+    "stable_fact",          # 明确长期事实：用户有糖尿病、与老伴同住
+    "recurring_pattern",    # 反复出现的模式：常忘记测糖、经常饭后散步
+    "long_term_constraint", # 长期约束：膝盖不好、不便出远门
+    "long_term_preference", # 现实生活偏好：不爱吃甜食、喜欢下棋
+    "care_context",         # 照护背景：女儿常提醒饮食、老伴负责陪诊
+)
+
+BASIC_INFO_STATUS: tuple[str, ...] = (
+    "active",
+    "uncertain",
+    "superseded",
+)
+
+@dataclass
+class BasicInfoClaim:
+    """One evidence-backed long-term background claim.
+    claim_id:
+        Existing claims keep their id. New claims can be assigned during ingest.
+
+    category:
+        One of BASIC_INFO_CATEGORIES.
+
+    claim_type:
+        One of BASIC_INFO_CLAIM_TYPES.
+
+    content:
+        A concise Chinese sentence describing a long-term user background fact,
+        pattern, constraint, preference, or care context.
+
+    source_event_ids / source_need_item_ids / source_turn_ids:
+        Evidence chain. At least one should be non-empty for active/uncertain claims.
+
+    first_seen / last_seen:
+        ISO timestamps or session timestamps. Useful for aging and conflict handling.
+
+    status:
+        active: currently valid.
+        uncertain: plausible but weak evidence.
+        superseded: contradicted or replaced by newer evidence; kept for traceability.
+    """
+
+    claim_id: str
+    category: str
+    claim_type: str
+    content: str
+
+    source_event_ids: list[str] = field(default_factory=list)
+    source_need_item_ids: list[str] = field(default_factory=list)
+    source_turn_ids: list[str] = field(default_factory=list)
+
+    first_seen: str = ""
+    last_seen: str = ""
+    confidence: float | None = None
+
+    status: str = "active"
+    supersedes: list[str] = field(default_factory=list)
+
+    updated_at: str = field(default_factory=utc_now_iso)
+
+    def to_dict(self) -> dict[str, Any]:
+        return asdict(self)
+
 @dataclass
 class BasicInfoSection:
     """Long-term background section with evidence-backed claims."""
     summary: str = ""
     claims: list[dict[str, Any]] = field(default_factory=list)
-
     # Claim ids used to produce the current summary.
     summary_source_claim_ids: list[str] = field(default_factory=list)
 
@@ -99,7 +168,7 @@ class BasicInfoSection:
 
 def _empty_basic_info() -> dict[str, Any]:
     return {
-        "work": BasicInfoSection().to_dict(),
+        "medical_care": BasicInfoSection().to_dict(),
         "family": BasicInfoSection().to_dict(),
         "health": BasicInfoSection().to_dict(),
         "leisure": BasicInfoSection().to_dict(),

@@ -98,6 +98,7 @@ NEED_SOLUTION_EXTRACT_SYSTEM: str = load_prompt(
 )
 
 RECENT_STATUS_SUMMARIZE_SYSTEM: str = load_prompt("memory/recent_status_summarize/system")
+BASIC_INFO_UPDATE_SYSTEM: str = load_prompt("memory/basic_info_update/system")
 NEED_CLUSTER_LABEL_SYSTEM: str = load_prompt("memory/need_cluster_label/system")
 NEED_CLUSTER_REFINE_SYSTEM: str = load_prompt("memory/need_cluster_refine/system")
 TOPIC_SEGMENT_SYSTEM: str = load_prompt("memory/topic_segment/system")
@@ -241,6 +242,20 @@ def build_need_solution_extract_prompt(
         session_events=render_event_lines(session_events or []),
     )
 
+
+
+def build_basic_info_update_prompt(
+    *,
+    old_basic_info: dict[str, Any],
+    session_events: list[dict[str, Any]],
+    session_need_items: list[dict[str, Any]],
+) -> str:
+    return load_prompt(
+        "memory/basic_info_update/user",
+        old_basic_info=json.dumps(old_basic_info, ensure_ascii=False),
+        session_events=json.dumps(session_events, ensure_ascii=False),
+        session_need_items=json.dumps(session_need_items, ensure_ascii=False),
+    )
 
 
 def build_recent_status_summarize_prompt(

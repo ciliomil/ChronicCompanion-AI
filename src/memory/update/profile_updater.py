@@ -1,6 +1,6 @@
 """Periodic profile updater from mid-layer memory.
 
-Two periodic updates are implemented:
+Three periodic updates are implemented:
 
 1. **Recent status summary** — LLM-driven summary over events within a
    sliding ``window_days`` window. Events are split into health, self-management,
@@ -10,6 +10,9 @@ Two periodic updates are implemented:
    incrementally assigned & refined; clusters are bootstrapped from scratch
    via :meth:`NeedClusterer.initialize` when none exist yet (or when the
    caller forces a re-cluster).
+3. **Basic info (long-term background)** — Last: when the caller passes this
+   session's event and need rows, an LLM merges them into evidence-backed
+   ``basic_info`` claims (see :mod:`src.memory.update.basic_info_updater`).
 
 The orchestrator returns ``(updated_profile, item_id_to_cluster_id)``. The
 caller is responsible for persisting ``cluster_id`` back onto each
@@ -31,6 +34,7 @@ from src.memory.schemas import (
     UserProfile,
     _empty_recent_status,
 )
+from src.memory.update.basic_info_updater import normalize_basic_info, update_basic_info
 from src.memory.update.need_clustering import NeedClusterer
 from src.memory.update.prompts import (
     RECENT_STATUS_SUMMARIZE_SYSTEM,
@@ -343,6 +347,8 @@ def update_profile_from_mid_memory(
     window_days: int = 14,
     min_items_to_cluster: int = 5,
     force_recluster: bool = False,
+    session_events: list[dict[str, Any]] | None = None,
+    session_need_items: list[dict[str, Any]] | None = None,
 ) -> tuple[UserProfile, dict[str, str]]:
     """Periodic top-layer update.
     Returns:
@@ -356,6 +362,12 @@ def update_profile_from_mid_memory(
           :meth:`NeedClusterer.initialize`.
         - Otherwise only items without a ``cluster_id`` are incrementally
           assigned and used to refine the affected clusters.
+        - **basic_info** (after recent status and need clustering): when
+          ``session_events`` and/or ``session_need_items`` are not ``None``
+          (ingest passes this session's extracted rows), they are passed to
+          :func:`update_basic_info`; a missing side is treated as ``[]``. The
+          LLM runs only if at least one row is present. When both are ``None``,
+          ``basic_info`` is only normalised, not LLM-updated.
     """
 
     llm = llm_client or get_default_llm_client()
@@ -388,8 +400,25 @@ def update_profile_from_mid_memory(
         unassigned = [it for it in need_solution_items if not it.get("cluster_id")]
         clusters, mapping = clusterer.assign_and_refine(existing_clusters, unassigned)
 
+    bio_in = profile_dict.get("basic_info")
+    if session_events is not None or session_need_items is not None:
+        ev_rows = session_events or []
+        need_rows = session_need_items or []
+        if ev_rows or need_rows:
+            basic_info = update_basic_info(
+                bio_in,
+                ev_rows,
+                need_rows,
+                llm_client=llm,
+                clock=clk,
+            )
+        else:
+            basic_info = normalize_basic_info(bio_in, clock=clk)
+    else:
+        basic_info = normalize_basic_info(bio_in, clock=clk)
+
     profile = UserProfile(
-        basic_info=profile_dict.get("basic_info", {}) or {},
+        basic_info=basic_info,
         recent_status=recent_status,
         need_preferences=[c.to_dict() for c in clusters],
         updated_at=clk.now_iso(),
