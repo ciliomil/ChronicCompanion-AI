@@ -23,7 +23,7 @@ import uuid
 from typing import Any
 
 from src.llm.llm import LLMClient, get_default_llm_client
-from src.memory.schemas import BASIC_INFO_CLAIM_TYPES, BASIC_INFO_STATUS
+from src.memory.ontology import BASIC_INFO_CLAIM_TYPES, BASIC_INFO_STATUS
 from src.memory.update.prompts import (
     BASIC_INFO_UPDATE_SYSTEM,
     build_basic_info_update_prompt,

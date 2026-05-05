@@ -17,5 +17,5 @@ EXAMPLE INPUT:
 新样本：
 - 需求："吃水果担心血糖" / 偏好："想知道哪些水果相对安全、每次大概吃几块"
 
-EXAMPLE OUTPUT:
+EXAMPLE JSON OUTPUT:
 {"need_type":"控糖饮食建议","preference_principle":"偏好家常、低糖、量化清晰、与现有饮食习惯衔接的可执行方案"}

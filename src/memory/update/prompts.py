@@ -25,52 +25,15 @@ import json
 from typing import Any, Iterable
 
 from src.llm.prompt_loader import load_prompt
+from src.memory.ontology import MEMORY_TAGS, NEED_DOMAINS
 
 # ---------------------------------------------------------------------------
 # Controlled vocabularies (rule-fallback only for needs)
 # ---------------------------------------------------------------------------
 
-NEED_TAXONOMY: tuple[str, ...] = (
-    "diet_support",
-    "activity_support",
-    "sleep_support",
-    "medication_support",
-    "emotional_support",
-    "knowledge_explanation",
-    "general_companionship",
-)
+NEED_TAXONOMY: tuple[str, ...] = tuple(NEED_DOMAINS.keys())
+EVENT_TAGS: tuple[str, ...] = MEMORY_TAGS
 
-EVENT_TYPES: tuple[str, ...] = (
-    "health_medical",
-    "self_management",
-    "family_social",
-    "mental_emotional",
-    "interest_activity",
-    "daily_life",
-    "other",
-)
-
-EVENT_TAGS: tuple[str, ...] = (
-    "glucose",
-    "medication",
-    "medical_visit",
-    "symptom",
-    "complication",
-    "diet",
-    "sleep",
-    "activity",
-    "monitoring",
-    "adherence",
-    "family",
-    "caregiver",
-    "living_alone",
-    "social",
-    "emotion",
-    "stress",
-    "hobby",
-    "safety_risk",
-    "other",
-)
 
 def _vocab_str(values: tuple[str, ...]) -> str:
     return ", ".join(values)
@@ -82,25 +45,15 @@ def _vocab_str(values: tuple[str, ...]) -> str:
 
 EVENT_EXTRACT_SYSTEM: str = load_prompt(
     "memory/event_extract/system",
-    event_types=_vocab_str(EVENT_TYPES),
     event_tags=_vocab_str(EVENT_TAGS),
 )
 
 # need_infer no longer takes a controlled need taxonomy.
 NEED_INFER_SYSTEM: str = load_prompt("memory/need_infer/system")
-
-# need extract: inferred_need free-form; tags controlled. items[] ≈ NeedItem:
-# inferred_need, related_tags, context, context_event_ids, solutions[] rows
-# (ai_solution_summary, feedback_turn_ids, quality_score, preference, confidence).
-NEED_SOLUTION_EXTRACT_SYSTEM: str = load_prompt(
-    "memory/need_solution_extract/system",
-    event_tags=_vocab_str(EVENT_TAGS),
-)
-
+NEED_SOLUTION_EXTRACT_SYSTEM: str = load_prompt("memory/need_solution_extract/system")
 RECENT_STATUS_SUMMARIZE_SYSTEM: str = load_prompt("memory/recent_status_summarize/system")
 BASIC_INFO_UPDATE_SYSTEM: str = load_prompt("memory/basic_info_update/system")
-NEED_CLUSTER_LABEL_SYSTEM: str = load_prompt("memory/need_cluster_label/system")
-NEED_CLUSTER_REFINE_SYSTEM: str = load_prompt("memory/need_cluster_refine/system")
+PREFERENCE_PRINCIPLE_UPDATE_SYSTEM: str = load_prompt("memory/preference_principle_update/system")
 TOPIC_SEGMENT_SYSTEM: str = load_prompt("memory/topic_segment/system")
 
 
@@ -146,10 +99,6 @@ def _event_tags(ev: dict[str, Any]) -> set[str]:
     return {str(t).strip() for t in raw if str(t).strip()}
 
 
-def _event_type(ev: dict[str, Any]) -> str:
-    return str(ev.get("event_type", "")).strip()
-
-
 def split_events_by_bucket(
     events: Iterable[dict[str, Any]],
 ) -> tuple[
@@ -185,17 +134,15 @@ def split_events_by_bucket(
         if not isinstance(ev, dict):
             continue
         tags = _event_tags(ev)
-        et = _event_type(ev)
-
-        if et == "health_medical" or (tags & health_tags):
+        if tags & health_tags:
             health_events.append(ev)
-        if et == "self_management" or (tags & self_tags):
+        if tags & self_tags:
             self_management_events.append(ev)
-        if et == "mental_emotional" or (tags & mental_tags):
+        if tags & mental_tags:
             mental_events.append(ev)
-        if et == "family_social" or (tags & family_tags):
+        if tags & family_tags:
             family_social_events.append(ev)
-        if et == "interest_activity" or (tags & interest_tags):
+        if tags & interest_tags:
             interest_events.append(ev)
         if "safety_risk" in tags:
             risk_hint_events.append(ev)
@@ -253,7 +200,7 @@ def build_basic_info_update_prompt(
     return load_prompt(
         "memory/basic_info_update/user",
         old_basic_info=json.dumps(old_basic_info, ensure_ascii=False),
-        session_events=json.dumps(session_events, ensure_ascii=False),
+        session_events=render_event_lines(session_events or []),
         session_need_items=json.dumps(session_need_items, ensure_ascii=False),
     )
 
@@ -282,36 +229,22 @@ def build_recent_status_summarize_prompt(
     )
 
 
-def build_need_cluster_label_prompt(samples: list[tuple[str, str]]) -> str:
-    """Render same-cluster (need, preference) samples for the labelling LLM."""
-    rendered = "\n".join(
-        f"- 需求：\"{r}\" / 偏好：\"{p}\"" for r, p in samples
-    ) or "(无样本)"
-    return load_prompt("memory/need_cluster_label/user", samples=rendered)
+def build_preference_principle_update_prompt(
+    *,
+    need_domain: str,
+    existing_preference_principle: str,
+    need_item: dict[str, Any],
+) -> str:
+    return load_prompt(
+        "memory/preference_principle_update/user",
+        need_domain=need_domain,
+        existing_preference_principle=existing_preference_principle or "",
+        need_item_json=json.dumps(need_item, ensure_ascii=False),
+    )
+
 
 
 def build_topic_segment_prompt(turns: list[dict[str, Any]]) -> str:
     """Render dialogue turns for the topic segmentation LLM call."""
     transcript = render_turns(turns)
     return load_prompt("memory/topic_segment/user", transcript=transcript)
-
-
-def build_need_cluster_refine_prompt(
-    *,
-    prev_need_type: str,
-    prev_preference_principle: str,
-    history_samples: list[tuple[str, str]],
-    new_need: str,
-    new_preference: str,
-) -> str:
-    rendered = "\n".join(
-        f"- 需求：\"{r}\" / 偏好：\"{p}\"" for r, p in history_samples
-    ) or "(无历史样本)"
-    return load_prompt(
-        "memory/need_cluster_refine/user",
-        prev_need_type=prev_need_type,
-        prev_preference_principle=prev_preference_principle,
-        history_samples=rendered,
-        new_need=new_need,
-        new_preference=new_preference,
-    )

@@ -20,7 +20,7 @@ EXAMPLE INPUT:
 [t-7|user|...] 对，越简单越好。
 [t-8|assistant|...] 好的，那您看血糖主要看两个数：空腹和饭后两小时。
 
-EXAMPLE OUTPUT:
+EXAMPLE JSON OUTPUT:
 {"windows":[
   {"window_id":"w-1","turn_ids":["t-1","t-2","t-3","t-4"]},
   {"window_id":"w-2","turn_ids":["t-5","t-6","t-7","t-8"]}

@@ -20,6 +20,8 @@ EXAMPLE INPUT:
 旧 recent_status：
 {"health_status": "近期空腹血糖偏高。", "self_management_status": "", "mental_status": "", "family_social_status": "", "interest_changes": [], "risk_flags": []}
 
+以下为最近 14 天内、按字段预先分桶的事件行（同一事件可能出现在多个桶；若无则为“(无)”）。
+
 health_events:
 [event-1|2026-03-15] 复诊调整二甲双胍剂量
 [event-2|2026-03-20] 测得空腹血糖 7.6 mmol/L
@@ -37,8 +39,8 @@ family_social_events:
 interest_events:
 (无)
 
-risk_hint_events:
+risk_hint_events（仅供归纳 risk_flags；一般为安全/就医延误等风险线索）：
 (无)
 
-EXAMPLE OUTPUT:
+EXAMPLE JSON OUTPUT:
 {"health_status":"近一周复诊后调整二甲双胍剂量，空腹血糖约 7.6 仍偏高。","self_management_status":"","mental_status":"","family_social_status":"老伴曾短期出差，与孙子保持视频联系。","interest_changes":[],"risk_flags":[]}

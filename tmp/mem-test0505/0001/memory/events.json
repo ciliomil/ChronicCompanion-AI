@@ -1,0 +1,445 @@
+[
+  {
+    "event_id": "event-0001_sample0-1",
+    "event_type": "self_management",
+    "timestamp": "2025-02-05T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample0-001"
+    ],
+    "event_summary": "拥有血糖仪并会自行测量血糖",
+    "tags": [
+      "monitoring",
+      "glucose"
+    ],
+    "confidence": 0.92
+  },
+  {
+    "event_id": "event-0001_sample0-2",
+    "event_type": "self_management",
+    "timestamp": "2025-02-05T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample0-003"
+    ],
+    "event_summary": "曾使用老伴帮忙设置的小程序记录血糖，但因步骤多常忘记记录，未能坚持",
+    "tags": [
+      "monitoring",
+      "adherence"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0001_sample0-3",
+    "event_type": "self_management",
+    "timestamp": "2025-02-05T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample0-005"
+    ],
+    "event_summary": "以前不记录血糖数字，凭感觉管理，不爱记数字",
+    "tags": [
+      "monitoring"
+    ],
+    "confidence": 0.88
+  },
+  {
+    "event_id": "event-0001_sample0-4",
+    "event_type": "self_management",
+    "timestamp": "2025-02-05T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample0-011"
+    ],
+    "event_summary": "决定尝试语音记录血糖，认为能坚持下来",
+    "tags": [
+      "monitoring"
+    ],
+    "confidence": 0.88
+  },
+  {
+    "event_id": "event-0001_sample0-5",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-02-05T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample0-013",
+      "turn-0001_sample0-015"
+    ],
+    "event_summary": "对老伴频繁追问血糖情况感到烦躁，希望有更轻松的分享方式",
+    "tags": [
+      "emotion",
+      "family"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0001_sample0-6",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-02-05T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample0-019"
+    ],
+    "event_summary": "拒绝自动每周向老伴发送血糖报告，觉得像打小报告，有被监视感",
+    "tags": [
+      "emotion",
+      "family"
+    ],
+    "confidence": 0.92
+  },
+  {
+    "event_id": "event-0001_sample1-1",
+    "event_type": "health_medical",
+    "timestamp": "2025-02-28T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample1-001"
+    ],
+    "event_summary": "膝盖不舒服，将晨跑改为慢走，并注意饮食。",
+    "tags": [
+      "symptom",
+      "activity",
+      "diet"
+    ],
+    "confidence": 0.92
+  },
+  {
+    "event_id": "event-0001_sample1-2",
+    "event_type": "health_medical",
+    "timestamp": "2025-02-28T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample1-031"
+    ],
+    "event_summary": "血糖有时高有时平稳，不想每天扎手指，觉得麻烦又疼。",
+    "tags": [
+      "glucose",
+      "monitoring"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0001_sample1-3",
+    "event_type": "family_social",
+    "timestamp": "2025-02-28T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample1-015",
+      "turn-0001_sample1-017",
+      "turn-0001_sample1-019"
+    ],
+    "event_summary": "妻子经常催问测血糖，让用户感到烦躁，希望减少直接询问。",
+    "tags": [
+      "family",
+      "caregiver",
+      "emotion"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "event_id": "event-0001_sample1-4",
+    "event_type": "self_management",
+    "timestamp": "2025-02-28T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample1-009",
+      "turn-0001_sample1-013"
+    ],
+    "event_summary": "计划在常逛的论坛上发帖记录每日健康行为（如慢走、饮食调整），以获取网友互动激励。",
+    "tags": [
+      "activity",
+      "hobby",
+      "social"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0001_sample1-5",
+    "event_type": "family_social",
+    "timestamp": "2025-02-28T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample1-023",
+      "turn-0001_sample1-029"
+    ],
+    "event_summary": "决定采用在家庭群晒图（清淡菜照片、服药提醒截图）以及在家庭共享相册放散步风景照的方式，自然向妻子传递健康生活信息。",
+    "tags": [
+      "family",
+      "activity",
+      "diet"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0001_sample1-6",
+    "event_type": "self_management",
+    "timestamp": "2025-02-28T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample1-037",
+      "turn-0001_sample1-039"
+    ],
+    "event_summary": "计划使用手机日历进行轻量血糖记录，只在想了解时测量并记录，关联生活事件如聚餐后、散步后等。",
+    "tags": [
+      "monitoring",
+      "glucose"
+    ],
+    "confidence": 0.92
+  },
+  {
+    "event_id": "event-0001_sample2-1",
+    "event_type": "self_management",
+    "timestamp": "2025-03-05T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample2-011",
+      "turn-0001_sample2-025"
+    ],
+    "event_summary": "用户尝试吃杂粮饭，感觉顶饱时间增长、精神好转",
+    "tags": [
+      "diet",
+      "other"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0001_sample2-2",
+    "event_type": "self_management",
+    "timestamp": "2025-03-05T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample2-013"
+    ],
+    "event_summary": "用户抗拒测血糖，老伴催促但躲避",
+    "tags": [
+      "monitoring",
+      "emotion",
+      "family"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0001_sample2-3",
+    "event_type": "health_medical",
+    "timestamp": "2025-03-05T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample2-017"
+    ],
+    "event_summary": "用户去年出差时曾有心慌不适",
+    "tags": [
+      "symptom",
+      "other"
+    ],
+    "confidence": 0.7
+  },
+  {
+    "event_id": "event-0001_sample2-4",
+    "event_type": "health_medical",
+    "timestamp": "2025-03-05T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample2-025"
+    ],
+    "event_summary": "用户因膝盖不适未能跑步",
+    "tags": [
+      "symptom",
+      "activity"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0001_sample2-5",
+    "event_type": "self_management",
+    "timestamp": "2025-03-05T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample2-025"
+    ],
+    "event_summary": "用户在小区散步代替跑步",
+    "tags": [
+      "activity"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0001_sample2-6",
+    "event_type": "self_management",
+    "timestamp": "2025-03-05T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample2-023"
+    ],
+    "event_summary": "用户计划尝试通过点图标方式记录饮食感受",
+    "tags": [
+      "monitoring",
+      "other"
+    ],
+    "confidence": 0.8
+  },
+  {
+    "event_id": "event-0001_sample3-1",
+    "event_type": "health_medical",
+    "timestamp": "2025-03-22T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample3-001",
+      "turn-0001_sample3-003"
+    ],
+    "event_summary": "膝盖不灵光，有旧伤，患有糖尿病，近半年因膝盖旧伤减少运动强度。",
+    "tags": [
+      "symptom",
+      "activity"
+    ],
+    "confidence": 0.92
+  },
+  {
+    "event_id": "event-0001_sample3-2",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-03-22T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample3-005",
+      "turn-0001_sample3-007",
+      "turn-0001_sample3-025"
+    ],
+    "event_summary": "对测血糖感到厌烦，倾向于凭感觉而不是监测血糖。",
+    "tags": [
+      "emotion",
+      "monitoring"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0001_sample3-3",
+    "event_type": "family_social",
+    "timestamp": "2025-03-22T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample3-007",
+      "turn-0001_sample3-025"
+    ],
+    "event_summary": "老伴常催促测血糖，用户对此感到厌烦，并试图躲避。",
+    "tags": [
+      "family",
+      "caregiver"
+    ],
+    "confidence": 0.88
+  },
+  {
+    "event_id": "event-0001_sample3-4",
+    "event_type": "interest_activity",
+    "timestamp": "2025-03-22T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample3-017"
+    ],
+    "event_summary": "用户喜欢看汽车测评和科技新闻。",
+    "tags": [
+      "hobby"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "event_id": "event-0001_sample3-5",
+    "event_type": "daily_life",
+    "timestamp": "2025-03-22T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample3-009",
+      "turn-0001_sample3-011"
+    ],
+    "event_summary": "用户不喜欢复杂健康App，偏好通过短视频获取信息。",
+    "tags": [
+      "other"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0001_sample4-1",
+    "event_type": "family_social",
+    "timestamp": "2025-03-29T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample4-001"
+    ],
+    "event_summary": "妻子频繁关心测血糖，用户感到压力",
+    "tags": [
+      "family",
+      "emotion"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0001_sample4-2",
+    "event_type": "health_medical",
+    "timestamp": "2025-03-29T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample4-011"
+    ],
+    "event_summary": "膝盖不适，已换为缓和运动",
+    "tags": [
+      "symptom",
+      "activity"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0001_sample4-3",
+    "event_type": "self_management",
+    "timestamp": "2025-03-29T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample4-011"
+    ],
+    "event_summary": "运动坚持困难，三天打鱼两天晒网",
+    "tags": [
+      "activity"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0001_sample4-4",
+    "event_type": "self_management",
+    "timestamp": "2025-03-29T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample4-027"
+    ],
+    "event_summary": "饭前药、吃饭、运动时间常记混或忘记",
+    "tags": [
+      "medication",
+      "adherence"
+    ],
+    "confidence": 0.88
+  },
+  {
+    "event_id": "event-0001_sample4-5",
+    "event_type": "self_management",
+    "timestamp": "2025-03-29T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample4-013"
+    ],
+    "event_summary": "以前记录血糖因单调而放弃",
+    "tags": [
+      "monitoring"
+    ],
+    "confidence": 0.82
+  },
+  {
+    "event_id": "event-0001_sample4-6",
+    "event_type": "self_management",
+    "timestamp": "2025-03-29T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample4-009"
+    ],
+    "event_summary": "计划采用微信收藏笔记记录血糖并让妻子自查看",
+    "tags": [
+      "monitoring",
+      "family"
+    ],
+    "confidence": 0.88
+  },
+  {
+    "event_id": "event-0001_sample4-7",
+    "event_type": "self_management",
+    "timestamp": "2025-03-29T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample4-023"
+    ],
+    "event_summary": "计划采用运动后看NBA集锦奖励方式坚持运动",
+    "tags": [
+      "activity",
+      "hobby"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0001_sample4-8",
+    "event_type": "self_management",
+    "timestamp": "2025-03-29T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0001_sample4-035"
+    ],
+    "event_summary": "用户计划将吃饭/吃药时间与日常必做事件绑定",
+    "tags": [
+      "adherence"
+    ],
+    "confidence": 0.75
+  }
+]

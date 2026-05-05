@@ -26,7 +26,6 @@ class RawTurn:
 @dataclass
 class EventItem:
     event_id: str
-    event_type: str
     timestamp: str
     source_turn_ids: list[str]
     event_summary: str
@@ -43,8 +42,8 @@ class NeedSolutionProposal:
 
     ai_solution_summary: str = ""
     feedback_turn_ids: list[str] = field(default_factory=list)
-    quality_score: float | None = None
-    preference: str = ""
+    fit_score: float | None = None
+    revealed_preference: str = ""
     confidence: float | None = None
 
     def to_dict(self) -> dict[str, Any]:
@@ -62,17 +61,23 @@ class NeedItem:
 
     ``item_id`` is assigned when persisting via
     :func:`src.memory.update.session_ingest.ingest_session` as
-    ``"{session_id}-need-{n}"`` (``n`` session-local).
+    ``"need-{session_id}-{n}"`` (``n`` session-local).
     """
 
     item_id: str
     timestamp: str
     source_turn_ids: list[str]
+
     inferred_need: str
+    need_domain: str 
+    need_object: str 
+    
     related_tags: list[str]
-    context: str = ""
+    context: str 
     context_event_ids: list[str] = field(default_factory=list)
+
     solutions: list[NeedSolutionProposal] = field(default_factory=list)
+
     cluster_id: str | None = None
 
     def to_dict(self) -> dict[str, Any]:
@@ -82,27 +87,6 @@ class NeedItem:
 # ---------------------------------------------------------------------------
 # Top-layer profile schemas
 # ---------------------------------------------------------------------------
-
-BASIC_INFO_CATEGORIES: tuple[str, ...] = (
-    "medical_care",
-    "family",
-    "health",
-    "leisure",
-)
-
-BASIC_INFO_CLAIM_TYPES: tuple[str, ...] = (
-    "stable_fact",          # 明确长期事实：用户有糖尿病、与老伴同住
-    "recurring_pattern",    # 反复出现的模式：常忘记测糖、经常饭后散步
-    "long_term_constraint", # 长期约束：膝盖不好、不便出远门
-    "long_term_preference", # 现实生活偏好：不爱吃甜食、喜欢下棋
-    "care_context",         # 照护背景：女儿常提醒饮食、老伴负责陪诊
-)
-
-BASIC_INFO_STATUS: tuple[str, ...] = (
-    "active",
-    "uncertain",
-    "superseded",
-)
 
 @dataclass
 class BasicInfoClaim:
@@ -208,11 +192,10 @@ class NeedClusterSample:
     cluster labelling / refinement and debugging.
     """
     item_id: str
-    need: str
-    preference: str = ""
-    vector: list[float] | None = None
+    inferred_need: str
+    revealed_preference: str = ""
     timestamp: str = ""
-    confidence: float | None = None
+    fit_score: float | None = None
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
@@ -220,26 +203,19 @@ class NeedClusterSample:
 @dataclass
 class NeedCluster:
     """
-    - ``need_type`` is gamma_i (LLM-labelled requirement type, e.g. "控糖饮食建议").
+    - ``need_domain`` is the ontology key for this cluster (one domain => one cluster).
     - ``preference_principle`` is rho_i (LLM-summarised preference principle).
-    - ``centroid`` is the L2-normalised mean embedding of cluster members,
-      used for incremental nearest-cluster assignment.
-    - ``representative_samples`` hold (need, preference) pairs; multiple rows
-      may share one ``item_id`` when one need has several solution preferences.
+    - ``member_item_ids`` tracks NeedItems assigned to this domain cluster.
     """
 
     cluster_id: str
-    need_type: str
+    need_domain: str
     preference_principle: str
 
-    centroid: list[float]
     member_item_ids: list[str] = field(default_factory=list)
-
-    representative_samples: list[NeedClusterSample] = field(default_factory=list)
 
     size: int = 0
     updated_at: str = field(default_factory=utc_now_iso)
-    status: str = "pending"
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
@@ -280,4 +256,3 @@ class TopicWindow:
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
-

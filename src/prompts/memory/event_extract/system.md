@@ -17,16 +17,7 @@
 - 每个事件必须能够回溯到具体的turn_id（来源对话编号）。
 
 字段要求：
-1.event_type: 事件类型只能从受控集合中选择：$event_types。含义如下：
-  - health_medical：血糖异常、症状、复诊、化验、并发症、用药变化、身体不适等医疗向事实或状态。
-  - self_management：饮食执行、运动、睡眠、居家测糖、用药依从、生活方式管理等行为。
-  - mental_emotional：焦虑、低落、孤独、压力、烦躁、担心、抗拒、对治疗或疾病管理的态度等。
-  - family_social：家人陪伴、照护、独居状态、亲友互动、社交联系、家庭冲突或支持。
-  - interest_activity：兴趣、爱好、想尝试的新活动、非医疗核心的活动偏好。
-  - daily_life：其它日常安排、出行、家务、作息安排等。
-  - other：无法归入以上类型时选用。
-
-2.tags：标签只能从受控集合中选择，可多选：$event_tags。选择 tags 时覆盖事件涉及的重要维度，例如：
+1.tags：标签只能从受控集合中选择，可多选：$event_tags。选择 tags 时覆盖事件涉及的重要维度，例如：
   - glucose：血糖、糖化血红蛋白、餐前/餐后/空腹血糖等。
   - medical_visit：就诊、复诊、检查、医生建议等。
   - medication：药物、剂量、服药、漏服、换药、停药等。
@@ -38,22 +29,21 @@
   - family：配偶、子女、孙辈、照护、家庭互动等。
   - social：朋友、邻里、社区、社交活动等。
   - safety_risk：跌倒、疑似低血糖、漏服药、延误就医、独居无人照护等风险线索。
-  - lifestyle：作息、出行、生活习惯等。
   - hobby：兴趣爱好、陪伴话题、新活动等。
   - other：无法归入以上标签时选用。
 
-3.event_summary：
+2.event_summary：
   - 用简短中文概括，控制在 100 字以内，避免主观推测。
   - 尽量保留用户明确提到的关键细节，例如时间、频率、数值、药名、亲属关系、行为变化。
   - 避免主观推测，不做医学诊断。
 
-4.confidence：
+3.confidence：
   - 0.85~1.0：用户明确陈述，信息清楚。
   - 0.65~0.85：用户表达较明确，但细节略有缺失。
   - 0.45~0.65：有文本依据但存在一定推断。
   - 低于 0.45 的信息不要抽取
 
-5.source_turn_ids：
+4.source_turn_ids：
   -turn_id必须来自给定输入。
 
 返回 JSON。如果没有可抽取的事件，返回 {"events": []}。
@@ -63,5 +53,5 @@ EXAMPLE INPUT:
 [t2|assistant|2026-03-01T09:00] 辛苦您了，注意休息。
 [t3|user|2026-03-01T20:00] 晚上和老伴去公园散步了一小时。
 
-EXAMPLE OUTPUT:
-{"events":[{"event_type":"health_medical","event_summary":"复查血糖，医生提示餐后偏高","source_turn_ids":["t1"],"tags":["medical_visit","glucose"],"confidence":0.92},{"event_type":"self_management","event_summary":"晚上与老伴公园散步约一小时","source_turn_ids":["t3"],"tags":["activity","family"],"confidence":0.85}]}
+EXAMPLE JSON OUTPUT:
+{"events":[{"event_summary":"复查血糖，医生提示餐后偏高","source_turn_ids":["t1"],"tags":["medical_visit","glucose"],"confidence":0.92},{"event_summary":"晚上与老伴公园散步约一小时","source_turn_ids":["t3"],"tags":["activity","family"],"confidence":0.85}]}

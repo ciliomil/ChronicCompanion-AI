@@ -30,7 +30,6 @@ from src.llm.embedder import Embedder, get_default_embedder
 from src.llm.llm import LLMClient, get_default_llm_client
 from src.memory.schemas import (
     NeedCluster,
-    NeedClusterSample,
     UserProfile,
     _empty_recent_status,
 )
@@ -282,51 +281,14 @@ def summarize_recent_status(
 # ---------------------------------------------------------------------------
 
 
-def _cluster_sample_from_dict(raw: dict[str, Any]) -> NeedClusterSample:
-    """Rebuild :class:`~src.memory.schemas.NeedClusterSample` from JSON/store dict."""
-    vec_raw = raw.get("vector")
-    vector: list[float] | None = None
-    if isinstance(vec_raw, list):
-        vector = [float(x) for x in vec_raw]
-
-    conf_raw = raw.get("confidence")
-    confidence: float | None = None
-    if conf_raw is not None:
-        try:
-            confidence = float(conf_raw)
-        except (TypeError, ValueError):
-            confidence = None
-
-    return NeedClusterSample(
-        item_id=str(raw.get("item_id", "")),
-        need=str(raw.get("need", "")),
-        preference=str(raw.get("preference", "")),
-        vector=vector,
-        timestamp=str(raw.get("timestamp", "")),
-        confidence=confidence,
-    )
-
-
 def _cluster_from_dict(d: dict[str, Any], *, clock: Clock) -> NeedCluster:
-    samples_raw = d.get("representative_samples") or []
-    representative_samples: list[NeedClusterSample] = []
-    if isinstance(samples_raw, list):
-        for s in samples_raw:
-            if isinstance(s, dict):
-                representative_samples.append(_cluster_sample_from_dict(s))
-
-    status = str(d.get("status", "") or "pending")
-
     return NeedCluster(
         cluster_id=str(d.get("cluster_id", "")),
-        need_type=str(d.get("need_type", "")),
+        need_domain=str(d.get("need_domain", "") or "other"),
         preference_principle=str(d.get("preference_principle", "")),
-        centroid=[float(x) for x in (d.get("centroid") or [])],
         member_item_ids=[str(x) for x in (d.get("member_item_ids") or [])],
-        representative_samples=representative_samples,
         size=int(d.get("size", 0) or 0),
         updated_at=str(d.get("updated_at", "") or clock.now_iso()),
-        status=status,
     )
 
 

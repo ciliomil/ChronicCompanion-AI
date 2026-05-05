@@ -35,7 +35,7 @@ basic_info 分为四类：
 - 不要使用输入之外的常识或医学推断。
 - 不要把 EventItem 中的短期事实直接改写成长期画像。
 - 不要把 NeedItem 中的 AI 方案本身写入 basic_info。
-- 可以从 NeedItem 的 inferred_need、context、context_event_ids、solutions.preference 中提取长期背景线索，但必须避免把纯方案偏好污染为 basic_info。
+- 可以从 NeedItem 的 inferred_need、need_domain、need_object、context、context_event_ids、solutions.revealed_preference 中提取长期背景线索，但必须避免把纯方案偏好污染为 basic_info。
 - 每个 active 或 uncertain claim 必须至少有一种证据来源：source_event_ids、source_need_item_ids 或 source_turn_ids。
 - 新增 claim 的 claim_id 可以返回空字符串，系统后续会分配；已有 claim 必须保留原 claim_id。
 
@@ -99,27 +99,9 @@ EXAMPLE INPUT:
   }
 }
 
-本 session 新抽取的 EventItem：
-[
-  {
-    "event_id": "event-1",
-    "event_type": "health_medical",
-    "timestamp": "2026-03-02T08:00:00Z",
-    "source_turn_ids": ["t1"],
-    "event_summary": "用户提到自己一直有糖尿病，最近早上空腹血糖偏高。",
-    "tags": ["glucose"],
-    "confidence": 0.92
-  },
-  {
-    "event_id": "event-2",
-    "event_type": "family_social",
-    "timestamp": "2026-03-02T09:00:00Z",
-    "source_turn_ids": ["t3"],
-    "event_summary": "用户女儿经常提醒用户少吃主食。",
-    "tags": ["family", "diet"],
-    "confidence": 0.88
-  }
-]
+本 session 新抽取的事件行：
+[event-1|2026-03-02] 用户提到自己一直有糖尿病，最近早上空腹血糖偏高。
+[event-2|2026-03-02] 用户女儿经常提醒用户少吃主食。
 
 本 session 新抽取的 NeedItem：
 [
@@ -127,6 +109,8 @@ EXAMPLE INPUT:
     "item_id": "need-1",
     "source_turn_ids": ["t4"],
     "inferred_need": "控糖早餐怎么安排",
+    "need_domain": "diet_glucose_management",
+    "need_object": "早餐安排",
     "related_tags": ["diet", "glucose"],
     "context": "用户有糖尿病，近期担心空腹血糖偏高，女儿也提醒其控制主食。",
     "context_event_ids": ["event-1", "event-2"],
@@ -134,8 +118,8 @@ EXAMPLE INPUT:
       {
         "ai_solution_summary": "建议早餐减少精米面，搭配鸡蛋、蔬菜和少量粗粮。",
         "feedback_turn_ids": ["t6"],
-        "quality_score": 0.78,
-        "preference": "偏好控糖、食材常见且容易执行的早餐建议",
+        "fit_score": 0.78,
+        "revealed_preference": "偏好控糖、食材常见且容易执行的早餐建议",
         "confidence": 0.8
       }
     ]

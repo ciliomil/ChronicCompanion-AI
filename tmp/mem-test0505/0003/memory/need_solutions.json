@@ -1,0 +1,738 @@
+[
+  {
+    "item_id": "need-0003_sample0-1",
+    "timestamp": "2025-04-14T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample0-001",
+      "turn-0003_sample0-002",
+      "turn-0003_sample0-003",
+      "turn-0003_sample0-004",
+      "turn-0003_sample0-005",
+      "turn-0003_sample0-006",
+      "turn-0003_sample0-007",
+      "turn-0003_sample0-008",
+      "turn-0003_sample0-009",
+      "turn-0003_sample0-010"
+    ],
+    "inferred_need": "获取可视化、分步的手机操作指引",
+    "related_tags": [
+      "monitoring",
+      "safety_risk"
+    ],
+    "context": "社区小刘已帮忙办理医保电子凭证，但用户不识字或操作不熟悉，害怕点错造成资金损失，之前尝试失败。",
+    "context_event_ids": [
+      "event-0003_sample0-1"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "分三步文字指引：先确认微信医保凭证，再打开问诊平台APP，最后绑定入口，每步都让用户确认。",
+        "feedback_turn_ids": [
+          "turn-0003_sample0-007",
+          "turn-0003_sample0-009"
+        ],
+        "quality_score": 0.2,
+        "preference": "偏好有人展示具体点击位置（如截图画圈），不接受纯文字路径描述",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议等社区工作人员下次上门时当面协助操作，最为直观。",
+        "feedback_turn_ids": [],
+        "quality_score": 0.5,
+        "preference": "",
+        "confidence": 0.35
+      }
+    ],
+    "cluster_id": "cluster-1abb840c"
+  },
+  {
+    "item_id": "need-0003_sample0-2",
+    "timestamp": "2025-04-14T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample0-011",
+      "turn-0003_sample0-012",
+      "turn-0003_sample0-013",
+      "turn-0003_sample0-014",
+      "turn-0003_sample0-015",
+      "turn-0003_sample0-016",
+      "turn-0003_sample0-017",
+      "turn-0003_sample0-018",
+      "turn-0003_sample0-019",
+      "turn-0003_sample0-020",
+      "turn-0003_sample0-021",
+      "turn-0003_sample0-022",
+      "turn-0003_sample0-023",
+      "turn-0003_sample0-024",
+      "turn-0003_sample0-025",
+      "turn-0003_sample0-026"
+    ],
+    "inferred_need": "想与女儿轻松沟通糖尿病管理",
+    "related_tags": [
+      "family",
+      "social",
+      "emotion"
+    ],
+    "context": "用户与女儿平时联系少，曾询问糖化血红蛋白未获回复，担心沟通让女儿觉得烦或负担，希望找到自然方式。",
+    "context_event_ids": [
+      "event-0003_sample0-2",
+      "event-0003_sample0-3",
+      "event-0003_sample0-4",
+      "event-0003_sample0-5"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议以‘科普’语气发信息，说把糖化血红蛋白理解为‘血糖记忆’，让女儿有空科普一句。",
+        "feedback_turn_ids": [
+          "turn-0003_sample0-015"
+        ],
+        "quality_score": 0.15,
+        "preference": "拒绝直接请教式沟通，担心给女儿解答压力或让女儿觉得烦",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议用用户养绿萝的爱好打比方，以‘分享生活趣闻’的方式聊糖化血红蛋白，末尾问‘你听说过吗’。",
+        "feedback_turn_ids": [
+          "turn-0003_sample0-019"
+        ],
+        "quality_score": 0.65,
+        "preference": "偏好将健康话题融入日常爱好闲聊，用比喻降低正式感，但末尾间接提问仍略有不自然",
+        "confidence": 0.8
+      },
+      {
+        "ai_solution_summary": "建议用‘咱们身体’和‘帮我品品这个比喻贴切不’等更亲切语言，将养绿萝经验与健康管理结合分享。",
+        "feedback_turn_ids": [
+          "turn-0003_sample0-021",
+          "turn-0003_sample0-023",
+          "turn-0003_sample0-025"
+        ],
+        "quality_score": 0.95,
+        "preference": "喜欢亲切自然的沟通方式，愿用生活经验（如养绿萝）与女儿分享健康话题，避免诉苦和求助感",
+        "confidence": 0.92
+      }
+    ],
+    "cluster_id": "cluster-6f63afcd"
+  },
+  {
+    "item_id": "need-0003_sample1-1",
+    "timestamp": "2025-05-04T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample1-001",
+      "turn-0003_sample1-002",
+      "turn-0003_sample1-003",
+      "turn-0003_sample1-004",
+      "turn-0003_sample1-005",
+      "turn-0003_sample1-006",
+      "turn-0003_sample1-007",
+      "turn-0003_sample1-008"
+    ],
+    "inferred_need": "利用养花爱好辅助血糖管理",
+    "related_tags": [
+      "glucose",
+      "activity"
+    ],
+    "context": "用户喜欢在阳台养花草但测血糖不规律，希望将爱好与健康管理自然结合。",
+    "context_event_ids": [
+      "event-0003_sample1-1",
+      "event-0003_sample1-2"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议给绿植起名（如\"稳糖小卫士\"）来联想健康事项",
+        "feedback_turn_ids": [
+          "turn-0003_sample1-005",
+          "turn-0003_sample1-007"
+        ],
+        "quality_score": 0.15,
+        "preference": "不喜欢刻意将爱好变成健康任务，希望轻松自然",
+        "confidence": 0.9
+      }
+    ],
+    "cluster_id": "cluster-63fd8d77"
+  },
+  {
+    "item_id": "need-0003_sample1-2",
+    "timestamp": "2025-05-04T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample1-009",
+      "turn-0003_sample1-010",
+      "turn-0003_sample1-011",
+      "turn-0003_sample1-012",
+      "turn-0003_sample1-013",
+      "turn-0003_sample1-014",
+      "turn-0003_sample1-015",
+      "turn-0003_sample1-016",
+      "turn-0003_sample1-017",
+      "turn-0003_sample1-018",
+      "turn-0003_sample1-019",
+      "turn-0003_sample1-020"
+    ],
+    "inferred_need": "理解糖化血红蛋白的含义及其与日常血糖监测的关系",
+    "related_tags": [
+      "glucose",
+      "monitoring",
+      "emotion"
+    ],
+    "context": "用户近期测血糖不规律，但主动学习糖尿病管理；有在阳台看饮食口诀卡的习惯；最近听讲座接触到糖化血红蛋白，希望理解该指标如何反映长期血糖控制情况。",
+    "context_event_ids": [
+      "event-0003_sample1-2",
+      "event-0003_sample1-5",
+      "event-0003_sample1-3"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "用花草生长趋势比喻解释糖化血红蛋白是反映过去两三个月血糖的长期‘长势’，而非单次血糖值。",
+        "feedback_turn_ids": [
+          "turn-0003_sample1-017"
+        ],
+        "quality_score": 0.92,
+        "preference": "喜欢用熟悉的日常事物（如养花草）理解医学术语，反感考试评分式表述。",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议将测血糖与在阳台看饮食口诀卡的轻松习惯结合，形成稳定监测节奏，以改善糖化血红蛋白水平。",
+        "feedback_turn_ids": [
+          "turn-0003_sample1-013",
+          "turn-0003_sample1-015"
+        ],
+        "quality_score": 0.85,
+        "preference": "愿意将血糖监测与已有的轻松日常习惯（如在阳台休息、看卡片）绑定，以减少负担感。",
+        "confidence": 0.9
+      },
+      {
+        "ai_solution_summary": "提出将糖化血红蛋白复查视为‘健康季考’以激励自我管理。",
+        "feedback_turn_ids": [
+          "turn-0003_sample1-019"
+        ],
+        "quality_score": 0.1,
+        "preference": "反感将健康管理比喻为考试或评分，期望避免增加压力的表述。",
+        "confidence": 0.9
+      }
+    ],
+    "cluster_id": "cluster-49345b64"
+  },
+  {
+    "item_id": "need-0003_sample1-3",
+    "timestamp": "2025-05-04T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample1-021",
+      "turn-0003_sample1-022",
+      "turn-0003_sample1-023",
+      "turn-0003_sample1-024",
+      "turn-0003_sample1-025",
+      "turn-0003_sample1-026",
+      "turn-0003_sample1-027",
+      "turn-0003_sample1-028",
+      "turn-0003_sample1-029",
+      "turn-0003_sample1-030",
+      "turn-0003_sample1-031",
+      "turn-0003_sample1-032",
+      "turn-0003_sample1-033",
+      "turn-0003_sample1-034"
+    ],
+    "inferred_need": "复诊准备与社区活动协调及行动指导",
+    "related_tags": [
+      "medical_visit",
+      "emotion",
+      "stress"
+    ],
+    "context": "医生提示复查，用户独自一人，想协调社区活动时间，记性不好害怕见医生不知道说什么，需要具体流程，但留意症状的建议引发焦虑。",
+    "context_event_ids": [
+      "event-0003_sample1-6",
+      "event-0003_sample1-7",
+      "event-0003_sample1-8",
+      "event-0003_sample1-9"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议先参加社区活动，带上纸笔记问题，复诊时带上记要点纸和饮食口诀卡照片给医生看。",
+        "feedback_turn_ids": [
+          "turn-0003_sample1-027",
+          "turn-0003_sample1-029"
+        ],
+        "quality_score": 0.9,
+        "preference": "偏好将复诊准备与社区活动串联，喜欢借助纸笔记录问题并利用已有资源（饮食口诀卡）提高沟通效率。",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议复诊前三天留意三餐后两小时身体感觉并记录，但用户表示焦虑拒绝，AI调整为不特意留意症状。",
+        "feedback_turn_ids": [
+          "turn-0003_sample1-033"
+        ],
+        "quality_score": 0.1,
+        "preference": "不愿意刻意留意症状以免增加心理负担，偏好按部就班、不额外增加心理压力的准备方式。",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-e36486fb"
+  },
+  {
+    "item_id": "need-0003_sample2-1",
+    "timestamp": "2025-05-18T19:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample2-001",
+      "turn-0003_sample2-002",
+      "turn-0003_sample2-003",
+      "turn-0003_sample2-004",
+      "turn-0003_sample2-005",
+      "turn-0003_sample2-006",
+      "turn-0003_sample2-007",
+      "turn-0003_sample2-008",
+      "turn-0003_sample2-009",
+      "turn-0003_sample2-010",
+      "turn-0003_sample2-011",
+      "turn-0003_sample2-012",
+      "turn-0003_sample2-013",
+      "turn-0003_sample2-014"
+    ],
+    "inferred_need": "如何与女儿开启自然对话",
+    "related_tags": [
+      "social",
+      "emotion"
+    ],
+    "context": "用户想与女儿聊天但怕打扰或尴尬，近期女儿曾转钱让其买水果，用户买了水果并保存小票。",
+    "context_event_ids": [
+      "event-0003_sample2-1",
+      "event-0003_sample2-2"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议周末下午给水果和绿萝拍照，附文字分享生活场景，避免直接提问",
+        "feedback_turn_ids": [
+          "turn-0003_sample2-007",
+          "turn-0003_sample2-009"
+        ],
+        "quality_score": 0.85,
+        "preference": "偏好结合自身爱好（养绿萝）的轻松自然分享方式，不习惯直接表达思念或询问",
+        "confidence": 0.9
+      },
+      {
+        "ai_solution_summary": "建议回复感谢时提到具体行动（买水果），并附小票照片，用'留个纪念'化解正式感",
+        "feedback_turn_ids": [
+          "turn-0003_sample2-011",
+          "turn-0003_sample2-013"
+        ],
+        "quality_score": 0.7,
+        "preference": "愿意用具体行动向女儿展示心意，但担心像汇报工作，偏好附上轻松说辞（如留个纪念）",
+        "confidence": 0.85
+      }
+    ],
+    "cluster_id": "cluster-da233829"
+  },
+  {
+    "item_id": "need-0003_sample2-2",
+    "timestamp": "2025-05-18T19:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample2-015",
+      "turn-0003_sample2-016",
+      "turn-0003_sample2-017",
+      "turn-0003_sample2-018",
+      "turn-0003_sample2-019",
+      "turn-0003_sample2-020",
+      "turn-0003_sample2-021",
+      "turn-0003_sample2-022",
+      "turn-0003_sample2-023",
+      "turn-0003_sample2-024"
+    ],
+    "inferred_need": "手机中健康相关小票照片的整理方法",
+    "related_tags": [
+      "adherence",
+      "family"
+    ],
+    "context": "用户已创建‘健康支出’文件夹存放小票照片，担心数量增多后查找不便，希望有简单的归类方法。",
+    "context_event_ids": [
+      "event-0003_sample2-3",
+      "event-0003_sample2-2"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议按月份建立子文件夹，将小票照片按月存放，按时间线整理。",
+        "feedback_turn_ids": [
+          "turn-0003_sample2-021"
+        ],
+        "quality_score": 0.92,
+        "preference": "偏好直观、操作简单的按月分类方式，认为整齐有序方便回顾",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议统一修改照片文件名，加入‘JK’缩写并按名称排序，实现无需文件夹的归类。",
+        "feedback_turn_ids": [
+          "turn-0003_sample2-023"
+        ],
+        "quality_score": 0.12,
+        "preference": "觉得改名字容易出错（忘记改或改错），更倾向视觉直观的文件夹方式",
+        "confidence": 0.9
+      }
+    ],
+    "cluster_id": "cluster-b71503b8"
+  },
+  {
+    "item_id": "need-0003_sample2-3",
+    "timestamp": "2025-05-18T19:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample2-025",
+      "turn-0003_sample2-026",
+      "turn-0003_sample2-027",
+      "turn-0003_sample2-028",
+      "turn-0003_sample2-029",
+      "turn-0003_sample2-030",
+      "turn-0003_sample2-031",
+      "turn-0003_sample2-032",
+      "turn-0003_sample2-033",
+      "turn-0003_sample2-034",
+      "turn-0003_sample2-035",
+      "turn-0003_sample2-036"
+    ],
+    "inferred_need": "如何将积极感转化为轻松可持续的健康习惯",
+    "related_tags": [
+      "diet",
+      "adherence",
+      "emotion"
+    ],
+    "context": "用户因完成买水果和存小票而感到积极，但担心积极性消退，希望找到简单不费神的方法来维持健康管理习惯。",
+    "context_event_ids": [
+      "event-0003_sample2-5",
+      "event-0003_sample2-2"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议每周定一天作为健康探索日，尝试新蔬果或改变绿萝位置",
+        "feedback_turn_ids": [
+          "turn-0003_sample2-029",
+          "turn-0003_sample2-031"
+        ],
+        "quality_score": 0.15,
+        "preference": "不喜欢额外计划和固定任务，偏好顺其自然、不费神的方式",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议每天将水果摆盘拍照作为打卡，留下视觉证据，周末回顾成果",
+        "feedback_turn_ids": [
+          "turn-0003_sample2-033",
+          "turn-0003_sample2-035"
+        ],
+        "quality_score": 0.72,
+        "preference": "偏好简单具体、有可视化成果、类似存小票的打卡方式",
+        "confidence": 0.88
+      }
+    ],
+    "cluster_id": "cluster-2f441de9"
+  },
+  {
+    "item_id": "need-0003_sample3-1",
+    "timestamp": "2025-05-30T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample3-001",
+      "turn-0003_sample3-002",
+      "turn-0003_sample3-003",
+      "turn-0003_sample3-004",
+      "turn-0003_sample3-005",
+      "turn-0003_sample3-006",
+      "turn-0003_sample3-007",
+      "turn-0003_sample3-008",
+      "turn-0003_sample3-009",
+      "turn-0003_sample3-010",
+      "turn-0003_sample3-011",
+      "turn-0003_sample3-012"
+    ],
+    "inferred_need": "独处时希望有简单稳定的健康互动以缓解冷清感",
+    "related_tags": [
+      "emotion",
+      "hobby"
+    ],
+    "context": "用户每天观看‘今日宜忌’内容，但独自观看时感到冷清孤单，且不习惯使用语音功能。用户每天都照料阳台绿植。",
+    "context_event_ids": [
+      "event-0003_sample3-1",
+      "event-0003_sample3-2",
+      "event-0003_sample3-3",
+      "event-0003_sample3-4"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议用户语音说出‘今天做到了’，助手回复鼓励贴士",
+        "feedback_turn_ids": [
+          "turn-0003_sample3-005"
+        ],
+        "quality_score": 0.1,
+        "preference": "不喜欢语音互动，偏好文字交流，认为语音麻烦",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议为阳台绿植设定‘每周健康伙伴’，观看健康信息后观察绿植变化",
+        "feedback_turn_ids": [
+          "turn-0003_sample3-009"
+        ],
+        "quality_score": 0.8,
+        "preference": "偏好与已有习惯（养绿植）结合的简单仪式，喜欢有‘任务感’的互动",
+        "confidence": 0.85
+      },
+      {
+        "ai_solution_summary": "建议每天看完‘今日宜忌’后给绿植浇水，并文字告知助手，获得‘小确幸’反馈",
+        "feedback_turn_ids": [
+          "turn-0003_sample3-011"
+        ],
+        "quality_score": 0.85,
+        "preference": "偏好举手之劳的日常行动，并愿意通过文字向助手汇报以获得鼓励",
+        "confidence": 0.9
+      }
+    ],
+    "cluster_id": "cluster-67ff0cce"
+  },
+  {
+    "item_id": "need-0003_sample3-2",
+    "timestamp": "2025-05-30T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample3-013",
+      "turn-0003_sample3-014",
+      "turn-0003_sample3-015",
+      "turn-0003_sample3-016",
+      "turn-0003_sample3-017",
+      "turn-0003_sample3-018",
+      "turn-0003_sample3-019",
+      "turn-0003_sample3-020",
+      "turn-0003_sample3-021",
+      "turn-0003_sample3-022"
+    ],
+    "inferred_need": "复查前准备与物品清单",
+    "related_tags": [
+      "medical_visit",
+      "emotion"
+    ],
+    "context": "用户近期将去社区医院复查，感到焦虑和准备不足，担心流程不熟、说不到要点，手机中健康信息散乱。",
+    "context_event_ids": [
+      "event-0003_sample3-6",
+      "event-0003_sample3-7",
+      "event-0003_sample3-8"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "给出复查当天必带清单：医保卡、手机、药盒、舒服的鞋子，共四样，简单明了。",
+        "feedback_turn_ids": [
+          "turn-0003_sample3-019",
+          "turn-0003_sample3-021"
+        ],
+        "quality_score": 0.72,
+        "preference": "偏好简单明确、可照着做的实物清单，且关注携带方便",
+        "confidence": 0.85
+      }
+    ],
+    "cluster_id": "cluster-8c03ba90"
+  },
+  {
+    "item_id": "need-0003_sample3-3",
+    "timestamp": "2025-05-30T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample3-023",
+      "turn-0003_sample3-024",
+      "turn-0003_sample3-025",
+      "turn-0003_sample3-026",
+      "turn-0003_sample3-027",
+      "turn-0003_sample3-028",
+      "turn-0003_sample3-029",
+      "turn-0003_sample3-030",
+      "turn-0003_sample3-031",
+      "turn-0003_sample3-032",
+      "turn-0003_sample3-033",
+      "turn-0003_sample3-034",
+      "turn-0003_sample3-035",
+      "turn-0003_sample3-036"
+    ],
+    "inferred_need": "理解不同水果对身体影响的区别",
+    "related_tags": [
+      "diet",
+      "glucose"
+    ],
+    "context": "用户常以苹果和橙子作为加餐，但对其身体和血糖影响缺乏感性认识，不想看复杂数据。",
+    "context_event_ids": [
+      "event-0003_sample3-10"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "用‘朋友’比喻解释：苹果带来踏实持久，橙子带来精神一振，帮助感性理解。",
+        "feedback_turn_ids": [
+          "turn-0003_sample3-027",
+          "turn-0003_sample3-029"
+        ],
+        "quality_score": 0.88,
+        "preference": "偏好形象、类比式的解释，厌弃数字和复杂理论",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议查找血糖照片对比数值来验证身体感受。",
+        "feedback_turn_ids": [
+          "turn-0003_sample3-031",
+          "turn-0003_sample3-033"
+        ],
+        "quality_score": 0.1,
+        "preference": "拒绝需要自行找照片、看数字的繁琐方法",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "简化方案：只留意吃后身体感受（饱腹感、清爽感），不记数字。",
+        "feedback_turn_ids": [
+          "turn-0003_sample3-035"
+        ],
+        "quality_score": 0.85,
+        "preference": "愿意尝试轻量无负担的自我观察法",
+        "confidence": 0.9
+      }
+    ],
+    "cluster_id": "cluster-18f6cdf2"
+  },
+  {
+    "item_id": "need-0003_sample4-1",
+    "timestamp": "2025-06-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample4-001",
+      "turn-0003_sample4-002",
+      "turn-0003_sample4-003",
+      "turn-0003_sample4-004",
+      "turn-0003_sample4-005",
+      "turn-0003_sample4-006",
+      "turn-0003_sample4-007",
+      "turn-0003_sample4-008",
+      "turn-0003_sample4-009",
+      "turn-0003_sample4-010"
+    ],
+    "inferred_need": "担心并发症，寻求缓解焦虑的日常管理方法",
+    "related_tags": [
+      "emotion",
+      "complication",
+      "glucose"
+    ],
+    "context": "用户有糖尿病史多年，颈动脉增厚，活动后气短，担心出现并发症；手机仅用微信，不擅复杂APP。",
+    "context_event_ids": [
+      "event-0003_sample4-1",
+      "event-0003_sample4-2",
+      "event-0003_sample4-3",
+      "event-0003_sample4-7",
+      "event-0003_sample4-10"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议通过医院APP在线咨询护士了解睡眠监测流程。",
+        "feedback_turn_ids": [
+          "turn-0003_sample4-005"
+        ],
+        "quality_score": 0.1,
+        "preference": "偏好简单、无需学习新APP的沟通方式，抵触使用复杂APP。",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议本周测3次空腹血糖并简单记录，培养成日常习惯。",
+        "feedback_turn_ids": [
+          "turn-0003_sample4-007",
+          "turn-0003_sample4-009"
+        ],
+        "quality_score": 0.85,
+        "preference": "偏好具体、可量化、能融入日常习惯的小目标管理方式。",
+        "confidence": 0.9
+      }
+    ],
+    "cluster_id": "cluster-834dd934"
+  },
+  {
+    "item_id": "need-0003_sample4-2",
+    "timestamp": "2025-06-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample4-011",
+      "turn-0003_sample4-012",
+      "turn-0003_sample4-013",
+      "turn-0003_sample4-014",
+      "turn-0003_sample4-015",
+      "turn-0003_sample4-016",
+      "turn-0003_sample4-017",
+      "turn-0003_sample4-018",
+      "turn-0003_sample4-019",
+      "turn-0003_sample4-020",
+      "turn-0003_sample4-021",
+      "turn-0003_sample4-022"
+    ],
+    "inferred_need": "睡眠监测前的物品和穿着准备",
+    "related_tags": [
+      "medical_visit",
+      "monitoring"
+    ],
+    "context": "用户即将进行睡眠监测检查，因不熟悉流程感到紧张焦虑，且不擅使用手机APP，依赖他人帮助。",
+    "context_event_ids": [
+      "event-0003_sample4-4",
+      "event-0003_sample4-10",
+      "event-0003_sample4-7"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议带上需要服用的药物，到时询问工作人员服用时间。",
+        "feedback_turn_ids": [
+          "turn-0003_sample4-015"
+        ],
+        "quality_score": 0.1,
+        "preference": "偏好聚焦于具体物品和穿着的准备指导，不接受额外的药物说明或流程解释。",
+        "confidence": 0.9
+      },
+      {
+        "ai_solution_summary": "建议准备一套宽松、系扣的睡衣或家居服，便于穿脱和连接设备。",
+        "feedback_turn_ids": [
+          "turn-0003_sample4-019",
+          "turn-0003_sample4-021"
+        ],
+        "quality_score": 0.9,
+        "preference": "偏好能提供具体、可想象、容易执行的物品建议，倾向于系扣式睡衣便于准备。",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-451c85a4"
+  },
+  {
+    "item_id": "need-0003_sample4-3",
+    "timestamp": "2025-06-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample4-023",
+      "turn-0003_sample4-024",
+      "turn-0003_sample4-025",
+      "turn-0003_sample4-026",
+      "turn-0003_sample4-027",
+      "turn-0003_sample4-028",
+      "turn-0003_sample4-029",
+      "turn-0003_sample4-030",
+      "turn-0003_sample4-031",
+      "turn-0003_sample4-032",
+      "turn-0003_sample4-033",
+      "turn-0003_sample4-034",
+      "turn-0003_sample4-035",
+      "turn-0003_sample4-036"
+    ],
+    "inferred_need": "日常活动后气短的自我观察方法",
+    "related_tags": [
+      "symptom",
+      "activity",
+      "emotion"
+    ],
+    "context": "用户有活动后气短、爬楼喘、弯腰眼前发黑等症状，担心并发症，心理紧张焦虑，希望简单平常心的观察方法。",
+    "context_event_ids": [
+      "event-0003_sample4-3",
+      "event-0003_sample4-10"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "观察不同动作（如弯腰、抬手）后的呼吸反应，记录哪种动作更费劲、需要歇更久",
+        "feedback_turn_ids": [
+          "turn-0003_sample4-029",
+          "turn-0003_sample4-031",
+          "turn-0003_sample4-035"
+        ],
+        "quality_score": 0.75,
+        "preference": "偏好简单、像观察植物一样的自我观察方式，不增加焦虑，能自己看出门道",
+        "confidence": 0.85
+      },
+      {
+        "ai_solution_summary": "对比早晨与下午的状态，留意恢复时间是否明显变慢作为就医信号",
+        "feedback_turn_ids": [
+          "turn-0003_sample4-033",
+          "turn-0003_sample4-035"
+        ],
+        "quality_score": 0.1,
+        "preference": "拒绝可能引发紧张和焦虑的对比或危险信号提示，追求平常心",
+        "confidence": 0.9
+      }
+    ],
+    "cluster_id": "cluster-0e5ea7aa"
+  }
+]

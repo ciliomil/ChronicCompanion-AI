@@ -1,0 +1,1124 @@
+[
+  {
+    "event_id": "event-0002_sample0-1",
+    "event_type": "health_medical",
+    "timestamp": "2025-04-10T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample0-001"
+    ],
+    "event_summary": "医生告知用户晚上血糖容易低，建议睡前加餐",
+    "tags": [
+      "glucose",
+      "medical_visit",
+      "diet"
+    ],
+    "confidence": 0.92
+  },
+  {
+    "event_id": "event-0002_sample0-2",
+    "event_type": "self_management",
+    "timestamp": "2025-04-10T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample0-005"
+    ],
+    "event_summary": "用户自述记性不好，有时记不清是否已服药",
+    "tags": [
+      "adherence",
+      "other"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample0-3",
+    "event_type": "family_social",
+    "timestamp": "2025-04-10T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample0-005"
+    ],
+    "event_summary": "子女在外地工作",
+    "tags": [
+      "family"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0002_sample0-4",
+    "event_type": "interest_activity",
+    "timestamp": "2025-04-10T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample0-005",
+      "turn-0002_sample0-009"
+    ],
+    "event_summary": "用户有每晚抄写《心经》的习惯",
+    "tags": [
+      "hobby"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "event_id": "event-0002_sample0-5",
+    "event_type": "family_social",
+    "timestamp": "2025-04-10T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample0-007"
+    ],
+    "event_summary": "老伴爱喝无糖酸奶，家里常备",
+    "tags": [
+      "family",
+      "diet"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample0-6",
+    "event_type": "health_medical",
+    "timestamp": "2025-04-10T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample0-007"
+    ],
+    "event_summary": "用户自述听力不佳（耳背）",
+    "tags": [
+      "symptom"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample0-7",
+    "event_type": "family_social",
+    "timestamp": "2025-04-10T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample0-015"
+    ],
+    "event_summary": "子女关心用户是否按时服药",
+    "tags": [
+      "family",
+      "adherence"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0002_sample0-8",
+    "event_type": "family_social",
+    "timestamp": "2025-04-10T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample0-019"
+    ],
+    "event_summary": "大女儿昨致电关心近期血糖和身体状况",
+    "tags": [
+      "family",
+      "social"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "event_id": "event-0002_sample0-9",
+    "event_type": "health_medical",
+    "timestamp": "2025-04-10T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample0-023"
+    ],
+    "event_summary": "用户有时脚底发凉",
+    "tags": [
+      "symptom"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0002_sample0-10",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-04-10T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample0-023"
+    ],
+    "event_summary": "用户心里有事但不想总打扰子女",
+    "tags": [
+      "emotion",
+      "family"
+    ],
+    "confidence": 0.8
+  },
+  {
+    "event_id": "event-0002_sample0-11",
+    "event_type": "self_management",
+    "timestamp": "2025-04-10T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample0-025"
+    ],
+    "event_summary": "用户一天多次测血糖",
+    "tags": [
+      "monitoring",
+      "glucose"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample0-12",
+    "event_type": "family_social",
+    "timestamp": "2025-04-10T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample0-025"
+    ],
+    "event_summary": "女儿工作忙",
+    "tags": [
+      "family"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0002_sample1-1",
+    "event_type": "health_medical",
+    "timestamp": "2025-04-17T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample1-031"
+    ],
+    "event_summary": "用户自述听力不佳，需使用助听器才能听清",
+    "tags": [
+      "symptom"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "event_id": "event-0002_sample1-2",
+    "event_type": "health_medical",
+    "timestamp": "2025-04-17T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample1-003"
+    ],
+    "event_summary": "用户自述记性不好，刚问过的事转头就忘",
+    "tags": [
+      "symptom"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample1-3",
+    "event_type": "family_social",
+    "timestamp": "2025-04-17T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample1-005"
+    ],
+    "event_summary": "用户和老伴年龄大，互相帮不上太多，生活中常依赖邻居",
+    "tags": [
+      "family",
+      "social",
+      "caregiver"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample1-4",
+    "event_type": "family_social",
+    "timestamp": "2025-04-17T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample1-021"
+    ],
+    "event_summary": "子女在外地，不常回家探亲",
+    "tags": [
+      "family"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "event_id": "event-0002_sample1-5",
+    "event_type": "family_social",
+    "timestamp": "2025-04-17T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample1-001"
+    ],
+    "event_summary": "用户因助听器电池没电，麻烦邻居帮忙更换",
+    "tags": [
+      "social"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample1-6",
+    "event_type": "self_management",
+    "timestamp": "2025-04-17T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample1-007"
+    ],
+    "event_summary": "用户决定用日历记录每次邻居帮忙的关键信息（如换电池型号、来源等）",
+    "tags": [
+      "other"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample1-7",
+    "event_type": "self_management",
+    "timestamp": "2025-04-17T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample1-025",
+      "turn-0002_sample1-027"
+    ],
+    "event_summary": "用户计划近期去社区卫生服务站请工作人员写助听器电池报销的书面指引",
+    "tags": [
+      "medical_visit"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample1-8",
+    "event_type": "interest_activity",
+    "timestamp": "2025-04-17T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample1-029",
+      "turn-0002_sample1-031"
+    ],
+    "event_summary": "用户每天早晚听评书和天气预报，视为主要精神乐趣",
+    "tags": [
+      "hobby"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "event_id": "event-0002_sample1-9",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-04-17T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample1-029",
+      "turn-0002_sample1-031"
+    ],
+    "event_summary": "因助听器电池耗尽无法听节目，用户感到心里空落落、发慌",
+    "tags": [
+      "emotion"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample1-10",
+    "event_type": "daily_life",
+    "timestamp": "2025-04-17T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample1-015"
+    ],
+    "event_summary": "用户使用防滑鞋等辅助器具，花费较大",
+    "tags": [
+      "other"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0002_sample1-11",
+    "event_type": "daily_life",
+    "timestamp": "2025-04-17T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample1-013"
+    ],
+    "event_summary": "用户使用老年手机，只会接打电话",
+    "tags": [
+      "other"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "event_id": "event-0002_sample2-1",
+    "event_type": "health_medical",
+    "timestamp": "2025-05-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample2-001"
+    ],
+    "event_summary": "计划近期复查血糖，并提前整理要问医生的问题。",
+    "tags": [
+      "medical_visit",
+      "glucose"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample2-2",
+    "event_type": "health_medical",
+    "timestamp": "2025-05-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample2-005"
+    ],
+    "event_summary": "上次复诊医生提示夜间血糖有风险。",
+    "tags": [
+      "glucose"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample2-3",
+    "event_type": "health_medical",
+    "timestamp": "2025-05-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample2-005"
+    ],
+    "event_summary": "用户自述脚底板发凉，计划复诊时询问。",
+    "tags": [
+      "symptom"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample2-4",
+    "event_type": "daily_life",
+    "timestamp": "2025-05-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample2-003"
+    ],
+    "event_summary": "用户自述记性不好，曾使用医嘱存档记录问题。",
+    "tags": [
+      "other"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0002_sample2-5",
+    "event_type": "family_social",
+    "timestamp": "2025-05-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample2-007"
+    ],
+    "event_summary": "用户老伴眼神不好，子女在外地，家庭照护有限。",
+    "tags": [
+      "family",
+      "caregiver"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample2-6",
+    "event_type": "self_management",
+    "timestamp": "2025-05-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample2-011"
+    ],
+    "event_summary": "计划复诊前将核心提醒（夜间血糖风险、脚凉）写在最醒目位置，便于医患沟通。",
+    "tags": [
+      "medical_visit",
+      "other"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample2-7",
+    "event_type": "daily_life",
+    "timestamp": "2025-05-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample2-019"
+    ],
+    "event_summary": "用户使用老年手机，拍照和建文件夹操作困难，病历字小看不清。",
+    "tags": [
+      "other"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample2-8",
+    "event_type": "self_management",
+    "timestamp": "2025-05-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample2-023",
+      "turn-0002_sample2-025"
+    ],
+    "event_summary": "计划复诊时请医生或家人将核心医嘱总结为关键词，记录在医嘱存档中。",
+    "tags": [
+      "medical_visit",
+      "other"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample3-1",
+    "event_type": "health_medical",
+    "timestamp": "2025-05-16T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample3-001"
+    ],
+    "event_summary": "近期血糖时高时低，怀疑与饮食有关",
+    "tags": [
+      "glucose",
+      "diet"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0002_sample3-2",
+    "event_type": "self_management",
+    "timestamp": "2025-05-16T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample3-003",
+      "turn-0002_sample3-013"
+    ],
+    "event_summary": "在邻居帮助下开始使用手机语音记录血糖",
+    "tags": [
+      "monitoring",
+      "social"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample3-3",
+    "event_type": "health_medical",
+    "timestamp": "2025-05-16T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample3-005"
+    ],
+    "event_summary": "晚上睡眠不踏实",
+    "tags": [
+      "sleep"
+    ],
+    "confidence": 0.8
+  },
+  {
+    "event_id": "event-0002_sample3-4",
+    "event_type": "health_medical",
+    "timestamp": "2025-05-16T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample3-005"
+    ],
+    "event_summary": "脚底板凉，医生认为与神经有关",
+    "tags": [
+      "symptom"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample3-5",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-05-16T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample3-007",
+      "turn-0002_sample3-017"
+    ],
+    "event_summary": "自述记性不好，容易忘事",
+    "tags": [
+      "other"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample3-6",
+    "event_type": "self_management",
+    "timestamp": "2025-05-16T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample3-007"
+    ],
+    "event_summary": "之前尝试手写记录血糖，觉得费劲",
+    "tags": [
+      "monitoring"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0002_sample3-7",
+    "event_type": "health_medical",
+    "timestamp": "2025-05-16T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample3-009"
+    ],
+    "event_summary": "自述眼神不好，视力差",
+    "tags": [
+      "symptom"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample3-8",
+    "event_type": "family_social",
+    "timestamp": "2025-05-16T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample3-009"
+    ],
+    "event_summary": "老伴眼睛也不好，平时买菜靠邻居帮忙",
+    "tags": [
+      "family",
+      "social"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample3-9",
+    "event_type": "health_medical",
+    "timestamp": "2025-05-16T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample3-021"
+    ],
+    "event_summary": "使用助听器，需要更换电池",
+    "tags": [
+      "other"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample3-10",
+    "event_type": "family_social",
+    "timestamp": "2025-05-16T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample3-025",
+      "turn-0002_sample3-027"
+    ],
+    "event_summary": "子女在外地，一年回家次数很少",
+    "tags": [
+      "family"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "event_id": "event-0002_sample4-1",
+    "event_type": "health_medical",
+    "timestamp": "2025-05-22T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample4-003"
+    ],
+    "event_summary": "用户反映脚底板感觉麻木",
+    "tags": [
+      "symptom"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample4-2",
+    "event_type": "health_medical",
+    "timestamp": "2025-05-22T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample4-021"
+    ],
+    "event_summary": "阴雨天脚感觉比平时更凉、木木的",
+    "tags": [
+      "symptom"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0002_sample4-3",
+    "event_type": "self_management",
+    "timestamp": "2025-05-22T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample4-001"
+    ],
+    "event_summary": "因下雨暂停户外晨练，改为在自家楼道行走",
+    "tags": [
+      "activity"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample4-4",
+    "event_type": "self_management",
+    "timestamp": "2025-05-22T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample4-022",
+      "turn-0002_sample4-028"
+    ],
+    "event_summary": "有每天检查脚的习惯",
+    "tags": [
+      "monitoring"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0002_sample4-5",
+    "event_type": "interest_activity",
+    "timestamp": "2025-05-22T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample4-013"
+    ],
+    "event_summary": "计划更换为笔杆粗的软垫笔进行抄经",
+    "tags": [
+      "hobby"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample4-6",
+    "event_type": "interest_activity",
+    "timestamp": "2025-05-22T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample4-019"
+    ],
+    "event_summary": "计划抄经时每隔约一刻钟做手指拉伸放松手腕",
+    "tags": [
+      "hobby",
+      "activity"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample4-7",
+    "event_type": "self_management",
+    "timestamp": "2025-05-22T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample4-029",
+      "turn-0002_sample4-031"
+    ],
+    "event_summary": "计划在每日检查脚时重点观察皮肤颜色变深变红、起泡破皮、异常冰凉等异常信号",
+    "tags": [
+      "monitoring",
+      "symptom"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample4-8",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-05-22T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample4-001",
+      "turn-0002_sample4-003"
+    ],
+    "event_summary": "担心下雨天活动不足导致血糖升高，害怕滑倒",
+    "tags": [
+      "emotion",
+      "safety_risk"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0002_sample5-1",
+    "event_type": "self_management",
+    "timestamp": "2025-05-28T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample5-001",
+      "turn-0002_sample5-021"
+    ],
+    "event_summary": "用户每天早晚坚持检查脚，并习惯在抄经前后进行",
+    "tags": [
+      "monitoring",
+      "hobby"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample5-2",
+    "event_type": "health_medical",
+    "timestamp": "2025-05-28T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample5-005"
+    ],
+    "event_summary": "用户脚底板常常感觉凉飕飕",
+    "tags": [
+      "symptom"
+    ],
+    "confidence": 0.88
+  },
+  {
+    "event_id": "event-0002_sample5-3",
+    "event_type": "self_management",
+    "timestamp": "2025-05-28T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample5-011"
+    ],
+    "event_summary": "用户每次都听从提醒打胰岛素",
+    "tags": [
+      "adherence",
+      "medication"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample5-4",
+    "event_type": "self_management",
+    "timestamp": "2025-05-28T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample5-011"
+    ],
+    "event_summary": "用户打完针后记性不好，常忘记是否已打针",
+    "tags": [
+      "adherence",
+      "medication"
+    ],
+    "confidence": 0.88
+  },
+  {
+    "event_id": "event-0002_sample5-5",
+    "event_type": "health_medical",
+    "timestamp": "2025-05-28T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample5-015"
+    ],
+    "event_summary": "上次复诊医生查看用户手写的血糖记录",
+    "tags": [
+      "medical_visit",
+      "glucose"
+    ],
+    "confidence": 0.75
+  },
+  {
+    "event_id": "event-0002_sample5-6",
+    "event_type": "interest_activity",
+    "timestamp": "2025-05-28T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample5-021"
+    ],
+    "event_summary": "用户每天抄经以静心安神",
+    "tags": [
+      "hobby"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample5-7",
+    "event_type": "self_management",
+    "timestamp": "2025-05-28T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample5-029"
+    ],
+    "event_summary": "用户接受将测血糖安排在抄经后的宁静时段进行",
+    "tags": [
+      "glucose",
+      "monitoring",
+      "hobby"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0002_sample5-8",
+    "event_type": "self_management",
+    "timestamp": "2025-05-28T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample5-033"
+    ],
+    "event_summary": "用户接受将检查脚融入抄经前‘定神’环节",
+    "tags": [
+      "monitoring",
+      "hobby"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0002_sample6-1",
+    "event_type": "health_medical",
+    "timestamp": "2025-06-09T16:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample6-001",
+      "turn-0002_sample6-005"
+    ],
+    "event_summary": "用户老伴曾买错二甲双胍规格，用户通过拍照比对及时发现",
+    "tags": [
+      "medication",
+      "safety_risk",
+      "monitoring"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample6-2",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-06-09T16:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample6-017"
+    ],
+    "event_summary": "用户担心因记性差、视力问题吃错药导致血糖波动或低血糖",
+    "tags": [
+      "emotion",
+      "safety_risk"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0002_sample6-3",
+    "event_type": "self_management",
+    "timestamp": "2025-06-09T16:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample6-025"
+    ],
+    "event_summary": "用户常有忘记是否已服药的困扰",
+    "tags": [
+      "medication",
+      "adherence",
+      "safety_risk"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample6-4",
+    "event_type": "daily_life",
+    "timestamp": "2025-06-09T16:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample6-029"
+    ],
+    "event_summary": "用户晚饭时间不固定，因老伴做饭较晚",
+    "tags": [
+      "family",
+      "diet"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0002_sample7-1",
+    "event_type": "interest_activity",
+    "timestamp": "2025-06-27T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample7-001",
+      "turn-0002_sample7-013"
+    ],
+    "event_summary": "用户坚持每天早晚抄经，追求静心。",
+    "tags": [
+      "hobby"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "event_id": "event-0002_sample7-2",
+    "event_type": "self_management",
+    "timestamp": "2025-06-27T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample7-001",
+      "turn-0002_sample7-013"
+    ],
+    "event_summary": "用户在抄经中断期间起身服药，并已形成习惯。",
+    "tags": [
+      "medication",
+      "adherence"
+    ],
+    "confidence": 0.92
+  },
+  {
+    "event_id": "event-0002_sample7-3",
+    "event_type": "health_medical",
+    "timestamp": "2025-06-27T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample7-007"
+    ],
+    "event_summary": "用户自述听力不好，怕听不清低音量提醒。",
+    "tags": [
+      "symptom"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample7-4",
+    "event_type": "self_management",
+    "timestamp": "2025-06-27T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample7-015"
+    ],
+    "event_summary": "用户担忧服药后点完确认转头就忘，记不清是否已服药。",
+    "tags": [
+      "medication",
+      "emotion"
+    ],
+    "confidence": 0.92
+  },
+  {
+    "event_id": "event-0002_sample7-5",
+    "event_type": "self_management",
+    "timestamp": "2025-06-27T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample7-021"
+    ],
+    "event_summary": "用户确认采用服药后手机显示大号‘已完成’视觉反馈方案，以巩固记忆。",
+    "tags": [
+      "medication",
+      "adherence"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample7-6",
+    "event_type": "family_social",
+    "timestamp": "2025-06-27T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample7-025"
+    ],
+    "event_summary": "用户提及老伴眼神不好、自顾不暇，邻居帮忙买菜送药。",
+    "tags": [
+      "family",
+      "caregiver",
+      "social"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0002_sample8-1",
+    "event_type": "self_management",
+    "timestamp": "2025-07-09T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample8-001"
+    ],
+    "event_summary": "用户近日使用测脚垫进行日常监测，发现指示灯有时亮有时不亮。",
+    "tags": [
+      "monitoring"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0002_sample8-2",
+    "event_type": "health_medical",
+    "timestamp": "2025-07-09T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample8-005"
+    ],
+    "event_summary": "用户反映近两日脚底发凉、麻木感觉比以往明显。",
+    "tags": [
+      "symptom",
+      "complication"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample8-3",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-07-09T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample8-007"
+    ],
+    "event_summary": "用户因AI提及“发凉或麻木加重”需联系医生而感紧张不安。",
+    "tags": [
+      "emotion",
+      "stress"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample8-4",
+    "event_type": "health_medical",
+    "timestamp": "2025-07-09T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample8-013"
+    ],
+    "event_summary": "用户自述听力下降、记性不好。",
+    "tags": [
+      "symptom",
+      "other"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample8-5",
+    "event_type": "family_social",
+    "timestamp": "2025-07-09T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample8-013"
+    ],
+    "event_summary": "子女因发现用户走路异常而为其购买了测脚垫。",
+    "tags": [
+      "family",
+      "safety_risk"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0002_sample8-6",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-07-09T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample8-019"
+    ],
+    "event_summary": "用户对实时数据同步方案表示反感，感觉被监控。",
+    "tags": [
+      "emotion",
+      "family"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample8-7",
+    "event_type": "family_social",
+    "timestamp": "2025-07-09T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample8-023",
+      "turn-0002_sample8-025"
+    ],
+    "event_summary": "用户计划明天请邻居来帮忙买菜并检查测脚垫情况。",
+    "tags": [
+      "social"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample8-8",
+    "event_type": "self_management",
+    "timestamp": "2025-07-09T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample8-027"
+    ],
+    "event_summary": "用户计划明天使用AI录音功能整理今日观察记录，以便与邻居沟通。",
+    "tags": [
+      "other",
+      "monitoring"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0002_sample9-1",
+    "event_type": "self_management",
+    "timestamp": "2025-07-22T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample9-001"
+    ],
+    "event_summary": "用户和老伴用不同纹理胶布贴在各自的药品上做记号，以防拿错药",
+    "tags": [
+      "medication",
+      "family",
+      "safety_risk"
+    ],
+    "confidence": 0.92
+  },
+  {
+    "event_id": "event-0002_sample9-2",
+    "event_type": "health_medical",
+    "timestamp": "2025-07-22T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample9-003"
+    ],
+    "event_summary": "用户自述听力不好，老伴视力不好",
+    "tags": [
+      "other"
+    ],
+    "confidence": 0.88
+  },
+  {
+    "event_id": "event-0002_sample9-3",
+    "event_type": "health_medical",
+    "timestamp": "2025-07-22T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample9-017"
+    ],
+    "event_summary": "用户前两日去医院复诊，取回新药",
+    "tags": [
+      "medical_visit",
+      "medication"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample9-4",
+    "event_type": "self_management",
+    "timestamp": "2025-07-22T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample9-009"
+    ],
+    "event_summary": "用户采纳录音提醒方案：请人录用药提示并设为闹钟，用圆点胶布区分胰岛素与二甲双胍",
+    "tags": [
+      "medication",
+      "family",
+      "adherence"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0002_sample9-5",
+    "event_type": "self_management",
+    "timestamp": "2025-07-22T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample9-023"
+    ],
+    "event_summary": "用户采纳用药核对清单法：在药箱旁贴清单，每次按步骤核对打钩",
+    "tags": [
+      "medication",
+      "adherence",
+      "safety_risk"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0002_sample9-6",
+    "event_type": "self_management",
+    "timestamp": "2025-07-22T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample9-029"
+    ],
+    "event_summary": "用户采纳“念、看、摸”三步法：用药前念药名、看药盒大字、摸胶布纹理，新药先贴好标记",
+    "tags": [
+      "medication",
+      "adherence",
+      "safety_risk"
+    ],
+    "confidence": 0.92
+  }
+]

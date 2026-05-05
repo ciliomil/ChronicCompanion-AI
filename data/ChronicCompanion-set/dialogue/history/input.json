@@ -7434,7 +7434,9 @@
                         ]
                     }
                 }
-            },
+            }
+        ],
+        "query": [
             {
                 "sample_id": "0000_sample24",
                 "dialogue_timestamp": "2025-11-09 12:00:00",
@@ -8130,9 +8132,7 @@
                         ]
                     }
                 }
-            }
-        ],
-        "query": [
+            },
             {
                 "sample_id": "0000_sample27",
                 "dialogue_timestamp": "2025-12-03 21:00:00",
@@ -16664,7 +16664,9 @@
                         ]
                     }
                 }
-            },
+            }
+        ],
+        "query": [
             {
                 "sample_id": "0001_sample28",
                 "dialogue_timestamp": "2025-11-12 14:00:00",
@@ -17522,9 +17524,7 @@
                         ]
                     }
                 }
-            }
-        ],
-        "query": [
+            },
             {
                 "sample_id": "0001_sample31",
                 "dialogue_timestamp": "2025-12-07 14:00:00",
@@ -22936,7 +22936,9 @@
                         ]
                     }
                 }
-            },
+            }
+        ],
+        "query": [
             {
                 "sample_id": "0002_sample16",
                 "dialogue_timestamp": "2025-11-03 14:00:00",
@@ -24218,9 +24220,7 @@
                         ]
                     }
                 }
-            }
-        ],
-        "query": [
+            },
             {
                 "sample_id": "0002_sample21",
                 "dialogue_timestamp": "2025-12-05 14:00:00",
@@ -32488,7 +32488,9 @@
                         ]
                     }
                 }
-            },
+            }
+        ],
+        "query": [
             {
                 "sample_id": "0003_sample22",
                 "dialogue_timestamp": "2025-11-08 12:00:00",
@@ -33520,9 +33522,7 @@
                         ]
                     }
                 }
-            }
-        ],
-        "query": [
+            },
             {
                 "sample_id": "0003_sample25",
                 "dialogue_timestamp": "2025-12-02 13:00:00",
@@ -43268,7 +43268,9 @@
                         ]
                     }
                 }
-            },
+            }
+        ],
+        "query": [
             {
                 "sample_id": "0004_sample32",
                 "dialogue_timestamp": "2025-11-04 19:00:00",
@@ -44340,9 +44342,7 @@
                         ]
                     }
                 }
-            }
-        ],
-        "query": [
+            },
             {
                 "sample_id": "0004_sample36",
                 "dialogue_timestamp": "2025-12-12 14:00:00",
@@ -50580,7 +50580,9 @@
                         ]
                     }
                 }
-            },
+            }
+        ],
+        "query": [
             {
                 "sample_id": "0005_sample20",
                 "dialogue_timestamp": "2025-11-19 16:00:00",
@@ -51482,9 +51484,7 @@
                         ]
                     }
                 }
-            }
-        ],
-        "query": [
+            },
             {
                 "sample_id": "0005_sample23",
                 "dialogue_timestamp": "2025-12-18 15:00:00",
@@ -58608,7 +58608,9 @@
                         ]
                     }
                 }
-            },
+            }
+        ],
+        "query": [
             {
                 "sample_id": "0006_sample20",
                 "dialogue_timestamp": "2025-11-03 15:00:00",
@@ -59416,9 +59418,7 @@
                         ]
                     }
                 }
-            }
-        ],
-        "query": [
+            },
             {
                 "sample_id": "0006_sample23",
                 "dialogue_timestamp": "2025-12-20 17:00:00",
@@ -66870,7 +66870,9 @@
                         ]
                     }
                 }
-            },
+            }
+        ],
+        "query": [
             {
                 "sample_id": "0007_sample24",
                 "dialogue_timestamp": "2025-11-04 16:00:00",
@@ -67868,9 +67870,7 @@
                         ]
                     }
                 }
-            }
-        ],
-        "query": [
+            },
             {
                 "sample_id": "0007_sample28",
                 "dialogue_timestamp": "2025-12-26 19:00:00",
@@ -76012,7 +76012,9 @@
                         ]
                     }
                 }
-            },
+            }
+        ],
+        "query": [
             {
                 "sample_id": "0008_sample27",
                 "dialogue_timestamp": "2025-11-08 20:00:00",
@@ -76890,9 +76892,7 @@
                         ]
                     }
                 }
-            }
-        ],
-        "query": [
+            },
             {
                 "sample_id": "0008_sample31",
                 "dialogue_timestamp": "2025-12-03 14:00:00",
@@ -86332,7 +86332,9 @@
                         ]
                     }
                 }
-            },
+            }
+        ],
+        "query": [
             {
                 "sample_id": "0009_sample29",
                 "dialogue_timestamp": "2025-11-21 18:00:00",
@@ -86514,9 +86516,7 @@
                         ]
                     }
                 }
-            }
-        ],
-        "query": [
+            },
             {
                 "sample_id": "0009_sample30",
                 "dialogue_timestamp": "2025-12-12 21:00:00",
@@ -94454,7 +94454,9 @@
                         ]
                     }
                 }
-            },
+            }
+        ],
+        "query": [
             {
                 "sample_id": "0010_sample25",
                 "dialogue_timestamp": "2025-11-13 12:00:00",
@@ -95362,9 +95364,7 @@
                         ]
                     }
                 }
-            }
-        ],
-        "query": [
+            },
             {
                 "sample_id": "0010_sample29",
                 "dialogue_timestamp": "2025-12-27 15:00:00",
@@ -105260,7 +105260,9 @@
                         ]
                     }
                 }
-            },
+            }
+        ],
+        "query": [
             {
                 "sample_id": "0011_sample29",
                 "dialogue_timestamp": "2025-11-10 18:00:00",
@@ -106120,9 +106122,7 @@
                         ]
                     }
                 }
-            }
-        ],
-        "query": [
+            },
             {
                 "sample_id": "0011_sample32",
                 "dialogue_timestamp": "2025-12-05 21:00:00",
@@ -111720,7 +111720,9 @@
                         ]
                     }
                 }
-            },
+            }
+        ],
+        "query": [
             {
                 "sample_id": "0012_sample14",
                 "dialogue_timestamp": "2025-11-10 18:00:00",
@@ -112428,9 +112430,7 @@
                         ]
                     }
                 }
-            }
-        ],
-        "query": [
+            },
             {
                 "sample_id": "0012_sample16",
                 "dialogue_timestamp": "2025-12-07 18:00:00",
@@ -120242,7 +120242,9 @@
                         ]
                     }
                 }
-            },
+            }
+        ],
+        "query": [
             {
                 "sample_id": "0013_sample22",
                 "dialogue_timestamp": "2025-11-24 16:00:00",
@@ -120900,9 +120902,7 @@
                         ]
                     }
                 }
-            }
-        ],
-        "query": [
+            },
             {
                 "sample_id": "0013_sample24",
                 "dialogue_timestamp": "2025-12-03 14:00:00",
@@ -127318,7 +127318,9 @@
                         ]
                     }
                 }
-            },
+            }
+        ],
+        "query": [
             {
                 "sample_id": "0014_sample19",
                 "dialogue_timestamp": "2025-11-03 14:00:00",
@@ -127824,9 +127826,7 @@
                         ]
                     }
                 }
-            }
-        ],
-        "query": [
+            },
             {
                 "sample_id": "0014_sample21",
                 "dialogue_timestamp": "2025-12-05 17:00:00",
@@ -135764,7 +135764,9 @@
                         ]
                     }
                 }
-            },
+            }
+        ],
+        "query": [
             {
                 "sample_id": "0015_sample21",
                 "dialogue_timestamp": "2025-11-05 15:00:00",
@@ -136736,9 +136738,7 @@
                         ]
                     }
                 }
-            }
-        ],
-        "query": [
+            },
             {
                 "sample_id": "0015_sample24",
                 "dialogue_timestamp": "2025-12-07 12:00:00",
@@ -146146,7 +146146,9 @@
                         ]
                     }
                 }
-            },
+            }
+        ],
+        "query": [
             {
                 "sample_id": "0016_sample27",
                 "dialogue_timestamp": "2025-11-05 19:00:00",
@@ -146854,9 +146856,7 @@
                         ]
                     }
                 }
-            }
-        ],
-        "query": [
+            },
             {
                 "sample_id": "0016_sample29",
                 "dialogue_timestamp": "2025-12-05 15:00:00",
@@ -155868,7 +155868,9 @@
                         ]
                     }
                 }
-            },
+            }
+        ],
+        "query": [
             {
                 "sample_id": "0017_sample27",
                 "dialogue_timestamp": "2025-11-07 19:00:00",
@@ -156900,9 +156902,7 @@
                         ]
                     }
                 }
-            }
-        ],
-        "query": [
+            },
             {
                 "sample_id": "0017_sample30",
                 "dialogue_timestamp": "2025-12-12 15:00:00",
@@ -164630,7 +164630,9 @@
                         ]
                     }
                 }
-            },
+            }
+        ],
+        "query": [
             {
                 "sample_id": "0018_sample23",
                 "dialogue_timestamp": "2025-11-04 12:00:00",
@@ -165592,9 +165594,7 @@
                         ]
                     }
                 }
-            }
-        ],
-        "query": [
+            },
             {
                 "sample_id": "0018_sample26",
                 "dialogue_timestamp": "2025-12-05 12:00:00",
@@ -174032,7 +174032,9 @@
                         ]
                     }
                 }
-            },
+            }
+        ],
+        "query": [
             {
                 "sample_id": "0019_sample27",
                 "dialogue_timestamp": "2025-11-05 17:00:00",
@@ -175034,9 +175036,7 @@
                         ]
                     }
                 }
-            }
-        ],
-        "query": [
+            },
             {
                 "sample_id": "0019_sample30",
                 "dialogue_timestamp": "2025-12-05 20:00:00",

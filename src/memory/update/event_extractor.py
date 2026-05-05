@@ -23,7 +23,6 @@ from src.memory.schemas import EventItem, RawTurn
 from src.memory.update.prompts import (
     EVENT_EXTRACT_SYSTEM,
     EVENT_TAGS,
-    EVENT_TYPES,
     build_event_extract_prompt,
 )
 
@@ -50,11 +49,9 @@ class RuleEventExtractor:
         if not text:
             return None
 
-        event_type = "daily_life"
         tags: list[str] = []
 
         if any(token in text for token in ("医院", "复诊", "看病", "化验", "就诊")):
-            event_type = "health_medical"
             tags.append("medical_visit")
         if any(token in text for token in ("散步", "运动")):
             tags.append("activity")
@@ -71,7 +68,6 @@ class RuleEventExtractor:
 
         return EventItem(
             event_id=f"event-{turn.turn_id}",
-            event_type=event_type,
             timestamp=turn.timestamp,
             source_turn_ids=[turn.turn_id],
             event_summary=text[:80],
@@ -204,9 +200,8 @@ class LLMEventExtractor:
         if not isinstance(raw, dict):
             return None
 
-        event_type = str(raw.get("event_type", "")).strip()
         summary = str(raw.get("event_summary", "")).strip()
-        if event_type not in EVENT_TYPES or not summary:
+        if not summary:
             return None
 
         source_turn_ids = _coerce_str_list(raw.get("source_turn_ids"))
@@ -239,7 +234,6 @@ class LLMEventExtractor:
 
         return EventItem(
             event_id=event_id,
-            event_type=event_type,
             timestamp=timestamp,
             source_turn_ids=filtered,
             event_summary=summary[:200],
@@ -280,7 +274,7 @@ def extract_events_from_window(
     window_id: str | None = None,
 ) -> list[EventItem]:
     """Convenience wrapper for window-level extraction."""
-    return _get_default_extractor().extract_from_session(list(turns), window_id=window_id)
+    return _get_default_extractor().extract_from_session(list(turns), session_id=window_id)
 
 
 # ---------------------------------------------------------------------------

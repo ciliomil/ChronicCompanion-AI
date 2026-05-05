@@ -13,5 +13,5 @@ EXAMPLE INPUT:
 用户画像摘要（可选，可能为空）：{"basic_info": {"age": 68}}
 用户历史主要需求（可选，可能为空）：["夜宵选择困扰", "夜里失眠焦虑"]
 
-EXAMPLE OUTPUT:
+EXAMPLE JSON OUTPUT:
 {"primary_need":"夜宵不升血糖的选项","candidate_needs":["夜宵不升血糖的选项","睡前情绪安抚"]}

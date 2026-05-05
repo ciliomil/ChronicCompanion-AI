@@ -1,0 +1,1390 @@
+[
+  {
+    "item_id": "need-0002_sample0-1",
+    "timestamp": "2025-04-10T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample0-001",
+      "turn-0002_sample0-002",
+      "turn-0002_sample0-003",
+      "turn-0002_sample0-004",
+      "turn-0002_sample0-005",
+      "turn-0002_sample0-006",
+      "turn-0002_sample0-007",
+      "turn-0002_sample0-008",
+      "turn-0002_sample0-009",
+      "turn-0002_sample0-010"
+    ],
+    "inferred_need": "睡前加餐具体方案及提醒",
+    "related_tags": [
+      "diet",
+      "glucose",
+      "adherence"
+    ],
+    "context": "医生建议睡前加餐防夜间低血糖，但用户不知具体吃什么、吃多少，且记性不好、耳背，子女在外地，有每晚抄经习惯。",
+    "context_event_ids": [
+      "event-0002_sample0-1",
+      "event-0002_sample0-2",
+      "event-0002_sample0-3",
+      "event-0002_sample0-4",
+      "event-0002_sample0-5"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "推荐无糖酸奶或全麦面包加坚果，份量小，预防低血糖且不易升糖",
+        "feedback_turn_ids": [
+          "turn-0002_sample0-007",
+          "turn-0002_sample0-009"
+        ],
+        "quality_score": 0.78,
+        "preference": "偏好家里常备、份量清晰、低升糖的加餐食物",
+        "confidence": 0.88
+      },
+      {
+        "ai_solution_summary": "在抄经时间后设语音+震动提醒，可调大音量，绑定旧习惯防遗忘",
+        "feedback_turn_ids": [
+          "turn-0002_sample0-007",
+          "turn-0002_sample0-009"
+        ],
+        "quality_score": 0.92,
+        "preference": "偏好将新习惯与旧习惯（抄经）绑定，并需大音量+震动双重提醒",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-fd033ed7"
+  },
+  {
+    "item_id": "need-0002_sample0-2",
+    "timestamp": "2025-04-10T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample0-011",
+      "turn-0002_sample0-012",
+      "turn-0002_sample0-013",
+      "turn-0002_sample0-014",
+      "turn-0002_sample0-015",
+      "turn-0002_sample0-016",
+      "turn-0002_sample0-017",
+      "turn-0002_sample0-018"
+    ],
+    "inferred_need": "需要明确的服药确认和记录共享方式",
+    "related_tags": [
+      "medication",
+      "adherence",
+      "caregiver"
+    ],
+    "context": "用户记性不好，常忘记是否已服药；子女在外地工作但关心其用药情况。",
+    "context_event_ids": [
+      "event-0002_sample0-2",
+      "event-0002_sample0-7",
+      "event-0002_sample0-12"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "每日睡前语音总结全天用药确认情况，并允许用户即时纠错；记录保存供用户和子女查看。",
+        "feedback_turn_ids": [
+          "turn-0002_sample0-017"
+        ],
+        "quality_score": 0.9,
+        "preference": "偏好语音每日总结、简单确认、能分享给子女的方案",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-89fe29c2"
+  },
+  {
+    "item_id": "need-0002_sample0-3",
+    "timestamp": "2025-04-10T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample0-019",
+      "turn-0002_sample0-020",
+      "turn-0002_sample0-021",
+      "turn-0002_sample0-022",
+      "turn-0002_sample0-023",
+      "turn-0002_sample0-024",
+      "turn-0002_sample0-025",
+      "turn-0002_sample0-026"
+    ],
+    "inferred_need": "希望子女简单了解自己近况",
+    "related_tags": [
+      "family",
+      "caregiver",
+      "monitoring"
+    ],
+    "context": "子女在外地工作，大女儿昨天来电关心。用户一天多次测血糖，不想给子女添麻烦，希望操作极简。",
+    "context_event_ids": [
+      "event-0002_sample0-3",
+      "event-0002_sample0-8",
+      "event-0002_sample0-11",
+      "event-0002_sample0-12"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "测完血糖后主动询问用户是否要留底，自动存入电子记录本供子女查看",
+        "feedback_turn_ids": [
+          "turn-0002_sample0-025"
+        ],
+        "quality_score": 0.2,
+        "preference": "排斥频繁主动询问的流程，希望极简、不增加负担的分享方式",
+        "confidence": 0.85
+      }
+    ],
+    "cluster_id": "cluster-cce82343"
+  },
+  {
+    "item_id": "need-0002_sample1-1",
+    "timestamp": "2025-04-17T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample1-001",
+      "turn-0002_sample1-002",
+      "turn-0002_sample1-003",
+      "turn-0002_sample1-004",
+      "turn-0002_sample1-005",
+      "turn-0002_sample1-006",
+      "turn-0002_sample1-007",
+      "turn-0002_sample1-008",
+      "turn-0002_sample1-009",
+      "turn-0002_sample1-010"
+    ],
+    "inferred_need": "如何系统记录邻里帮助事项",
+    "related_tags": [
+      "family",
+      "social",
+      "other"
+    ],
+    "context": "用户因记性不好时常重复询问邻居，感到过意不去，想找到固定管理办法。",
+    "context_event_ids": [
+      "event-0002_sample1-2",
+      "event-0002_sample1-3",
+      "event-0002_sample1-5"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议在日历上用大字记录邻居帮忙的关键信息，如换电池型号等，作为事务本。",
+        "feedback_turn_ids": [
+          "turn-0002_sample1-007"
+        ],
+        "quality_score": 0.9,
+        "preference": "偏好用天天看到的日历作为事务本，简单可靠，不易丢失信息。",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议请邻居慢教一两个简单步骤，逐步独立处理小事。",
+        "feedback_turn_ids": [
+          "turn-0002_sample1-009"
+        ],
+        "quality_score": 0.1,
+        "preference": "因听力和记性差，不愿占用邻居时间学习新步骤，只求记录清晰不打扰。",
+        "confidence": 0.9
+      }
+    ],
+    "cluster_id": "cluster-42654d1a"
+  },
+  {
+    "item_id": "need-0002_sample1-2",
+    "timestamp": "2025-04-17T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample1-011",
+      "turn-0002_sample1-012",
+      "turn-0002_sample1-013",
+      "turn-0002_sample1-014",
+      "turn-0002_sample1-015",
+      "turn-0002_sample1-016",
+      "turn-0002_sample1-017",
+      "turn-0002_sample1-018",
+      "turn-0002_sample1-019",
+      "turn-0002_sample1-020",
+      "turn-0002_sample1-021",
+      "turn-0002_sample1-022",
+      "turn-0002_sample1-023",
+      "turn-0002_sample1-024",
+      "turn-0002_sample1-025",
+      "turn-0002_sample1-026",
+      "turn-0002_sample1-027",
+      "turn-0002_sample1-028"
+    ],
+    "inferred_need": "了解助听器电池医保报销政策和流程",
+    "related_tags": [
+      "medication",
+      "adherence",
+      "caregiver"
+    ],
+    "context": "用户使用助听器，但电池费用不低，且记性不好、只会用老年机、子女在外地，希望获得简单直观的书面指引。",
+    "context_event_ids": [
+      "event-0002_sample1-1",
+      "event-0002_sample1-2",
+      "event-0002_sample1-4",
+      "event-0002_sample1-6",
+      "event-0002_sample1-7"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议将询问报销事宜记在日历上，等下次去社区卫生站测血糖时顺便问",
+        "feedback_turn_ids": [
+          "turn-0002_sample1-017",
+          "turn-0002_sample1-019"
+        ],
+        "quality_score": 0.15,
+        "preference": "不喜欢绕弯子、依赖未来偶然机会的方案；希望尽快得到明确答复",
+        "confidence": 0.9
+      },
+      {
+        "ai_solution_summary": "建议等子女下次回家时用手机查询并打印大字版政策",
+        "feedback_turn_ids": [
+          "turn-0002_sample1-021",
+          "turn-0002_sample1-023"
+        ],
+        "quality_score": 0.12,
+        "preference": "不愿意为小事打扰子女；希望独立、及时地获取信息，不依赖他人行程",
+        "confidence": 0.92
+      },
+      {
+        "ai_solution_summary": "建议直接去社区卫生服务站请工作人员用大字写一张包含关键信息的书面指引",
+        "feedback_turn_ids": [
+          "turn-0002_sample1-025",
+          "turn-0002_sample1-027"
+        ],
+        "quality_score": 0.92,
+        "preference": "偏好直接、简单、可立刻操作且不依赖他人的方式；希望得到大字、清晰的书面材料",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-ed84b764"
+  },
+  {
+    "item_id": "need-0002_sample1-3",
+    "timestamp": "2025-04-17T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample1-029",
+      "turn-0002_sample1-030",
+      "turn-0002_sample1-031",
+      "turn-0002_sample1-032",
+      "turn-0002_sample1-033",
+      "turn-0002_sample1-034",
+      "turn-0002_sample1-035",
+      "turn-0002_sample1-036",
+      "turn-0002_sample1-037",
+      "turn-0002_sample1-038"
+    ],
+    "inferred_need": "主动预防助听器电池耗尽以保证收听乐趣",
+    "related_tags": [
+      "monitoring",
+      "adherence",
+      "emotion"
+    ],
+    "context": "用户听力不佳，依赖助听器，每天早晚听评书和天气预报为主要精神乐趣；之前因电池耗尽无法收听，感到心里空落落，担心再次发生。",
+    "context_event_ids": [
+      "event-0002_sample1-1",
+      "event-0002_sample1-8",
+      "event-0002_sample1-9"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议将卖电池药店或社区服务站电话记在专用本子上，用于应急联系和请邻居代取",
+        "feedback_turn_ids": [
+          "turn-0002_sample1-035",
+          "turn-0002_sample1-037"
+        ],
+        "quality_score": 0.1,
+        "preference": "偏好事前预防措施，不愿事后应急；讨厌多个本子混乱，希望简单直接不绕弯",
+        "confidence": 0.9
+      }
+    ],
+    "cluster_id": "cluster-8408c476"
+  },
+  {
+    "item_id": "need-0002_sample2-1",
+    "timestamp": "2025-05-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample2-001",
+      "turn-0002_sample2-002",
+      "turn-0002_sample2-003",
+      "turn-0002_sample2-004",
+      "turn-0002_sample2-005",
+      "turn-0002_sample2-006",
+      "turn-0002_sample2-007",
+      "turn-0002_sample2-008",
+      "turn-0002_sample2-009",
+      "turn-0002_sample2-010",
+      "turn-0002_sample2-011",
+      "turn-0002_sample2-012"
+    ],
+    "inferred_need": "准备复查时要问医生的问题",
+    "related_tags": [
+      "medical_visit",
+      "adherence"
+    ],
+    "context": "用户计划近期复查血糖，医生曾提示夜间血糖风险，用户自述脚底板发凉，记性不好，曾用医嘱存档记录问题，家庭照护有限（老伴眼神不好、子女在外地）。",
+    "context_event_ids": [
+      "event-0002_sample2-1",
+      "event-0002_sample2-2",
+      "event-0002_sample2-3",
+      "event-0002_sample2-4",
+      "event-0002_sample2-5"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议请家人模拟复诊练习，标记易忘问题",
+        "feedback_turn_ids": [
+          "turn-0002_sample2-007",
+          "turn-0002_sample2-009"
+        ],
+        "quality_score": 0.1,
+        "preference": "偏好独立准备，不愿麻烦家人或增加正式感",
+        "confidence": 0.9
+      },
+      {
+        "ai_solution_summary": "建议将核心提醒写在最醒目位置，围绕核心补充自己的感受",
+        "feedback_turn_ids": [
+          "turn-0002_sample2-011"
+        ],
+        "quality_score": 0.9,
+        "preference": "偏好将核心问题写在最醒目位置，一眼可见，便于聚焦",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-6afb6eb7"
+  },
+  {
+    "item_id": "need-0002_sample2-2",
+    "timestamp": "2025-05-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample2-013",
+      "turn-0002_sample2-014",
+      "turn-0002_sample2-015",
+      "turn-0002_sample2-016",
+      "turn-0002_sample2-017",
+      "turn-0002_sample2-018",
+      "turn-0002_sample2-019",
+      "turn-0002_sample2-020",
+      "turn-0002_sample2-021",
+      "turn-0002_sample2-022",
+      "turn-0002_sample2-023",
+      "turn-0002_sample2-024",
+      "turn-0002_sample2-025",
+      "turn-0002_sample2-026",
+      "turn-0002_sample2-027",
+      "turn-0002_sample2-028"
+    ],
+    "inferred_need": "复诊后医嘱的留存与共享",
+    "related_tags": [
+      "adherence",
+      "monitoring",
+      "family"
+    ],
+    "context": "用户记性不好，老伴眼神不好，子女在外地，家庭照护有限。计划复诊前将核心提醒写在最醒目位置。使用老年手机，拍照和建文件夹操作困难。上次医生提示夜间血糖风险。",
+    "context_event_ids": [
+      "event-0002_sample2-4",
+      "event-0002_sample2-5",
+      "event-0002_sample2-7",
+      "event-0002_sample2-6",
+      "event-0002_sample2-2"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议用手机拍照医嘱并存入健康档案文件夹",
+        "feedback_turn_ids": [
+          "turn-0002_sample2-019",
+          "turn-0002_sample2-021"
+        ],
+        "quality_score": 0.12,
+        "preference": "拒绝需要手机拍照和建文件夹的方案，觉得操作复杂、字小看不清",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议使用医嘱存档功能，由医生或家人当场用关键词记录核心医嘱",
+        "feedback_turn_ids": [
+          "turn-0002_sample2-023",
+          "turn-0002_sample2-025"
+        ],
+        "quality_score": 0.92,
+        "preference": "偏好已熟悉的简单关键词记录方式，愿意请医生或家人帮忙概括，方便自己和子女查看",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "补充建议：若允许，可录音后与子女通电话时转写关键内容存备忘录",
+        "feedback_turn_ids": [
+          "turn-0002_sample2-027"
+        ],
+        "quality_score": 0.05,
+        "preference": "明确拒绝录音转文字的方法，觉得步骤太多、自己完全搞不来",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-e06ae52d"
+  },
+  {
+    "item_id": "need-0002_sample3-1",
+    "timestamp": "2025-05-16T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample3-001",
+      "turn-0002_sample3-002",
+      "turn-0002_sample3-003",
+      "turn-0002_sample3-004",
+      "turn-0002_sample3-005",
+      "turn-0002_sample3-006",
+      "turn-0002_sample3-007",
+      "turn-0002_sample3-008",
+      "turn-0002_sample3-009",
+      "turn-0002_sample3-010",
+      "turn-0002_sample3-011",
+      "turn-0002_sample3-012"
+    ],
+    "inferred_need": "了解饮食对血糖影响，预防夜间低血糖",
+    "related_tags": [
+      "diet",
+      "glucose",
+      "complication"
+    ],
+    "context": "用户近期血糖波动，夜间睡眠不踏实，脚底凉（与神经相关）。记性不好、视力差，老伴视力也差，靠邻居帮忙买菜，子女在外地。已用语音记录血糖。",
+    "context_event_ids": [
+      "event-0002_sample3-1",
+      "event-0002_sample3-3",
+      "event-0002_sample3-4",
+      "event-0002_sample3-5",
+      "event-0002_sample3-7"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议在感觉低血糖或睡不安时记录时间、前后饮食活动，以分析规律",
+        "feedback_turn_ids": [
+          "turn-0002_sample3-007"
+        ],
+        "quality_score": 0.1,
+        "preference": "偏好简单易行、不需要额外记忆细节的方法",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议晚餐搭配豆腐或鱼肉等蛋白，睡前喝半杯牛奶；并用碗底、手掌心等生活化度量描述分量",
+        "feedback_turn_ids": [
+          "turn-0002_sample3-009",
+          "turn-0002_sample3-011"
+        ],
+        "quality_score": 0.2,
+        "preference": "需要非常具体、可直接操作的分量指导，且不增加邻居负担",
+        "confidence": 0.85
+      }
+    ],
+    "cluster_id": "cluster-d11f42ea"
+  },
+  {
+    "item_id": "need-0002_sample3-2",
+    "timestamp": "2025-05-16T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample3-013",
+      "turn-0002_sample3-014",
+      "turn-0002_sample3-015",
+      "turn-0002_sample3-016",
+      "turn-0002_sample3-017",
+      "turn-0002_sample3-018",
+      "turn-0002_sample3-019",
+      "turn-0002_sample3-020"
+    ],
+    "inferred_need": "如何向他人说明手机语音记录血糖的操作",
+    "related_tags": [
+      "monitoring",
+      "adherence"
+    ],
+    "context": "用户记性不好，依赖邻居帮忙设置手机语音记录血糖，担心换人帮忙时说不清操作步骤。",
+    "context_event_ids": [
+      "event-0002_sample3-5",
+      "event-0002_sample3-2",
+      "event-0002_sample3-6"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议将操作步骤写在便签纸上贴在手机背面",
+        "feedback_turn_ids": [
+          "turn-0002_sample3-019"
+        ],
+        "quality_score": 0.1,
+        "preference": "不接受依赖他人书写、易丢失或过时的纸质备忘，偏好自己能语音记录并持久保存的自主方式",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-4572412a"
+  },
+  {
+    "item_id": "need-0002_sample3-3",
+    "timestamp": "2025-05-16T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample3-021",
+      "turn-0002_sample3-022",
+      "turn-0002_sample3-023",
+      "turn-0002_sample3-024",
+      "turn-0002_sample3-025",
+      "turn-0002_sample3-026",
+      "turn-0002_sample3-027",
+      "turn-0002_sample3-028",
+      "turn-0002_sample3-029",
+      "turn-0002_sample3-030"
+    ],
+    "inferred_need": "咨询助听器电池等补贴政策的即时办理方法",
+    "related_tags": [
+      "other",
+      "caregiver"
+    ],
+    "context": "用户使用助听器需换电池，子女在外地一年难回一次，老伴眼睛不好，记性视力差，希望了解可线下办理的补贴政策及流程。",
+    "context_event_ids": [
+      "event-0002_sample3-9",
+      "event-0002_sample3-10",
+      "event-0002_sample3-8",
+      "event-0002_sample3-5",
+      "event-0002_sample3-7"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议等子女回来时去社区卫生服务中心请教家庭医生，了解本地老年人健康管理福利和申请流程。",
+        "feedback_turn_ids": [
+          "turn-0002_sample3-027",
+          "turn-0002_sample3-029"
+        ],
+        "quality_score": 0.1,
+        "preference": "希望有即时可操作的、无需依赖子女的线下办理途径，需要清晰的材料和流程指引",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-4078ec39"
+  },
+  {
+    "item_id": "need-0002_sample4-1",
+    "timestamp": "2025-05-22T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample4-001",
+      "turn-0002_sample4-002",
+      "turn-0002_sample4-003",
+      "turn-0002_sample4-004",
+      "turn-0002_sample4-005",
+      "turn-0002_sample4-006"
+    ],
+    "inferred_need": "下雨天安全居家活动以管理血糖",
+    "related_tags": [
+      "activity",
+      "glucose",
+      "safety_risk"
+    ],
+    "context": "用户因下雨暂停户外晨练，仅在楼道行走，脚底板麻木，担心滑倒且害怕血糖升高。",
+    "context_event_ids": [
+      "event-0002_sample4-1",
+      "event-0002_sample4-2",
+      "event-0002_sample4-3",
+      "event-0002_sample4-8"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议设置闹钟，每隔一小时在客厅慢走两三分钟，化整为零增加活动量。",
+        "feedback_turn_ids": [
+          "turn-0002_sample4-005"
+        ],
+        "quality_score": 0.92,
+        "preference": "偏好安全、简单、易执行、有提醒的居家活动方式",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-9dbecf75"
+  },
+  {
+    "item_id": "need-0002_sample4-2",
+    "timestamp": "2025-05-22T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample4-007",
+      "turn-0002_sample4-008",
+      "turn-0002_sample4-009",
+      "turn-0002_sample4-010",
+      "turn-0002_sample4-011",
+      "turn-0002_sample4-012",
+      "turn-0002_sample4-013",
+      "turn-0002_sample4-014",
+      "turn-0002_sample4-015",
+      "turn-0002_sample4-016",
+      "turn-0002_sample4-017",
+      "turn-0002_sample4-018",
+      "turn-0002_sample4-019",
+      "turn-0002_sample4-020"
+    ],
+    "inferred_need": "抄经时手部酸僵寻求放松方法",
+    "related_tags": [
+      "hobby",
+      "activity"
+    ],
+    "context": "用户有多年抄经习惯，近期抄经时手部酸痛僵硬，希望在不中断抄经的前提下缓解不适。",
+    "context_event_ids": [],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议更换笔杆粗或带软胶垫的笔，减少握笔用力",
+        "feedback_turn_ids": [
+          "turn-0002_sample4-013"
+        ],
+        "quality_score": 0.9,
+        "preference": "偏好不改变原有习惯、简单易行的工具改良方案",
+        "confidence": 0.92
+      },
+      {
+        "ai_solution_summary": "建议抄经中途手凉时用温水泡手几分钟",
+        "feedback_turn_ids": [
+          "turn-0002_sample4-015",
+          "turn-0002_sample4-017"
+        ],
+        "quality_score": 0.15,
+        "preference": "排斥步骤繁琐、需要起身离座的方案，追求简洁原地操作",
+        "confidence": 0.9
+      },
+      {
+        "ai_solution_summary": "建议抄经每15-20分钟做手指交叉前推拉伸，坐着即可完成",
+        "feedback_turn_ids": [
+          "turn-0002_sample4-019"
+        ],
+        "quality_score": 0.88,
+        "preference": "喜欢能自然融入抄经节奏、不需记数的简易拉伸动作",
+        "confidence": 0.92
+      }
+    ],
+    "cluster_id": "cluster-b438d5fc"
+  },
+  {
+    "item_id": "need-0002_sample4-3",
+    "timestamp": "2025-05-22T18:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample4-021",
+      "turn-0002_sample4-022",
+      "turn-0002_sample4-023",
+      "turn-0002_sample4-024",
+      "turn-0002_sample4-025",
+      "turn-0002_sample4-026",
+      "turn-0002_sample4-027",
+      "turn-0002_sample4-028",
+      "turn-0002_sample4-029",
+      "turn-0002_sample4-030",
+      "turn-0002_sample4-031",
+      "turn-0002_sample4-032",
+      "turn-0002_sample4-033",
+      "turn-0002_sample4-034",
+      "turn-0002_sample4-035",
+      "turn-0002_sample4-036"
+    ],
+    "inferred_need": "阴雨天足部保暖和护理方法",
+    "related_tags": [
+      "complication",
+      "monitoring"
+    ],
+    "context": "用户脚底板麻木，阴雨天脚更凉、木木，有每日检查脚的习惯。",
+    "context_event_ids": [
+      "event-0002_sample4-1",
+      "event-0002_sample4-2",
+      "event-0002_sample4-4"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议进行足部运动如脚趾抓放或活动脚腕以促进血液循环",
+        "feedback_turn_ids": [
+          "turn-0002_sample4-025",
+          "turn-0002_sample4-027"
+        ],
+        "quality_score": 0.43,
+        "preference": "偏好有明确步骤、可验证效果的护理方式，对抽象的运动指导感到不确定",
+        "confidence": 0.85
+      },
+      {
+        "ai_solution_summary": "调整方案：建议在每日检查脚时重点观察皮肤颜色变深变红、起泡破皮、异常冰凉等明确信号以判断是否需要就医",
+        "feedback_turn_ids": [
+          "turn-0002_sample4-029",
+          "turn-0002_sample4-031"
+        ],
+        "quality_score": 0.93,
+        "preference": "偏好具有明确、可观察、可判断的护理指标，喜欢有界限感的方法",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议睡前用温水泡脚（不超过37度）5-10分钟，擦干后涂润肤霜",
+        "feedback_turn_ids": [
+          "turn-0002_sample4-033",
+          "turn-0002_sample4-035"
+        ],
+        "quality_score": 0.1,
+        "preference": "偏好简洁低风险的护理流程，对需要温度监测的复杂步骤感到负担和担忧",
+        "confidence": 0.9
+      }
+    ],
+    "cluster_id": "cluster-41be9d09"
+  },
+  {
+    "item_id": "need-0002_sample5-1",
+    "timestamp": "2025-05-28T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample5-001",
+      "turn-0002_sample5-002",
+      "turn-0002_sample5-003",
+      "turn-0002_sample5-004",
+      "turn-0002_sample5-005",
+      "turn-0002_sample5-006",
+      "turn-0002_sample5-007",
+      "turn-0002_sample5-008",
+      "turn-0002_sample5-009",
+      "turn-0002_sample5-010"
+    ],
+    "inferred_need": "如何更有效地进行足部检查以预防风险",
+    "related_tags": [
+      "complication",
+      "monitoring"
+    ],
+    "context": "用户每天早晚坚持检查脚，脚底板常觉凉飕飕，希望更有效提前发现足部风险。",
+    "context_event_ids": [
+      "event-0002_sample5-1",
+      "event-0002_sample5-2"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议在检查时用手轻摸脚背和脚底，感受温度差异和硬度变化，结合视觉检查。",
+        "feedback_turn_ids": [
+          "turn-0002_sample5-005",
+          "turn-0002_sample5-007"
+        ],
+        "quality_score": 0.9,
+        "preference": "偏好具体、可操作、不麻烦的检查方法，认为用手摸比光用眼更实在。",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议用手机拍照记录脚趾缝的红、痒、水疱等异常，以便咨询医生。",
+        "feedback_turn_ids": [
+          "turn-0002_sample5-009"
+        ],
+        "quality_score": 0.1,
+        "preference": "拒绝拍照，因眼神不好、操作不便、感到难为情，偏好无需额外工具且私密的检查方式。",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-aced0d39"
+  },
+  {
+    "item_id": "need-0002_sample5-2",
+    "timestamp": "2025-05-28T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample5-011",
+      "turn-0002_sample5-012",
+      "turn-0002_sample5-013",
+      "turn-0002_sample5-014",
+      "turn-0002_sample5-015",
+      "turn-0002_sample5-016",
+      "turn-0002_sample5-017",
+      "turn-0002_sample5-018",
+      "turn-0002_sample5-019",
+      "turn-0002_sample5-020"
+    ],
+    "inferred_need": "确认胰岛素注射是否完成",
+    "related_tags": [
+      "medication",
+      "adherence"
+    ],
+    "context": "用户每次都听从提醒打胰岛素，但打完针后记性不好，常忘记是否已打针，心里总是悬着。",
+    "context_event_ids": [
+      "event-0002_sample5-3",
+      "event-0002_sample5-4"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议用户打完后说一句‘打完了’，系统自动记录时间戳，可用于复诊参考",
+        "feedback_turn_ids": [
+          "turn-0002_sample5-017",
+          "turn-0002_sample5-019"
+        ],
+        "quality_score": 0.1,
+        "preference": "不喜欢需要出声的方式，偏好无声、简便、无需言语的确认方式",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-c1930e06"
+  },
+  {
+    "item_id": "need-0002_sample5-3",
+    "timestamp": "2025-05-28T20:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample5-021",
+      "turn-0002_sample5-022",
+      "turn-0002_sample5-023",
+      "turn-0002_sample5-024",
+      "turn-0002_sample5-025",
+      "turn-0002_sample5-026",
+      "turn-0002_sample5-027",
+      "turn-0002_sample5-028",
+      "turn-0002_sample5-029",
+      "turn-0002_sample5-030",
+      "turn-0002_sample5-031",
+      "turn-0002_sample5-032",
+      "turn-0002_sample5-033",
+      "turn-0002_sample5-034"
+    ],
+    "inferred_need": "将健康检查融入抄经仪式",
+    "related_tags": [
+      "monitoring",
+      "activity",
+      "emotion"
+    ],
+    "context": "用户每天抄经以静心安神，已习惯在抄经前后检查脚，希望将测血糖也融入这一安静时段。",
+    "context_event_ids": [
+      "event-0002_sample5-1",
+      "event-0002_sample5-6",
+      "event-0002_sample5-8"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议抄完一段经后，利用余韵宁静感测血糖；用户担心打断，AI解释可由自己把握时长。",
+        "feedback_turn_ids": [
+          "turn-0002_sample5-027",
+          "turn-0002_sample5-029"
+        ],
+        "quality_score": 0.86,
+        "preference": "偏好将测血糖融入抄经后的宁静时段，需要灵活掌握打断时机。",
+        "confidence": 0.9
+      },
+      {
+        "ai_solution_summary": "建议在抄经前定神环节检查脚，使其成为定神的一部分；用户担心忙乱，AI调整后用户接受。",
+        "feedback_turn_ids": [
+          "turn-0002_sample5-031",
+          "turn-0002_sample5-033"
+        ],
+        "quality_score": 0.9,
+        "preference": "偏好将检查脚作为抄经前定神的一部分，自然融入仪式。",
+        "confidence": 0.92
+      }
+    ],
+    "cluster_id": "cluster-cec95012"
+  },
+  {
+    "item_id": "need-0002_sample6-1",
+    "timestamp": "2025-06-09T16:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample6-001",
+      "turn-0002_sample6-002",
+      "turn-0002_sample6-003",
+      "turn-0002_sample6-004",
+      "turn-0002_sample6-005",
+      "turn-0002_sample6-006",
+      "turn-0002_sample6-007",
+      "turn-0002_sample6-008",
+      "turn-0002_sample6-009",
+      "turn-0002_sample6-010",
+      "turn-0002_sample6-011",
+      "turn-0002_sample6-012",
+      "turn-0002_sample6-013",
+      "turn-0002_sample6-014"
+    ],
+    "inferred_need": "让别人帮忙买药时避免规格错误",
+    "related_tags": [
+      "medication",
+      "safety_risk",
+      "caregiver"
+    ],
+    "context": "用户因老伴曾买错二甲双胍规格，担心眼力或记性差导致再次买错或吃错药，希望有清晰凭证供他人参照。",
+    "context_event_ids": [
+      "event-0002_sample6-1",
+      "event-0002_sample6-2"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议使用家庭共享链接，让外地子女远程核对药品信息",
+        "feedback_turn_ids": [
+          "turn-0002_sample6-007"
+        ],
+        "quality_score": 0.1,
+        "preference": "不喜欢需要他人登录查看、远距离且麻烦孩子的方案，偏好本地可直接出示的凭证",
+        "confidence": 0.92
+      },
+      {
+        "ai_solution_summary": "建议为每味药制作大字药品信息卡片，可通过拍照生成电子或纸质版，方便直接出示",
+        "feedback_turn_ids": [
+          "turn-0002_sample6-011"
+        ],
+        "quality_score": 0.9,
+        "preference": "偏好操作简单、信息清晰、大字显示、无需他人操作手机即可核对的方式",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议每周定期语音提醒核对药品信息，确保记录最新",
+        "feedback_turn_ids": [
+          "turn-0002_sample6-013"
+        ],
+        "quality_score": 0.1,
+        "preference": "不喜欢被定期催促核对，偏好按需自主核对，避免打扰",
+        "confidence": 0.93
+      }
+    ],
+    "cluster_id": "cluster-e8d40ced"
+  },
+  {
+    "item_id": "need-0002_sample6-2",
+    "timestamp": "2025-06-09T16:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample6-015",
+      "turn-0002_sample6-016",
+      "turn-0002_sample6-017",
+      "turn-0002_sample6-018",
+      "turn-0002_sample6-019",
+      "turn-0002_sample6-020",
+      "turn-0002_sample6-021",
+      "turn-0002_sample6-022",
+      "turn-0002_sample6-023",
+      "turn-0002_sample6-024"
+    ],
+    "inferred_need": "快速准确核对新旧药品是否一致，防止用药差错",
+    "related_tags": [
+      "medication",
+      "safety_risk",
+      "monitoring"
+    ],
+    "context": "用户曾因老伴买错二甲双胍规格而及时纠正，但担心自己记性差、视力问题，再次发生类似情况导致血糖波动或低血糖；且有时忘记是否服药。",
+    "context_event_ids": [
+      "event-0002_sample6-1",
+      "event-0002_sample6-2",
+      "event-0002_sample6-3"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "助手学习并记忆用户常备药包装特征（颜色、标志位置），拍照时额外提醒包装差异，引导重点核对规格。",
+        "feedback_turn_ids": [
+          "turn-0002_sample6-021",
+          "turn-0002_sample6-023"
+        ],
+        "quality_score": 0.92,
+        "preference": "用户偏好利用视觉直观特征（颜色、标志）辅助核对，认为比阅读小字更简单可靠。",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-160cf61d"
+  },
+  {
+    "item_id": "need-0002_sample6-3",
+    "timestamp": "2025-06-09T16:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample6-025",
+      "turn-0002_sample6-026",
+      "turn-0002_sample6-027",
+      "turn-0002_sample6-028",
+      "turn-0002_sample6-029",
+      "turn-0002_sample6-030",
+      "turn-0002_sample6-031",
+      "turn-0002_sample6-032",
+      "turn-0002_sample6-033",
+      "turn-0002_sample6-034",
+      "turn-0002_sample6-035",
+      "turn-0002_sample6-036"
+    ],
+    "inferred_need": "忘记服药时的确认与提醒方案",
+    "related_tags": [
+      "medication",
+      "adherence",
+      "monitoring"
+    ],
+    "context": "用户因记性差、视力不佳，常有忘记是否已服药的困扰，且晚饭时间不固定，担心吃错药或漏服导致血糖波动。",
+    "context_event_ids": [
+      "event-0002_sample6-2",
+      "event-0002_sample6-3",
+      "event-0002_sample6-4"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "固定时间提醒并点击'已服用'按钮，记录服药状态",
+        "feedback_turn_ids": [
+          "turn-0002_sample6-029"
+        ],
+        "quality_score": 0.4,
+        "preference": "需要更灵活的提醒方式，担心固定时间与晚饭冲突，也担心忘了点按钮",
+        "confidence": 0.85
+      },
+      {
+        "ai_solution_summary": "设置双重温和提醒：第一次提醒后半小时未确认再温和提醒一次，最多两次，不催促、不通知他人",
+        "feedback_turn_ids": [
+          "turn-0002_sample6-031",
+          "turn-0002_sample6-033"
+        ],
+        "quality_score": 0.9,
+        "preference": "偏好温和、不催促、不通知他人的双重提醒，语气舒服，能接受缓冲确认",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "增加服药打卡日历，每天语音或点击日期标记，可查看历史记录",
+        "feedback_turn_ids": [
+          "turn-0002_sample6-035"
+        ],
+        "quality_score": 0.0,
+        "preference": "拒绝需要额外操作（打卡、看日历）的复杂方案，视力不好看小勾费劲",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-2cbc294b"
+  },
+  {
+    "item_id": "need-0002_sample7-1",
+    "timestamp": "2025-06-27T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample7-001",
+      "turn-0002_sample7-002",
+      "turn-0002_sample7-003",
+      "turn-0002_sample7-004",
+      "turn-0002_sample7-005",
+      "turn-0002_sample7-006",
+      "turn-0002_sample7-007",
+      "turn-0002_sample7-008",
+      "turn-0002_sample7-009",
+      "turn-0002_sample7-010",
+      "turn-0002_sample7-011",
+      "turn-0002_sample7-012",
+      "turn-0002_sample7-013",
+      "turn-0002_sample7-014"
+    ],
+    "inferred_need": "抄经时不服药打断静心状态",
+    "related_tags": [
+      "medication",
+      "emotion",
+      "hobby"
+    ],
+    "context": "用户每天早晚抄经追求静心，听力不好，担心忘记服药，希望服药提醒不破坏抄经的专注状态。",
+    "context_event_ids": [
+      "event-0002_sample7-1",
+      "event-0002_sample7-3",
+      "event-0002_sample7-4"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议调低提醒音量或改用振动模式，以减少对抄经的干扰。",
+        "feedback_turn_ids": [
+          "turn-0002_sample7-007"
+        ],
+        "quality_score": 0.1,
+        "preference": "用户偏好清晰响亮的提醒，低音量或振动无法满足其听力需求。",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议将服药安排于抄经的自然停顿点（如写完一段、休息时），使服药成为节奏中的自然过渡。",
+        "feedback_turn_ids": [
+          "turn-0002_sample7-011",
+          "turn-0002_sample7-013"
+        ],
+        "quality_score": 0.92,
+        "preference": "用户偏好将服药融入日常活动的自然环节，作为有预期的过渡而非外来打断。",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-6d9b490a"
+  },
+  {
+    "item_id": "need-0002_sample7-2",
+    "timestamp": "2025-06-27T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample7-015",
+      "turn-0002_sample7-016",
+      "turn-0002_sample7-017",
+      "turn-0002_sample7-018",
+      "turn-0002_sample7-019",
+      "turn-0002_sample7-020",
+      "turn-0002_sample7-021",
+      "turn-0002_sample7-022",
+      "turn-0002_sample7-023",
+      "turn-0002_sample7-024",
+      "turn-0002_sample7-025",
+      "turn-0002_sample7-026"
+    ],
+    "inferred_need": "服药后记忆巩固方案",
+    "related_tags": [
+      "medication",
+      "adherence",
+      "emotion"
+    ],
+    "context": "用户服用降糖药后常忘记是否已服，虽已使用手机确认但仍不踏实；用户日常有抄经静心习惯。",
+    "context_event_ids": [
+      "event-0002_sample7-4",
+      "event-0002_sample7-1"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "在手机点击确认服药后，屏幕显示大号\"已完成\"并停留5-10秒，形成视觉记忆。",
+        "feedback_turn_ids": [
+          "turn-0002_sample7-019",
+          "turn-0002_sample7-021"
+        ],
+        "quality_score": 0.92,
+        "preference": "偏好简单、清晰、不干扰当前活动的视觉确认方式，喜欢独立的自我管理方案。",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "在主要提醒后5分钟增加二次确认（振动或小声询问）作为补充检查点。",
+        "feedback_turn_ids": [
+          "turn-0002_sample7-023"
+        ],
+        "quality_score": 0.05,
+        "preference": "不喜欢在抄经期间被打扰，希望服药确认不影响后续活动。",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "请老伴或邻居在固定时间打电话或发信息提醒服药，作为人际双重确认。",
+        "feedback_turn_ids": [
+          "turn-0002_sample7-025"
+        ],
+        "quality_score": 0.05,
+        "preference": "不喜欢依赖他人，希望自己独立掌握服药情况。",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-a256ecda"
+  },
+  {
+    "item_id": "need-0002_sample8-1",
+    "timestamp": "2025-07-09T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample8-001",
+      "turn-0002_sample8-002",
+      "turn-0002_sample8-003",
+      "turn-0002_sample8-004",
+      "turn-0002_sample8-005",
+      "turn-0002_sample8-006",
+      "turn-0002_sample8-007",
+      "turn-0002_sample8-008",
+      "turn-0002_sample8-009",
+      "turn-0002_sample8-010"
+    ],
+    "inferred_need": "理解测脚垫指示灯变化与症状关系",
+    "related_tags": [
+      "monitoring",
+      "symptom",
+      "emotion"
+    ],
+    "context": "用户近日使用测脚垫发现灯时亮时不亮，同时脚底发凉麻木感觉加重，子女为其购买垫子辅助观察。",
+    "context_event_ids": [
+      "event-0002_sample8-1",
+      "event-0002_sample8-2",
+      "event-0002_sample8-5"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "解释灯连续不亮且症状加重需联系医生",
+        "feedback_turn_ids": [
+          "turn-0002_sample8-007"
+        ],
+        "quality_score": 0.15,
+        "preference": "反感警报式建议，希望获得简单不引发焦虑的指导",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "提供口诀“绿灯放心站，红灯缓一缓，不亮测两遍，记下给医生看”",
+        "feedback_turn_ids": [
+          "turn-0002_sample8-009"
+        ],
+        "quality_score": 0.9,
+        "preference": "偏好简单易记、不增加心理负担的观察方法",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-ad2ccf67"
+  },
+  {
+    "item_id": "need-0002_sample8-2",
+    "timestamp": "2025-07-09T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample8-011",
+      "turn-0002_sample8-012",
+      "turn-0002_sample8-013",
+      "turn-0002_sample8-014",
+      "turn-0002_sample8-015",
+      "turn-0002_sample8-016",
+      "turn-0002_sample8-017",
+      "turn-0002_sample8-018",
+      "turn-0002_sample8-019",
+      "turn-0002_sample8-020",
+      "turn-0002_sample8-021",
+      "turn-0002_sample8-022"
+    ],
+    "inferred_need": "想让子女了解监测数据但不愿被实时监控",
+    "related_tags": [
+      "caregiver",
+      "monitoring",
+      "emotion"
+    ],
+    "context": "用户听力下降、记性不好，子女因发现其走路异常为其购买测脚垫。用户担心自己说不清，希望子女了解情况，但反感被实时监控，感到压力。",
+    "context_event_ids": [
+      "event-0002_sample8-4",
+      "event-0002_sample8-5",
+      "event-0002_sample8-6"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议请邻居帮忙扫描二维码绑定设备，实现数据实时同步到子女手机",
+        "feedback_turn_ids": [
+          "turn-0002_sample8-019"
+        ],
+        "quality_score": 0.15,
+        "preference": "反感被实时监控，不愿让子女天天查看日常监测细节，感到压力大",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议设置自动异常告警，平时不打扰，仅检测到异常时自动发短信通知子女",
+        "feedback_turn_ids": [
+          "turn-0002_sample8-021"
+        ],
+        "quality_score": 0.92,
+        "preference": "偏好平时不打扰、仅异常时自动通知的方案，不希望子女为日常小事操心",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-af2329a2"
+  },
+  {
+    "item_id": "need-0002_sample8-3",
+    "timestamp": "2025-07-09T17:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample8-023",
+      "turn-0002_sample8-024",
+      "turn-0002_sample8-025",
+      "turn-0002_sample8-026",
+      "turn-0002_sample8-027",
+      "turn-0002_sample8-028"
+    ],
+    "inferred_need": "向邻居清晰说明测脚垫情况并记住反馈",
+    "related_tags": [
+      "monitoring",
+      "caregiver",
+      "social"
+    ],
+    "context": "用户听力下降、记性不好，正使用测脚垫监测脚部，指示灯异常且脚底发凉麻木，计划明天请邻居帮忙检查并买菜，担心说不清楚。",
+    "context_event_ids": [
+      "event-0002_sample8-4",
+      "event-0002_sample8-7",
+      "event-0002_sample8-1"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议用户对着AI说‘记录给邻居听’，AI将口述内容整理成语音，明天播放给邻居听，并保存以便事后回忆。",
+        "feedback_turn_ids": [
+          "turn-0002_sample8-025",
+          "turn-0002_sample8-027"
+        ],
+        "quality_score": 0.92,
+        "preference": "偏好通过语音口述、无需书写、能自动保存的方案，以适应记性不佳的情况。",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-de502743"
+  },
+  {
+    "item_id": "need-0002_sample9-1",
+    "timestamp": "2025-07-22T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample9-001",
+      "turn-0002_sample9-002",
+      "turn-0002_sample9-003",
+      "turn-0002_sample9-004",
+      "turn-0002_sample9-005",
+      "turn-0002_sample9-006",
+      "turn-0002_sample9-007",
+      "turn-0002_sample9-008",
+      "turn-0002_sample9-009",
+      "turn-0002_sample9-010",
+      "turn-0002_sample9-011",
+      "turn-0002_sample9-012",
+      "turn-0002_sample9-013",
+      "turn-0002_sample9-014",
+      "turn-0002_sample9-015",
+      "turn-0002_sample9-016"
+    ],
+    "inferred_need": "听力不好、视力不好时确保用药安全",
+    "related_tags": [
+      "medication",
+      "caregiver",
+      "safety_risk"
+    ],
+    "context": "用户和老伴听力、视力均不佳，此前用不同纹理胶布标记药品以防拿错，但仍担心胶布脱落或混淆。",
+    "context_event_ids": [
+      "event-0002_sample9-1",
+      "event-0002_sample9-2",
+      "event-0002_sample9-3"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "请人录用药提醒语音设为闹钟铃声，按不同胶布标记分工各管各的药",
+        "feedback_turn_ids": [
+          "turn-0002_sample9-009"
+        ],
+        "quality_score": 0.88,
+        "preference": "偏好用听得见的声音、结合已有标记、分工明确的提醒方式，不想互相依赖或唠叨",
+        "confidence": 0.9
+      },
+      {
+        "ai_solution_summary": "在药箱旁挂白板用大字写用药记录",
+        "feedback_turn_ids": [
+          "turn-0002_sample9-011"
+        ],
+        "quality_score": 0.15,
+        "preference": "拒绝依赖视觉的方法，因老伴视力不好，且担心两人一起查看时理解错误",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "每天固定时间让邻居或子女电话提醒用药",
+        "feedback_turn_ids": [
+          "turn-0002_sample9-013"
+        ],
+        "quality_score": 0.1,
+        "preference": "不愿意麻烦他人，希望独立管理用药，不依赖外部定时提醒",
+        "confidence": 0.9
+      }
+    ],
+    "cluster_id": "cluster-30d2633e"
+  },
+  {
+    "item_id": "need-0002_sample9-2",
+    "timestamp": "2025-07-22T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0002_sample9-017",
+      "turn-0002_sample9-018",
+      "turn-0002_sample9-019",
+      "turn-0002_sample9-020",
+      "turn-0002_sample9-021",
+      "turn-0002_sample9-022",
+      "turn-0002_sample9-023",
+      "turn-0002_sample9-024",
+      "turn-0002_sample9-025",
+      "turn-0002_sample9-026",
+      "turn-0002_sample9-027",
+      "turn-0002_sample9-028",
+      "turn-0002_sample9-029",
+      "turn-0002_sample9-030"
+    ],
+    "inferred_need": "新药增多后确保用药不混淆的核查方法",
+    "related_tags": [
+      "medication",
+      "safety_risk"
+    ],
+    "context": "用户和老伴用纹理胶布区分药品以防拿错，但近期复诊取回新药，担心混淆；用户听力不好，老伴视力不好。",
+    "context_event_ids": [
+      "event-0002_sample9-1",
+      "event-0002_sample9-2",
+      "event-0002_sample9-3"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "制作用药核对清单，每次取药按步骤核对打钩，利用视觉和触觉双重确认。",
+        "feedback_turn_ids": [
+          "turn-0002_sample9-023"
+        ],
+        "quality_score": 0.87,
+        "preference": "偏好步骤明确、可打钩的清单式核对方法",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议不确定药物外观或匹配时直接咨询医生或药师。",
+        "feedback_turn_ids": [
+          "turn-0002_sample9-025",
+          "turn-0002_sample9-027"
+        ],
+        "quality_score": 0.15,
+        "preference": "偏好具体可执行的步骤而非笼统建议",
+        "confidence": 0.9
+      },
+      {
+        "ai_solution_summary": "提出“念、看、摸”三步法：念药名、看药盒大字、摸纹理胶布；新药提前贴好标记。",
+        "feedback_turn_ids": [
+          "turn-0002_sample9-029"
+        ],
+        "quality_score": 0.95,
+        "preference": "偏好利用多种感官交叉核对、简单易记且能融入已有标记方法的具体步骤",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-420a38f3"
+  }
+]

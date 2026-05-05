@@ -1,0 +1,623 @@
+[
+  {
+    "event_id": "event-0003_sample0-1",
+    "event_type": "health_medical",
+    "timestamp": "2025-04-14T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample0-001",
+      "turn-0003_sample0-003"
+    ],
+    "event_summary": "社区小刘已帮忙办好医保电子凭证，但用户不知道如何关联到线上问诊平台；曾尝试操作但因害怕按错或造成资金损失而放弃。",
+    "tags": [
+      "medical_visit",
+      "other"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0003_sample0-2",
+    "event_type": "family_social",
+    "timestamp": "2025-04-14T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample0-013"
+    ],
+    "event_summary": "用户与女儿平日联系较少，通常仅节日发短信。",
+    "tags": [
+      "family",
+      "social"
+    ],
+    "confidence": 0.92
+  },
+  {
+    "event_id": "event-0003_sample0-3",
+    "event_type": "family_social",
+    "timestamp": "2025-04-14T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample0-013"
+    ],
+    "event_summary": "用户曾向女儿询问糖化血红蛋白含义，未获回复。",
+    "tags": [
+      "family",
+      "glucose"
+    ],
+    "confidence": 0.92
+  },
+  {
+    "event_id": "event-0003_sample0-4",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-04-14T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample0-011",
+      "turn-0003_sample0-013"
+    ],
+    "event_summary": "用户想与女儿沟通糖尿病问题，但担心女儿觉得烦或视为负担，希望找到自然轻松的方式。",
+    "tags": [
+      "family",
+      "emotion"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0003_sample0-5",
+    "event_type": "interest_activity",
+    "timestamp": "2025-04-14T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample0-019"
+    ],
+    "event_summary": "用户有养绿萝的爱好，熟悉其生长状态（如叶子打卷）。",
+    "tags": [
+      "hobby"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0003_sample0-6",
+    "event_type": "family_social",
+    "timestamp": "2025-04-14T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample0-025"
+    ],
+    "event_summary": "用户决定采纳用绿萝打比方的方式，以“养身体和养绿萝”相似的比喻自然地和女儿聊糖尿病管理，不让她感到压力。",
+    "tags": [
+      "family",
+      "hobby",
+      "emotion"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0003_sample1-1",
+    "event_type": "interest_activity",
+    "timestamp": "2025-05-04T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample1-001",
+      "turn-0003_sample1-003"
+    ],
+    "event_summary": "用户喜欢在阳台养花草，每天浇水",
+    "tags": [
+      "hobby"
+    ],
+    "confidence": 0.92
+  },
+  {
+    "event_id": "event-0003_sample1-2",
+    "event_type": "self_management",
+    "timestamp": "2025-05-04T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample1-011"
+    ],
+    "event_summary": "用户测血糖不规律，有时忘记",
+    "tags": [
+      "monitoring",
+      "adherence"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0003_sample1-3",
+    "event_type": "self_management",
+    "timestamp": "2025-05-04T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample1-013"
+    ],
+    "event_summary": "用户手机存有饮食口诀卡，偶尔在阳台看",
+    "tags": [
+      "diet",
+      "hobby"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0003_sample1-4",
+    "event_type": "self_management",
+    "timestamp": "2025-05-04T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample1-015"
+    ],
+    "event_summary": "用户决定在阳台看卡片后测血糖，形成固定习惯",
+    "tags": [
+      "monitoring",
+      "diet",
+      "adherence"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0003_sample1-5",
+    "event_type": "health_medical",
+    "timestamp": "2025-05-04T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample1-009"
+    ],
+    "event_summary": "用户最近听讲座提到糖化血红蛋白，想了解其含义",
+    "tags": [
+      "glucose",
+      "medical_visit"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0003_sample1-6",
+    "event_type": "health_medical",
+    "timestamp": "2025-05-04T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample1-021"
+    ],
+    "event_summary": "医生提示需要复查，用户询问如何与社区活动协调时间",
+    "tags": [
+      "medical_visit",
+      "social"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0003_sample1-7",
+    "event_type": "family_social",
+    "timestamp": "2025-05-04T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample1-023"
+    ],
+    "event_summary": "用户独自一人去复诊，无人陪同",
+    "tags": [
+      "living_alone",
+      "medical_visit"
+    ],
+    "confidence": 0.92
+  },
+  {
+    "event_id": "event-0003_sample1-8",
+    "event_type": "self_management",
+    "timestamp": "2025-05-04T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample1-027"
+    ],
+    "event_summary": "用户计划先参加社区活动记下问题，再去复诊",
+    "tags": [
+      "medical_visit",
+      "social"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0003_sample1-9",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-05-04T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample1-031",
+      "turn-0003_sample1-033"
+    ],
+    "event_summary": "用户对刻意留意症状感到焦虑，拒绝执行该建议",
+    "tags": [
+      "emotion",
+      "stress"
+    ],
+    "confidence": 0.92
+  },
+  {
+    "event_id": "event-0003_sample2-1",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-05-18T19:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample2-001"
+    ],
+    "event_summary": "用户想与女儿聊天，但怕女儿忙或不知道如何回应，感到顾虑",
+    "tags": [
+      "emotion",
+      "family"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0003_sample2-2",
+    "event_type": "self_management",
+    "timestamp": "2025-05-18T19:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample2-003"
+    ],
+    "event_summary": "用户用女儿转的钱去市场挑选了苹果和橙子，并拍摄了小票保存",
+    "tags": [
+      "diet",
+      "family"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "event_id": "event-0003_sample2-3",
+    "event_type": "self_management",
+    "timestamp": "2025-05-18T19:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample2-015"
+    ],
+    "event_summary": "用户在手机中创建了'健康支出'文件夹，用于存放健康相关的小票照片",
+    "tags": [
+      "other"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0003_sample2-4",
+    "event_type": "interest_activity",
+    "timestamp": "2025-05-18T19:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample2-007"
+    ],
+    "event_summary": "用户提到阳台上摆了不少绿萝",
+    "tags": [
+      "hobby"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "event_id": "event-0003_sample2-5",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-05-18T19:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample2-025"
+    ],
+    "event_summary": "用户因完成买水果和存小票的行为而感到积极，觉得自己能管理自己的事",
+    "tags": [
+      "emotion"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0003_sample2-6",
+    "event_type": "self_management",
+    "timestamp": "2025-05-18T19:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample2-021"
+    ],
+    "event_summary": "用户表示将尝试按月建立子文件夹来整理健康照片",
+    "tags": [
+      "other"
+    ],
+    "confidence": 0.7
+  },
+  {
+    "event_id": "event-0003_sample2-7",
+    "event_type": "self_management",
+    "timestamp": "2025-05-18T19:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample2-035"
+    ],
+    "event_summary": "用户表示愿意尝试每天将不同颜色水果摆盘拍照，以此记录健康饮食",
+    "tags": [
+      "diet"
+    ],
+    "confidence": 0.7
+  },
+  {
+    "event_id": "event-0003_sample3-1",
+    "event_type": "daily_life",
+    "timestamp": "2025-05-30T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample3-001"
+    ],
+    "event_summary": "用户每天观看‘今日宜忌’内容",
+    "tags": [
+      "other"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "event_id": "event-0003_sample3-2",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-05-30T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample3-001"
+    ],
+    "event_summary": "用户独自观看‘今日宜忌’时感到冷清孤单",
+    "tags": [
+      "emotion",
+      "living_alone"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0003_sample3-3",
+    "event_type": "daily_life",
+    "timestamp": "2025-05-30T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample3-005"
+    ],
+    "event_summary": "用户平时微信只用文字，不习惯语音功能",
+    "tags": [
+      "other"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0003_sample3-4",
+    "event_type": "interest_activity",
+    "timestamp": "2025-05-30T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample3-009"
+    ],
+    "event_summary": "用户每天都照料阳台的绿萝、吊兰等绿植",
+    "tags": [
+      "hobby"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0003_sample3-5",
+    "event_type": "self_management",
+    "timestamp": "2025-05-30T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample3-011"
+    ],
+    "event_summary": "用户计划每天看完‘今日宜忌’后给阳台绿植浇水，并告知助手",
+    "tags": [
+      "activity",
+      "hobby"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0003_sample3-6",
+    "event_type": "health_medical",
+    "timestamp": "2025-05-30T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample3-013"
+    ],
+    "event_summary": "用户近期将去社区医院复查",
+    "tags": [
+      "medical_visit"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0003_sample3-7",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-05-30T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample3-013",
+      "turn-0003_sample3-017"
+    ],
+    "event_summary": "用户对复查感到焦虑和准备不足，担心流程不熟、说不到要点",
+    "tags": [
+      "emotion",
+      "stress",
+      "medical_visit"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0003_sample3-8",
+    "event_type": "self_management",
+    "timestamp": "2025-05-30T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample3-015",
+      "turn-0003_sample3-019"
+    ],
+    "event_summary": "用户手机中有血糖照片和复查单据散乱，想整理但不会操作",
+    "tags": [
+      "glucose",
+      "medical_visit",
+      "monitoring"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0003_sample3-9",
+    "event_type": "self_management",
+    "timestamp": "2025-05-30T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample3-021"
+    ],
+    "event_summary": "用户计划复查时携带医保卡、手机、药盒、舒适的鞋子",
+    "tags": [
+      "medical_visit",
+      "adherence"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0003_sample3-10",
+    "event_type": "self_management",
+    "timestamp": "2025-05-30T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample3-023"
+    ],
+    "event_summary": "用户常以苹果和橙子作为加餐",
+    "tags": [
+      "diet"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0003_sample3-11",
+    "event_type": "self_management",
+    "timestamp": "2025-05-30T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample3-031"
+    ],
+    "event_summary": "用户测血糖不勤快，血糖记录零散难找",
+    "tags": [
+      "glucose",
+      "monitoring",
+      "adherence"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0003_sample3-12",
+    "event_type": "self_management",
+    "timestamp": "2025-05-30T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample3-035"
+    ],
+    "event_summary": "用户计划在吃苹果和橙子时留意身体感受（饱腹感、清爽感）",
+    "tags": [
+      "diet"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0003_sample4-1",
+    "event_type": "health_medical",
+    "timestamp": "2025-06-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample4-001"
+    ],
+    "event_summary": "医生诊断颈动脉有点厚",
+    "tags": [
+      "medical_visit",
+      "symptom"
+    ],
+    "confidence": 0.92
+  },
+  {
+    "event_id": "event-0003_sample4-2",
+    "event_type": "health_medical",
+    "timestamp": "2025-06-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample4-003"
+    ],
+    "event_summary": "糖尿病史多年，曾因停药住院",
+    "tags": [
+      "medication",
+      "medical_visit",
+      "adherence"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "event_id": "event-0003_sample4-3",
+    "event_type": "health_medical",
+    "timestamp": "2025-06-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample4-001",
+      "turn-0003_sample4-003",
+      "turn-0003_sample4-023",
+      "turn-0003_sample4-029"
+    ],
+    "event_summary": "活动后气短，爬楼喘，弯腰蹲起后眼前发黑",
+    "tags": [
+      "symptom",
+      "activity"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0003_sample4-4",
+    "event_type": "health_medical",
+    "timestamp": "2025-06-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample4-011"
+    ],
+    "event_summary": "即将进行睡眠监测检查",
+    "tags": [
+      "medical_visit"
+    ],
+    "confidence": 0.93
+  },
+  {
+    "event_id": "event-0003_sample4-5",
+    "event_type": "self_management",
+    "timestamp": "2025-06-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample4-007",
+      "turn-0003_sample4-009"
+    ],
+    "event_summary": "计划本周坚持测3次空腹血糖",
+    "tags": [
+      "monitoring",
+      "glucose"
+    ],
+    "confidence": 0.88
+  },
+  {
+    "event_id": "event-0003_sample4-6",
+    "event_type": "self_management",
+    "timestamp": "2025-06-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample4-031",
+      "turn-0003_sample4-035"
+    ],
+    "event_summary": "接受观察活动后身体反应的自我管理方法",
+    "tags": [
+      "activity",
+      "other"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "event_id": "event-0003_sample4-7",
+    "event_type": "daily_life",
+    "timestamp": "2025-06-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample4-005"
+    ],
+    "event_summary": "手机仅用微信，不擅使用复杂APP",
+    "tags": [
+      "other"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "event_id": "event-0003_sample4-8",
+    "event_type": "daily_life",
+    "timestamp": "2025-06-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample4-019",
+      "turn-0003_sample4-021"
+    ],
+    "event_summary": "有系扣睡衣，准备用于睡眠监测穿着",
+    "tags": [
+      "other"
+    ],
+    "confidence": 0.88
+  },
+  {
+    "event_id": "event-0003_sample4-9",
+    "event_type": "family_social",
+    "timestamp": "2025-06-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample4-013"
+    ],
+    "event_summary": "上次挂号预约依赖社工帮助",
+    "tags": [
+      "social",
+      "caregiver"
+    ],
+    "confidence": 0.92
+  },
+  {
+    "event_id": "event-0003_sample4-10",
+    "event_type": "mental_emotional",
+    "timestamp": "2025-06-04T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0003_sample4-003",
+      "turn-0003_sample4-011",
+      "turn-0003_sample4-033",
+      "turn-0003_sample4-035"
+    ],
+    "event_summary": "担心并发症，对睡眠监测流程感到不踏实，因提醒紧张焦虑",
+    "tags": [
+      "emotion",
+      "stress"
+    ],
+    "confidence": 0.82
+  }
+]

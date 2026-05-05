@@ -29,6 +29,7 @@ from dataclasses import replace
 from typing import Any
 
 from src.llm.llm import LLMClient, get_default_llm_client
+from src.memory.ontology import NEED_DOMAINS
 from src.memory.schemas import NeedItem, NeedSolutionProposal, RawTurn
 from src.memory.update.prompts import (
     EVENT_TAGS,
@@ -39,6 +40,7 @@ from src.memory.update.prompts import (
 )
 
 _logger = logging.getLogger(__name__)
+
 # ---------------------------------------------------------------------------
 # Free-form need phrase shaping
 # ---------------------------------------------------------------------------
@@ -47,9 +49,13 @@ _NEED_ITEM_ID_PLACEHOLDER = "need-pending-ingest"
 
 _DEFAULT_NEED = "日常陪伴"
 _MAX_NEED_LEN = 24
+_MAX_NEED_OBJECT_LEN = 15
 _MAX_PREFERENCE_LEN = 80
 _MAX_SOLUTION_LEN = 120
 _MAX_CONTEXT_LEN = 120
+
+_NEED_DOMAIN_KEYS: tuple[str, ...] = tuple(NEED_DOMAINS.keys())
+_DEFAULT_NEED_DOMAIN = "other"
 
 # Used by the rule extractor to map a heuristic need to a sensible event tag.
 # Keys are now Chinese phrases (matching the new free-form schema); we keep a
@@ -58,8 +64,18 @@ _NEED_TO_TAG: dict[str, str] = {
     "饮食支持": "diet",
     "活动支持": "activity",
     "睡眠支持": "sleep",
-    "用药支持": "medical",
+    "用药支持": "medication",
     "情绪支持": "emotion",
+    "知识解释": "other",
+    "日常陪伴": "other",
+}
+
+_NEED_TO_DOMAIN: dict[str, str] = {
+    "饮食支持": "diet_glucose_management",
+    "活动支持": "activity_safety",
+    "睡眠支持": "routine_habit_adherence",
+    "用药支持": "medication_adherence",
+    "情绪支持": "emotional_motivation",
     "知识解释": "other",
     "日常陪伴": "other",
 }
@@ -82,6 +98,14 @@ def _shape_preference(value: Any) -> str:
         return ""
     text = " ".join(text.split())
     return text[:_MAX_PREFERENCE_LEN]
+
+
+def _shape_need_object(value: Any) -> str:
+    text = str(value or "").strip()
+    if not text:
+        return ""
+    text = " ".join(text.split())
+    return text[:_MAX_NEED_OBJECT_LEN]
 
 
 def _shape_context(value: Any) -> str:
@@ -130,11 +154,15 @@ class RuleNeedSolutionExtractor:
     def _item_from_rule_pair(self, user_turn: RawTurn, assistant_turn: RawTurn) -> NeedItem:
         need = self._keyword_need(user_turn.text)
         tag = _NEED_TO_TAG.get(need, "other")
+        need_domain = _NEED_TO_DOMAIN.get(need, _DEFAULT_NEED_DOMAIN)
+        need_object = need[:_MAX_NEED_OBJECT_LEN]
         return NeedItem(
             item_id=_NEED_ITEM_ID_PLACEHOLDER,
-            timestamp=assistant_turn.timestamp,
-            source_turn_ids=[user_turn.turn_id, assistant_turn.turn_id],
+            timestamp=user_turn.timestamp,
+            source_turn_ids=[user_turn.turn_id],
             inferred_need=need,
+            need_domain=need_domain,
+            need_object=need_object,
             related_tags=[tag],
             context="",
             context_event_ids=[],
@@ -142,8 +170,8 @@ class RuleNeedSolutionExtractor:
                 NeedSolutionProposal(
                     ai_solution_summary=assistant_turn.text.strip()[:100],
                     feedback_turn_ids=[],
-                    quality_score=0.5,
-                    preference="",
+                    fit_score=0.5,
+                    revealed_preference="",
                     confidence=None,
                 ),
             ],
@@ -216,34 +244,6 @@ class LLMNeedSolutionExtractor:
 
     # -- need inference -----------------------------------------------------
 
-    def infer_need(
-        self,
-        query: str,
-        profile_hint: dict[str, Any] | None = None,
-        top_needs: list[str] | None = None,
-    ) -> dict[str, Any]:
-        if not query or not query.strip():
-            return self._fallback.infer_need(query, profile_hint, top_needs)
-
-        try:
-            prompt = build_need_infer_prompt(
-                query=query,
-                profile_hint=profile_hint,
-                top_needs=top_needs,
-            )
-            response = self.client.generate_json(
-                prompt,
-                system_prompt=NEED_INFER_SYSTEM,
-            )
-            return self._coerce_need_inference(response)
-        except Exception as err:  # noqa: BLE001 — defensive fallback
-            _logger.warning(
-                "LLMNeedSolutionExtractor.infer_need failed (%s); "
-                "falling back to rule extractor.",
-                err,
-            )
-            return self._fallback.infer_need(query, profile_hint, top_needs)
-
     def extract_item(
         self,
         window_turns: list[RawTurn],
@@ -286,7 +286,7 @@ class LLMNeedSolutionExtractor:
         return []
 
     def _coerce_unit_float(self, value: Any) -> float | None:
-        """Clamp to [0, 1]; used for ``quality_score`` and ``confidence`` (aligned with event_extract)."""
+        """Clamp to [0, 1]; used for ``fit_score`` and ``confidence``."""
         if value is None:
             return None
         try:
@@ -346,8 +346,8 @@ class LLMNeedSolutionExtractor:
                     NeedSolutionProposal(
                         ai_solution_summary=summ,
                         feedback_turn_ids=self._coerce_str_list(row.get("feedback_turn_ids")),
-                        quality_score=self._coerce_unit_float(row.get("quality_score")),
-                        preference=_shape_preference(row.get("preference")),
+                        fit_score=self._coerce_unit_float(row.get("fit_score")),
+                        revealed_preference=_shape_preference(row.get("revealed_preference")),
                         confidence=self._coerce_unit_float(row.get("confidence")),
                     ),
                 )
@@ -363,6 +363,12 @@ class LLMNeedSolutionExtractor:
         need = _shape_need_phrase(item.get("inferred_need"))
         if not need:
             need = _DEFAULT_NEED
+        need_domain = str(item.get("need_domain") or "").strip()
+        if need_domain not in _NEED_DOMAIN_KEYS:
+            need_domain = _NEED_TO_DOMAIN.get(need, _DEFAULT_NEED_DOMAIN)
+        need_object = _shape_need_object(item.get("need_object"))
+        if not need_object:
+            need_object = need[:_MAX_NEED_OBJECT_LEN]
 
         fallback_assistant = window_turns[-1].text.strip()[:100]
 
@@ -391,11 +397,24 @@ class LLMNeedSolutionExtractor:
             session_events,
         )
 
+        user_turns = [t for t in window_turns if t.role == "user" and t.text.strip()]
+        source_turn_ids = self._coerce_str_list(item.get("source_turn_ids"))
+        valid_user_ids = {t.turn_id for t in user_turns}
+        source_turn_ids = [tid for tid in source_turn_ids if tid in valid_user_ids]
+        if not source_turn_ids:
+            source_turn_ids = [t.turn_id for t in user_turns]
+        if not source_turn_ids:
+            source_turn_ids = [window_turns[0].turn_id]
+        ts_by_turn = {t.turn_id: t.timestamp for t in window_turns}
+        timestamp = min((ts_by_turn.get(tid, "") for tid in source_turn_ids), default="") or window_turns[0].timestamp
+
         return NeedItem(
             item_id=_NEED_ITEM_ID_PLACEHOLDER,
-            timestamp=window_turns[-1].timestamp,
-            source_turn_ids=[t.turn_id for t in window_turns],
+            timestamp=timestamp,
+            source_turn_ids=source_turn_ids,
             inferred_need=need,
+            need_domain=need_domain,
+            need_object=need_object,
             related_tags=tags,
             context=_shape_context(item.get("context")),
             context_event_ids=ctx_ids,

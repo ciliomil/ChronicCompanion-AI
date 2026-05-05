@@ -14,5 +14,5 @@ EXAMPLE INPUT:
 - 需求："早餐怎么搭不饿又稳" / 偏好："偏好做法简单、量化清晰"
 - 需求："吃水果担心血糖" / 偏好："想要可量化的食用量参考"
 
-EXAMPLE OUTPUT:
+EXAMPLE JSON OUTPUT:
 {"need_type":"控糖饮食建议","preference_principle":"偏好家常、低糖、量化清晰、与现有饮食习惯衔接的可执行方案"}
