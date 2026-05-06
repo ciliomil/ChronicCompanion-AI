@@ -25,7 +25,11 @@ import json
 from typing import Any, Iterable
 
 from src.llm.prompt_loader import load_prompt
-from src.memory.ontology import MEMORY_TAGS, NEED_DOMAINS
+from src.memory.ontology import (
+    BASIC_INFO_CLAIM_TYPE_DESCRIPTIONS,
+    MEMORY_TAGS,
+    NEED_DOMAINS,
+)
 
 # ---------------------------------------------------------------------------
 # Controlled vocabularies (rule-fallback only for needs)
@@ -39,6 +43,14 @@ def _vocab_str(values: tuple[str, ...]) -> str:
     return ", ".join(values)
 
 
+def _claim_type_descriptions_str() -> str:
+    """Render BASIC_INFO_CLAIM_TYPE_DESCRIPTIONS as a bulleted list."""
+    lines: list[str] = []
+    for key, desc in BASIC_INFO_CLAIM_TYPE_DESCRIPTIONS.items():
+        lines.append(f"- {key}：{desc}")
+    return "\n".join(lines)
+
+
 # ---------------------------------------------------------------------------
 # Loaded system prompts
 # ---------------------------------------------------------------------------
@@ -50,9 +62,27 @@ EVENT_EXTRACT_SYSTEM: str = load_prompt(
 
 # need_infer no longer takes a controlled need taxonomy.
 NEED_INFER_SYSTEM: str = load_prompt("memory/need_infer/system")
-NEED_SOLUTION_EXTRACT_SYSTEM: str = load_prompt("memory/need_solution_extract/system")
+NEED_SOLUTION_EXTRACT_SYSTEM: str = load_prompt(
+    "memory/need_solution_extract/system",
+    need_domains=_vocab_str(tuple(NEED_DOMAINS.keys())),
+    memory_tags=_vocab_str(MEMORY_TAGS),
+)
 RECENT_STATUS_SUMMARIZE_SYSTEM: str = load_prompt("memory/recent_status_summarize/system")
-BASIC_INFO_UPDATE_SYSTEM: str = load_prompt("memory/basic_info_update/system")
+
+# basic_info update is split into a three-stage pipeline:
+# 1. propose candidate long-term claims from this session's events / needs;
+# 2. consolidate candidates against existing claims (add | update | supersede | ignore);
+# 3. re-summarize each section based on the merged active / uncertain claims.
+BASIC_INFO_PROPOSE_SYSTEM: str = load_prompt(
+    "memory/basic_info_propose/system",
+    claim_type_descriptions=_claim_type_descriptions_str(),
+)
+BASIC_INFO_CONSOLIDATE_SYSTEM: str = load_prompt(
+    "memory/basic_info_consolidate/system",
+    claim_type_descriptions=_claim_type_descriptions_str(),
+)
+BASIC_INFO_SUMMARIZE_SYSTEM: str = load_prompt("memory/basic_info_summarize/system")
+
 PREFERENCE_PRINCIPLE_UPDATE_SYSTEM: str = load_prompt("memory/preference_principle_update/system")
 TOPIC_SEGMENT_SYSTEM: str = load_prompt("memory/topic_segment/system")
 
@@ -191,17 +221,57 @@ def build_need_solution_extract_prompt(
 
 
 
-def build_basic_info_update_prompt(
+def render_event_lines_with_tags(events: Iterable[dict[str, Any]]) -> str:
+    """Render events as ``[event_id|YYYY-MM-DD] summary [tags: a, b]`` lines.
+
+    Used by the basic_info propose stage so the LLM can constrain candidate
+    tags to the union of cited evidence's tags. Returns ``(无)`` when empty.
+    """
+    lines: list[str] = []
+    for ev in events:
+        eid = str(ev.get("event_id", "?"))
+        ts = str(ev.get("timestamp", "")).split("T")[0]
+        summary = str(ev.get("event_summary", "")).strip().replace("\n", " ")
+        raw_tags = ev.get("tags")
+        tags: list[str] = []
+        if isinstance(raw_tags, list):
+            tags = [str(t).strip() for t in raw_tags if str(t).strip()]
+        tag_part = f" [tags: {', '.join(tags)}]" if tags else " [tags: ]"
+        lines.append(f"[{eid}|{ts}] {summary}{tag_part}")
+    return "\n".join(lines) if lines else "(无)"
+
+
+def build_basic_info_propose_prompt(
     *,
-    old_basic_info: dict[str, Any],
     session_events: list[dict[str, Any]],
     session_need_items: list[dict[str, Any]],
 ) -> str:
     return load_prompt(
-        "memory/basic_info_update/user",
-        old_basic_info=json.dumps(old_basic_info, ensure_ascii=False),
-        session_events=render_event_lines(session_events or []),
-        session_need_items=json.dumps(session_need_items, ensure_ascii=False),
+        "memory/basic_info_propose/user",
+        session_events=render_event_lines_with_tags(session_events or []),
+        session_need_items=json.dumps(session_need_items or [], ensure_ascii=False),
+    )
+
+
+def build_basic_info_consolidate_prompt(
+    *,
+    existing_claims: str,
+    candidates: str,
+) -> str:
+    return load_prompt(
+        "memory/basic_info_consolidate/user",
+        existing_claims=existing_claims,
+        candidates=candidates,
+    )
+
+
+def build_basic_info_summarize_prompt(
+    *,
+    section_claims: str,
+) -> str:
+    return load_prompt(
+        "memory/basic_info_summarize/user",
+        section_claims=section_claims,
     )
 
 

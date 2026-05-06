@@ -468,10 +468,7 @@ def ingest_session(
             embedder=emb,
             llm_client=llm,
             clock=clock,
-            cluster_min_size=cluster_min_size,
             window_days=window_days,
-            min_items_to_cluster=min_items_to_cluster,
-            force_recluster=force_recluster,
             session_events=session_event_dicts,
             session_need_items=new_need_dicts,
         )

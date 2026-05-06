@@ -6,10 +6,9 @@ Three periodic updates are implemented:
    sliding ``window_days`` window. Events are split into health, self-management,
    mental, family/social, interest, and risk-hint buckets; the resulting
    ``recent_status`` matches :func:`src.memory.schemas._empty_recent_status`.
-2. **Need preference clusters** — Items previously without a ``cluster_id`` are
-   incrementally assigned & refined; clusters are bootstrapped from scratch
-   via :meth:`NeedClusterer.initialize` when none exist yet (or when the
-   caller forces a re-cluster).
+2. **Need preference clusters** — Domain-based assignment. Each ``need_domain``
+   maps to one cluster; items without ``cluster_id`` are assigned by domain and
+   preference principles are updated via ``preference_principle_update`` prompt.
 3. **Basic info (long-term background)** — Last: when the caller passes this
    session's event and need rows, an LLM merges them into evidence-backed
    ``basic_info`` claims (see :mod:`src.memory.update.basic_info_updater`).
@@ -305,10 +304,7 @@ def update_profile_from_mid_memory(
     embedder: Embedder | None = None,
     llm_client: LLMClient | None = None,
     clock: Clock | None = None,
-    cluster_min_size: int = 3,
     window_days: int = 14,
-    min_items_to_cluster: int = 5,
-    force_recluster: bool = False,
     session_events: list[dict[str, Any]] | None = None,
     session_need_items: list[dict[str, Any]] | None = None,
 ) -> tuple[UserProfile, dict[str, str]]:
@@ -319,11 +315,10 @@ def update_profile_from_mid_memory(
         :class:`NeedItem`s via :meth:`NeedSolutionStore.update_item`.
 
     Behaviour:
-        - When the profile has no clusters yet (or ``force_recluster=True``),
-          all items are re-clustered from scratch via
-          :meth:`NeedClusterer.initialize`.
-        - Otherwise only items without a ``cluster_id`` are incrementally
-          assigned and used to refine the affected clusters.
+        - When the profile has no clusters yet, all items are grouped by domain
+          via :meth:`NeedClusterer.initialize`.
+        - Otherwise only items without a ``cluster_id`` are assigned by domain
+          and used to update the affected domain principles.
         - **basic_info** (after recent status and need clustering): when
           ``session_events`` and/or ``session_need_items`` are not ``None``
           (ingest passes this session's extracted rows), they are passed to
@@ -346,13 +341,11 @@ def update_profile_from_mid_memory(
         for c in (profile_dict.get("need_preferences") or [])
         if isinstance(c, dict)
     ]
-    needs_full_init = force_recluster or not existing_clusters
+    needs_full_init = not existing_clusters
 
     clusterer = NeedClusterer(
         embedder=emb,
         llm_client=llm,
-        cluster_min_size=cluster_min_size,
-        min_items_to_cluster=min_items_to_cluster,
         now_iso=clk.now_iso(),
     )
 

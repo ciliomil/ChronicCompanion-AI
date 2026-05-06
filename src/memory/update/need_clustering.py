@@ -1,6 +1,6 @@
 """Need preference clustering by domain.
 
-Current strategy (domain-first, no HDBSCAN):
+Current strategy (domain):
 - Each ``need_domain`` corresponds to one cluster.
 - Cluster assignment is deterministic by domain.
 - For each domain cluster, summarise a ``preference_principle`` from that
@@ -105,11 +105,6 @@ class NeedClusterer:
         # Keep signature for compatibility; some args are no longer used.
         self._embedder = embedder
         self._llm = llm_client
-        self._cluster_min_size = max(1, cluster_min_size)
-        self._hdbscan_min_samples = hdbscan_min_samples
-        self._min_items_to_cluster = min_items_to_cluster
-        self._stable_threshold = stable_threshold
-        self._pending_threshold = pending_threshold
         self._now_iso = now_iso
 
     def _now(self) -> str:
@@ -192,12 +187,13 @@ class NeedClusterer:
                 clusters.append(cluster)
                 by_domain[domain] = cluster
 
-            old_member_ids = set(cluster.member_item_ids)
+            existing = set(cluster.member_item_ids)
             for it in items_for_domain:
                 iid = _item_id(it)
-                if iid and iid not in old_member_ids:
+                if iid and iid not in existing:
                     cluster.member_item_ids.append(iid)
-                    old_member_ids.add(iid)
+                    existing.add(iid)
+
             cluster.size = len(cluster.member_item_ids)
             cluster.preference_principle = self._summarize_domain_preference(
                 domain,

@@ -14,22 +14,10 @@
 - 单纯医疗事实、血糖数值、症状、就诊、家庭事件等，这些只可写入 context，不要当作 need 或 preference；
 - 一次性安排、具体时间地点、具体活动计划，不要直接写成 preference。
 
-受控 need_domain，只能选一个：
-- diet_glucose_management：饮食、加餐、主食、饮食对血糖影响
-- glucose_monitoring_recording：血糖测量、记录、趋势理解、监测解释
-- medication_adherence：用药提醒、服药确认、漏服、用药记录
-- symptom_risk_triage：症状担忧、并发症、副作用、何时就医
-- activity_safety：运动、居家活动、膝盖友好、安全活动
-- routine_habit_adherence：健康习惯提醒、生活节奏绑定、坚持习惯
-- family_caregiver_collaboration：家属/照护者知情、协作、共享、减轻压力
-- healthcare_navigation：复诊准备、医嘱留存、医保/补贴/社区服务流程
-- supplies_device_management：试纸、助听器、电池、设备耗材、补货预防
-- emotional_motivation：情绪支持、鼓励、认可、趣味激励、解闷
-- daily_life_task_support：邻里帮助、生活事务记录、工具操作交接
-- other：其他
+受控 need_domain，从以下集合中只能选一个：
+$need_domains
 
-受控 related_tags，多选 1~3 个：
-glucose, medication, medical_visit, symptom, complication, diet, sleep, activity, monitoring, adherence, family, caregiver, living_alone, social, emotion, stress, hobby, safety_risk, other
+受控 related_tags ，从以下集合中多选 1~3 个：$memory_tags
 
 拆分规则：
 - 一个具体需求生成一个 item。

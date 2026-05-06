@@ -1,0 +1,790 @@
+[
+  {
+    "item_id": "need-0000_sample0-1",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample0-001",
+      "turn-0000_sample0-003"
+    ],
+    "inferred_need": "医生建议后晚饭主食调整的具体指导",
+    "need_domain": "diet_glucose_management",
+    "need_object": "晚饭主食",
+    "related_tags": [
+      "diet",
+      "glucose"
+    ],
+    "context": "用户社区医院复查，医生建议注意晚饭但未具体说明，对碳水化合物概念模糊，日常晚餐常吃米饭面条。用户眼睛不好，看小字费劲。",
+    "context_event_ids": [
+      "event-0000_sample0-1",
+      "event-0000_sample0-3",
+      "event-0000_sample0-4"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议将晚餐米饭换成小半碗杂粮饭或一小块红薯/玉米",
+        "feedback_turn_ids": [
+          "turn-0000_sample0-005"
+        ],
+        "fit_score": 0.9,
+        "revealed_preference": "偏好具体、量化的食物替代方案，愿意尝试对控制血糖友好的替代主食",
+        "confidence": 0.92
+      },
+      {
+        "ai_solution_summary": "建议汤面少放一半面条，多加蔬菜、豆腐或鸡蛋",
+        "feedback_turn_ids": [
+          "turn-0000_sample0-007"
+        ],
+        "fit_score": 0.85,
+        "revealed_preference": "偏好改动不大的烹饪调整，能兼顾习惯和血糖控制",
+        "confidence": 0.88
+      },
+      {
+        "ai_solution_summary": "建议记录晚餐内容与次日空腹血糖对照",
+        "feedback_turn_ids": [
+          "turn-0000_sample0-009"
+        ],
+        "fit_score": 0.1,
+        "revealed_preference": "因眼睛不好和嫌麻烦，不愿增加记录负担",
+        "confidence": 0.9
+      }
+    ],
+    "cluster_id": "cluster-diet_glucose_management"
+  },
+  {
+    "item_id": "need-0000_sample0-2",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample0-011",
+      "turn-0000_sample0-013",
+      "turn-0000_sample0-015",
+      "turn-0000_sample0-017"
+    ],
+    "inferred_need": "需要通俗易懂的血糖数值解读",
+    "need_domain": "glucose_monitoring_recording",
+    "need_object": "血糖数字理解",
+    "related_tags": [
+      "monitoring",
+      "glucose",
+      "symptom"
+    ],
+    "context": "用户老花眼看不清照片里的血糖数字，希望知道整体情况而非具体数值，并想知道血糖与症状、饮食的关系。",
+    "context_event_ids": [
+      "event-0000_sample0-3",
+      "event-0000_sample0-2",
+      "event-0000_sample0-1"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "用红绿灯比喻血糖值：绿灯4-7表示平稳，黄灯7.5以上提醒注意晚餐主食量",
+        "feedback_turn_ids": [
+          "turn-0000_sample0-019"
+        ],
+        "fit_score": 0.92,
+        "revealed_preference": "喜欢直观类比（如红绿灯）来理解血糖范围，将数值转化为可行动建议",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-glucose_monitoring_recording"
+  },
+  {
+    "item_id": "need-0000_sample0-3",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample0-021"
+    ],
+    "inferred_need": "因视力不好，需要语音记录血糖",
+    "need_domain": "glucose_monitoring_recording",
+    "need_object": "血糖记录方式",
+    "related_tags": [
+      "glucose",
+      "monitoring",
+      "family"
+    ],
+    "context": "用户眼睛老花，看不清血糖本子，也写不了；女儿拍照也看不清。希望有类似发微信语音的简单方法记录。",
+    "context_event_ids": [
+      "event-0000_sample0-3"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议用户测完血糖后像发微信语音一样，按住说话报血糖值，助手自动记录并整理成大表格",
+        "feedback_turn_ids": [
+          "turn-0000_sample0-025"
+        ],
+        "fit_score": 0.85,
+        "revealed_preference": "偏好像发微信语音一样简单的操作，不需要学习新APP",
+        "confidence": 0.85
+      }
+    ],
+    "cluster_id": "cluster-glucose_monitoring_recording"
+  },
+  {
+    "item_id": "need-0000_sample0-4",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample0-027"
+    ],
+    "inferred_need": "希望血糖记录能方便女儿查看，但不想打扰家庭群",
+    "need_domain": "family_caregiver_collaboration",
+    "need_object": "血糖数据分享",
+    "related_tags": [
+      "glucose",
+      "family",
+      "monitoring"
+    ],
+    "context": "用户女儿工作忙，用户担心频繁发消息会打扰，希望女儿能方便看到但不影响聊天。",
+    "context_event_ids": [
+      "event-0000_sample0-5"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议每周生成一次血糖健康周报，发到家庭群，选周末白天不打扰聊天",
+        "feedback_turn_ids": [
+          "turn-0000_sample0-029"
+        ],
+        "fit_score": 0.9,
+        "revealed_preference": "偏好每周一次的固定分享，不影响家庭群日常聊天",
+        "confidence": 0.9
+      }
+    ],
+    "cluster_id": "cluster-family_caregiver_collaboration"
+  },
+  {
+    "item_id": "need-0000_sample0-5",
+    "timestamp": "2025-02-06T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample0-031"
+    ],
+    "inferred_need": "暂时只想先记录血糖，不想同时记录其他症状以免混乱",
+    "need_domain": "glucose_monitoring_recording",
+    "need_object": "记录范围设定",
+    "related_tags": [
+      "glucose",
+      "monitoring",
+      "symptom"
+    ],
+    "context": "用户有腿麻、眼花症状但时有时无，怕一起记录会更乱，决定先专注血糖。",
+    "context_event_ids": [
+      "event-0000_sample0-2"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议在报血糖时也顺便简单记录症状，但未坚持。用户拒绝后立即尊重用户选择。",
+        "feedback_turn_ids": [
+          "turn-0000_sample0-031"
+        ],
+        "fit_score": 0.15,
+        "revealed_preference": "偏好一次只聚焦一个健康维度，避免混淆",
+        "confidence": 0.9
+      }
+    ],
+    "cluster_id": "cluster-glucose_monitoring_recording"
+  },
+  {
+    "item_id": "need-0000_sample1-1",
+    "timestamp": "2025-02-18T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample1-001",
+      "turn-0000_sample1-003"
+    ],
+    "inferred_need": "在家自我监测脚部异常，避免依赖他人",
+    "need_domain": "symptom_risk_triage",
+    "need_object": "脚麻监测",
+    "related_tags": [
+      "symptom",
+      "complication",
+      "family"
+    ],
+    "context": "用户下午脚麻，担心与糖尿病并发症有关，已约下周就诊但心里不踏实，想在家自行判断是否有恶化迹象。",
+    "context_event_ids": [
+      "event-0000_sample1-1",
+      "event-0000_sample1-2"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议请女儿每周帮忙拍双脚照片，存入固定相册对比",
+        "feedback_turn_ids": [
+          "turn-0000_sample1-005"
+        ],
+        "fit_score": 0.15,
+        "revealed_preference": "不想依赖孩子帮忙，希望自己操作简单、不麻烦他人的监测方式",
+        "confidence": 0.85
+      }
+    ],
+    "cluster_id": "cluster-symptom_risk_triage"
+  },
+  {
+    "item_id": "need-0000_sample1-2",
+    "timestamp": "2025-02-18T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample1-007"
+    ],
+    "inferred_need": "让女儿自动知晓复查等事项，无需自己操作",
+    "need_domain": "family_caregiver_collaboration",
+    "need_object": "信息同步给女儿",
+    "related_tags": [
+      "family",
+      "caregiver",
+      "adherence"
+    ],
+    "context": "用户记性差，常记混女儿们询问的事，又不敢频繁打扰，希望让女儿知道复查和注意事项。",
+    "context_event_ids": [
+      "event-0000_sample1-3",
+      "event-0000_sample1-7",
+      "event-0000_sample1-2"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议用微信待办清单列出事项，完成手动点确认，女儿可看进度",
+        "feedback_turn_ids": [
+          "turn-0000_sample1-013"
+        ],
+        "fit_score": 0.1,
+        "revealed_preference": "拒绝需要手动确认的方案，认为会增加记忆负担",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议用手机日历标记并共享给女儿，自动提醒",
+        "feedback_turn_ids": [
+          "turn-0000_sample1-017"
+        ],
+        "fit_score": 0.05,
+        "revealed_preference": "拒绝需要自己操作且可能误关的方案，偏好稳定、无需用户干预的方式",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-family_caregiver_collaboration"
+  },
+  {
+    "item_id": "need-0000_sample1-3",
+    "timestamp": "2025-02-18T13:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample1-021"
+    ],
+    "inferred_need": "寻找不费眼不费力的情绪放松方式",
+    "need_domain": "emotional_motivation",
+    "need_object": "放松或倾诉方式",
+    "related_tags": [
+      "emotion",
+      "hobby"
+    ],
+    "context": "用户因视力下降无法做针线活，下午乏力常发呆，担心给子女添麻烦，不敢轻易倾诉。",
+    "context_event_ids": [
+      "event-0000_sample1-5",
+      "event-0000_sample1-6",
+      "event-0000_sample1-7"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议午后疲乏时做深呼吸放松，默念放松和烦恼走",
+        "feedback_turn_ids": [
+          "turn-0000_sample1-025"
+        ],
+        "fit_score": 0.2,
+        "revealed_preference": "不喜欢任务式的放松指导，偏好自然随意的情绪出口",
+        "confidence": 0.9
+      },
+      {
+        "ai_solution_summary": "改为提供随时倾听陪伴，鼓励用户像现在这样随意聊天",
+        "feedback_turn_ids": [
+          "turn-0000_sample1-027"
+        ],
+        "fit_score": 0.9,
+        "revealed_preference": "愿意将AI作为安全倾诉对象，避免给子女增加负担；更接受自然聊天的陪伴而非指示性方法",
+        "confidence": 0.9
+      }
+    ],
+    "cluster_id": "cluster-emotional_motivation"
+  },
+  {
+    "item_id": "need-0000_sample2-1",
+    "timestamp": "2025-02-24T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample2-001",
+      "turn-0000_sample2-003"
+    ],
+    "inferred_need": "寻求不费力可长期坚持的就诊信息记录方法",
+    "need_domain": "healthcare_navigation",
+    "need_object": "就诊信息记录",
+    "related_tags": [
+      "monitoring",
+      "adherence",
+      "family"
+    ],
+    "context": "用户因视力不佳且手写看不太清、语音识别常出错，记录就诊信息非常困难，感到沮丧并希望找到简便方法。",
+    "context_event_ids": [
+      "event-0000_sample2-1",
+      "event-0000_sample2-2"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议使用微信发语音和拍照记录就诊信息，利用微信个人对话窗口按时间排序保存",
+        "feedback_turn_ids": [
+          "turn-0000_sample2-005"
+        ],
+        "fit_score": 0.92,
+        "revealed_preference": "偏好简单、自己已会使用、无需他人帮忙、无需打字或填表的记录方式",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议由女儿帮忙在手机备忘录建就医记录模板，分栏填写",
+        "feedback_turn_ids": [
+          "turn-0000_sample2-007"
+        ],
+        "fit_score": 0.05,
+        "revealed_preference": "不愿意麻烦子女，且无法操作复杂表格，排斥需要他人协助或易看不太清的格式",
+        "confidence": 0.9
+      }
+    ],
+    "cluster_id": "cluster-healthcare_navigation"
+  },
+  {
+    "item_id": "need-0000_sample2-2",
+    "timestamp": "2025-02-24T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample2-009",
+      "turn-0000_sample2-011"
+    ],
+    "inferred_need": "需要极简单的服药提醒或记录方法",
+    "need_domain": "medication_adherence",
+    "need_object": "服药记录",
+    "related_tags": [
+      "medication",
+      "adherence"
+    ],
+    "context": "用户服用降糖药和降血脂药，忙时易忘服药；曾用女儿设的闹钟但被按掉；拒绝复杂软件；视力不佳且不愿手写。",
+    "context_event_ids": [
+      "event-0000_sample2-3",
+      "event-0000_sample2-6",
+      "event-0000_sample2-2"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议准备一个专门本子，每天吃完药打勾，同时简单记录身体感觉",
+        "feedback_turn_ids": [
+          "turn-0000_sample2-015"
+        ],
+        "fit_score": 0.2,
+        "revealed_preference": "拒绝任何需要手写或复杂记录的方法，偏好零负担、无需专门操作的记录方式",
+        "confidence": 0.9
+      },
+      {
+        "ai_solution_summary": "建议将服药记录与微信语音记录就诊信息整合，用语音说一句‘今天药吃了’",
+        "feedback_turn_ids": [
+          "turn-0000_sample2-017"
+        ],
+        "fit_score": 0.6,
+        "revealed_preference": "愿意尝试与已有习惯（微信记录）结合的简单语音记录，但要求不增加额外操作",
+        "confidence": 0.7
+      }
+    ],
+    "cluster_id": "cluster-medication_adherence"
+  },
+  {
+    "item_id": "need-0000_sample2-3",
+    "timestamp": "2025-02-24T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample2-009",
+      "turn-0000_sample2-013"
+    ],
+    "inferred_need": "想了解脚麻症状是否与药物有关及应对方法",
+    "need_domain": "symptom_risk_triage",
+    "need_object": "脚麻症状",
+    "related_tags": [
+      "symptom",
+      "medication",
+      "complication"
+    ],
+    "context": "用户出现脚麻症状，担心与长期服用的降糖药和降血脂药有关；糖尿病史长，医生曾提醒注意脚和眼睛。",
+    "context_event_ids": [
+      "event-0000_sample2-4",
+      "event-0000_sample2-5"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "解释脚麻可能是糖尿病并发症信号而非药物直接引起，建议记录症状频率和感觉，复诊时咨询医生",
+        "feedback_turn_ids": [
+          "turn-0000_sample2-017"
+        ],
+        "fit_score": 0.3,
+        "revealed_preference": "希望获得直接明确的因果解释，而非‘可能需医生判断’的模糊回答",
+        "confidence": 0.8
+      }
+    ],
+    "cluster_id": "cluster-symptom_risk_triage"
+  },
+  {
+    "item_id": "need-0000_sample2-4",
+    "timestamp": "2025-02-24T14:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample2-019",
+      "turn-0000_sample2-021"
+    ],
+    "inferred_need": "寻找低视力要求的居家解闷活动",
+    "need_domain": "activity_safety",
+    "need_object": "居家休闲活动",
+    "related_tags": [
+      "activity",
+      "hobby",
+      "living_alone"
+    ],
+    "context": "用户因视力下降放弃缝纫爱好，感到生活乏味，平时喜欢听戏和叠纸鹤，已尝试手部活动。",
+    "context_event_ids": [
+      "event-0000_sample2-7",
+      "event-0000_sample2-8",
+      "event-0000_sample2-9",
+      "event-0000_sample2-10"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议触摸分类石子、扑克牌排序等靠触觉和思维的低视力手部活动",
+        "feedback_turn_ids": [
+          "turn-0000_sample2-023"
+        ],
+        "fit_score": 0.86,
+        "revealed_preference": "偏好低视力要求、靠触觉和简单思维的居家手工活动，像玩游戏而非康复训练",
+        "confidence": 0.9
+      },
+      {
+        "ai_solution_summary": "建议参加社区健康拍拍操或八段锦小组",
+        "feedback_turn_ids": [
+          "turn-0000_sample2-025"
+        ],
+        "fit_score": 0.1,
+        "revealed_preference": "不喜欢集体社交和有任务感的活动，偏好独自居家活动，避免压力和不自在",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-activity_safety"
+  },
+  {
+    "item_id": "need-0000_sample3-1",
+    "timestamp": "2025-02-28T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample3-001",
+      "turn-0000_sample3-003"
+    ],
+    "inferred_need": "寻求与女儿建立简单、无压力的日常健康管理协作",
+    "need_domain": "family_caregiver_collaboration",
+    "need_object": "与女儿协作",
+    "related_tags": [
+      "family",
+      "caregiver",
+      "adherence"
+    ],
+    "context": "用户计划下周检查脚部，希望借此与女儿商量长期管理方法，自述一人难坚持，手机提醒操作困难。",
+    "context_event_ids": [
+      "event-0000_sample3-1",
+      "event-0000_sample3-2",
+      "event-0000_sample3-4"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议每周女儿探访时一起检查脚部，把专业检查变成家庭关心",
+        "feedback_turn_ids": [
+          "turn-0000_sample3-005"
+        ],
+        "fit_score": 0.9,
+        "revealed_preference": "偏好家人参与、简单、不用自己操作的检查方式",
+        "confidence": 0.9
+      },
+      {
+        "ai_solution_summary": "建议请女儿录鼓励语音自动播放，作为活动提醒",
+        "feedback_turn_ids": [
+          "turn-0000_sample3-007",
+          "turn-0000_sample3-009"
+        ],
+        "fit_score": 0.1,
+        "revealed_preference": "拒绝依赖复杂手机设置和自动提醒，因曾操作困难、易误关",
+        "confidence": 0.9
+      },
+      {
+        "ai_solution_summary": "建议建家庭群每天用语音汇报活动和脚感，家人回表情鼓励",
+        "feedback_turn_ids": [
+          "turn-0000_sample3-011"
+        ],
+        "fit_score": 0.1,
+        "revealed_preference": "拒绝每日打卡式汇报，偏好自然轻松、无压力的互动",
+        "confidence": 0.8
+      }
+    ],
+    "cluster_id": "cluster-family_caregiver_collaboration"
+  },
+  {
+    "item_id": "need-0000_sample3-2",
+    "timestamp": "2025-02-28T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample3-013"
+    ],
+    "inferred_need": "简便易行的晚饭主食替代方案",
+    "need_domain": "diet_glucose_management",
+    "need_object": "晚饭主食替换",
+    "related_tags": [
+      "diet",
+      "adherence"
+    ],
+    "context": "用户独居，无人提醒，曾尝试凉拌魔芋丝但单一，希望有可操作且能坚持的主食替换方法，并想感知效果。",
+    "context_event_ids": [
+      "event-0000_sample3-5",
+      "event-0000_sample3-6",
+      "event-0000_sample3-7",
+      "event-0000_sample3-8"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议先吃一大盘凉拌魔芋丝、木耳等爽口凉菜，再吃少量米饭，并用语音记录变化以观察效果。",
+        "feedback_turn_ids": [
+          "turn-0000_sample3-019",
+          "turn-0000_sample3-021"
+        ],
+        "fit_score": 0.85,
+        "revealed_preference": "偏好食材家常、步骤简单、能自然减少主食量的方案，且愿意结合已有记录习惯来验证效果。",
+        "confidence": 0.9
+      },
+      {
+        "ai_solution_summary": "建议将南瓜压泥加全麦面粉做成小饼，作为主食替换。",
+        "feedback_turn_ids": [
+          "turn-0000_sample3-023",
+          "turn-0000_sample3-025"
+        ],
+        "fit_score": 0.0,
+        "revealed_preference": "偏好极简步骤，不愿增加额外烹饪环节和采购新食材。",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "调整为推荐蒸南瓜直接吃，或切块和米饭一起蒸，省心可行。",
+        "feedback_turn_ids": [
+          "turn-0000_sample3-023"
+        ],
+        "fit_score": 0.9,
+        "revealed_preference": "偏好无需加工、直接蒸熟即可食用的主食替代方式。",
+        "confidence": 0.9
+      }
+    ],
+    "cluster_id": "cluster-diet_glucose_management"
+  },
+  {
+    "item_id": "need-0000_sample3-3",
+    "timestamp": "2025-02-28T12:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample3-027"
+    ],
+    "inferred_need": "在听戏叠纸鹤时融入不打断的轻量活动",
+    "need_domain": "activity_safety",
+    "need_object": "兴趣活动中的身体活动",
+    "related_tags": [
+      "activity",
+      "hobby"
+    ],
+    "context": "用户常久坐听戏叠纸鹤，下午易疲劳、视力模糊，希望不增加额外任务地活动身体。",
+    "context_event_ids": [
+      "event-0000_sample3-9",
+      "event-0000_sample3-10"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议每叠完一只纸鹤起身走动或浇花，利用自然停顿活动",
+        "feedback_turn_ids": [
+          "turn-0000_sample3-031"
+        ],
+        "fit_score": 0.15,
+        "revealed_preference": "拒绝频繁起身走动，因易头晕且打断活动连贯性",
+        "confidence": 0.9
+      },
+      {
+        "ai_solution_summary": "建议每叠完三只纸鹤暂停做伸展懒腰",
+        "feedback_turn_ids": [
+          "turn-0000_sample3-035"
+        ],
+        "fit_score": 0.12,
+        "revealed_preference": "拒绝需要计数的动作，认为增加心理负担",
+        "confidence": 0.9
+      },
+      {
+        "ai_solution_summary": "建议随戏曲节奏轻轻拍打大腿到小腿，无需站立和计数",
+        "feedback_turn_ids": [
+          "turn-0000_sample3-037",
+          "turn-0000_sample3-039"
+        ],
+        "fit_score": 0.95,
+        "revealed_preference": "偏好跟随兴趣节奏（如戏曲拍子）的静态活动，无需记忆和打断",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-activity_safety"
+  },
+  {
+    "item_id": "need-0000_sample4-1",
+    "timestamp": "2025-03-10T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample4-001"
+    ],
+    "inferred_need": "省心提醒+自动补货血糖试纸",
+    "need_domain": "supplies_device_management",
+    "need_object": "血糖试纸补货",
+    "related_tags": [
+      "monitoring",
+      "adherence",
+      "living_alone"
+    ],
+    "context": "用户担心忘记购买血糖试纸导致断供，曾用买菜软件购买但手动操作，女儿设的手机提醒常被按错，手机使用能力有限。",
+    "context_event_ids": [
+      "event-0000_sample4-1",
+      "event-0000_sample4-2",
+      "event-0000_sample4-8"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议请女儿帮忙在手机闹钟App设置试纸购买提醒，与吃药提醒并列。",
+        "feedback_turn_ids": [
+          "turn-0000_sample4-007"
+        ],
+        "fit_score": 0.1,
+        "revealed_preference": "明确拒绝手机复杂提醒，认为界面杂乱易误操作，偏好简单直观的物理提醒方式。",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议使用贴纸条的试纸盒：剩半盒时联系熟悉的社区卫生站补货。",
+        "feedback_turn_ids": [
+          "turn-0000_sample4-009"
+        ],
+        "fit_score": 0.9,
+        "revealed_preference": "偏好物理可见、低技术依赖的提醒方式，且愿意利用熟悉的社区服务渠道。",
+        "confidence": 0.92
+      },
+      {
+        "ai_solution_summary": "建议在生鲜平台使用‘周期购’功能，设置自动送货，如每月一次。",
+        "feedback_turn_ids": [
+          "turn-0000_sample4-011"
+        ],
+        "fit_score": 0.95,
+        "revealed_preference": "高度偏好自动化、无需惦记的补货方式，接受生鲜平台且愿意尝试‘周期购’。",
+        "confidence": 0.9
+      }
+    ],
+    "cluster_id": "cluster-supplies_device_management"
+  },
+  {
+    "item_id": "need-0000_sample4-2",
+    "timestamp": "2025-03-10T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample4-013"
+    ],
+    "inferred_need": "了解慢性病购药优惠或便捷途径",
+    "need_domain": "healthcare_navigation",
+    "need_object": "慢性病购药政策咨询",
+    "related_tags": [
+      "medication",
+      "family"
+    ],
+    "context": "用户患有2型糖尿病和高血脂，需长期服药，觉得常跑医院累，想了解医保或社区便捷拿药途径，手机使用能力有限（仅打电话发语音），常去社区卫生站。",
+    "context_event_ids": [
+      "event-0000_sample4-3",
+      "event-0000_sample4-8",
+      "event-0000_sample4-9"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议用政务服务App查询慢病政策，需女儿帮忙下载操作",
+        "feedback_turn_ids": [
+          "turn-0000_sample4-019"
+        ],
+        "fit_score": 0.1,
+        "revealed_preference": "拒绝需要下载新App、让女儿帮忙操作的复杂方案，希望简单直接",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议带医保卡和药盒去社区卫生站当面咨询",
+        "feedback_turn_ids": [
+          "turn-0000_sample4-021",
+          "turn-0000_sample4-023"
+        ],
+        "fit_score": 0.9,
+        "revealed_preference": "偏好当面咨询熟悉的工作人员，方式简单直接，避免复杂操作",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "建议让女儿用微信关注本地医保公众号，找文章读给用户听",
+        "feedback_turn_ids": [
+          "turn-0000_sample4-023"
+        ],
+        "fit_score": 0.1,
+        "revealed_preference": "拒绝需要女儿转述信息的间接方式，认为麻烦且记不住",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-healthcare_navigation"
+  },
+  {
+    "item_id": "need-0000_sample4-3",
+    "timestamp": "2025-03-10T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample4-025",
+      "turn-0000_sample4-029"
+    ],
+    "inferred_need": "担心乏力腿麻是药物副作用，想知道何时需要就医",
+    "need_domain": "symptom_risk_triage",
+    "need_object": "乏力腿麻症状评估",
+    "related_tags": [
+      "symptom",
+      "medication"
+    ],
+    "context": "用户独居，自述服用药物后出现乏力、腿麻，担心与药物有关，但不确定是否严重。",
+    "context_event_ids": [
+      "event-0000_sample4-4"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议乏力时测血糖并记录，复诊时带给医生看",
+        "feedback_turn_ids": [
+          "turn-0000_sample4-031"
+        ],
+        "fit_score": 0.1,
+        "revealed_preference": "不愿意增加额外记录负担，认为太麻烦且难以坚持",
+        "confidence": 0.95
+      },
+      {
+        "ai_solution_summary": "调整为仅当乏力或腿麻变得频繁、明显，或出现新症状（心慌、视力模糊）时，及时告知医生",
+        "feedback_turn_ids": [
+          "turn-0000_sample4-033"
+        ],
+        "fit_score": 0.9,
+        "revealed_preference": "接受简化方案：轻微症状自行观察，仅在症状显著加重或出现新信号时就医",
+        "confidence": 0.9
+      }
+    ],
+    "cluster_id": "cluster-symptom_risk_triage"
+  },
+  {
+    "item_id": "need-0000_sample4-4",
+    "timestamp": "2025-03-10T21:00:00+00:00",
+    "source_turn_ids": [
+      "turn-0000_sample4-025",
+      "turn-0000_sample4-027"
+    ],
+    "inferred_need": "需要简单易行的非手机方法提醒按时服药",
+    "need_domain": "medication_adherence",
+    "need_object": "服药提醒方法",
+    "related_tags": [
+      "medication",
+      "adherence",
+      "living_alone"
+    ],
+    "context": "用户独居且记性不佳，手机使用仅限打电话和发语音，之前用闹钟常按错，希望有简单直观的提醒方式。",
+    "context_event_ids": [
+      "event-0000_sample4-2",
+      "event-0000_sample4-8"
+    ],
+    "solutions": [
+      {
+        "ai_solution_summary": "建议使用老式台历放在餐桌上，早晚服药后在日期上打勾，一眼可见是否已服药",
+        "feedback_turn_ids": [
+          "turn-0000_sample4-035"
+        ],
+        "fit_score": 0.95,
+        "revealed_preference": "偏好物理、低技术、与日常习惯（餐桌吃饭）绑定的服药提醒方式",
+        "confidence": 0.95
+      }
+    ],
+    "cluster_id": "cluster-medication_adherence"
+  }
+]

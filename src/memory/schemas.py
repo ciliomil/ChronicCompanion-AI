@@ -104,6 +104,9 @@ class BasicInfoClaim:
         A concise Chinese sentence describing a long-term user background fact,
         pattern, constraint, preference, or care context.
 
+    tags:
+        List of tags from MEMORY_TAGS.
+        
     source_event_ids / source_need_item_ids / source_turn_ids:
         Evidence chain. At least one should be non-empty for active/uncertain claims.
 
@@ -120,6 +123,8 @@ class BasicInfoClaim:
     category: str
     claim_type: str
     content: str
+
+    tags: list[str] = field(default_factory=list)
 
     source_event_ids: list[str] = field(default_factory=list)
     source_need_item_ids: list[str] = field(default_factory=list)
@@ -184,21 +189,21 @@ def _empty_recent_status() -> dict[str, Any]:
         }
     }
 
-@dataclass
-class NeedClusterSample:
-    """A representative item kept inside a need-preference cluster.
+# @dataclass
+# class NeedClusterSample:
+#     """A representative item kept inside a need-preference cluster.
 
-    This is not the full :class:`NeedItem`; it is a compact copy used for
-    cluster labelling / refinement and debugging.
-    """
-    item_id: str
-    inferred_need: str
-    revealed_preference: str = ""
-    timestamp: str = ""
-    fit_score: float | None = None
+#     This is not the full :class:`NeedItem`; it is a compact copy used for
+#     cluster labelling / refinement and debugging.
+#     """
+#     item_id: str
+#     inferred_need: str
+#     revealed_preference: str = ""
+#     timestamp: str = ""
+#     fit_score: float | None = None
 
-    def to_dict(self) -> dict[str, Any]:
-        return asdict(self)
+#     def to_dict(self) -> dict[str, Any]:
+#         return asdict(self)
 
 @dataclass
 class NeedCluster:

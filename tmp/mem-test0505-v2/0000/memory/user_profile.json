@@ -1,0 +1,494 @@
+{
+  "basic_info": {
+    "medical_care": {
+      "summary": "",
+      "claims": [
+        {
+          "claim_id": "claim-3a90bf8adbf04b65",
+          "category": "medical_care",
+          "claim_type": "long_term_constraint",
+          "content": "用户因视力不佳，记录就诊信息非常困难，且不愿麻烦子女，长期存在就医信息记录障碍。",
+          "source_event_ids": [
+            "event-0000_sample2-1",
+            "event-0000_sample2-2",
+            "event-0000_sample3-4"
+          ],
+          "source_need_item_ids": [
+            "need-0000_sample2-1",
+            "need-0000_sample3-1"
+          ],
+          "source_turn_ids": [],
+          "first_seen": "2025-02-24",
+          "last_seen": "2025-02-28",
+          "confidence": 0.85,
+          "status": "active",
+          "supersedes": [],
+          "updated_at": "2025-02-28T14:00:00Z"
+        },
+        {
+          "claim_id": "claim-9588d43e32564445",
+          "category": "medical_care",
+          "claim_type": "care_context",
+          "content": "用户常去社区卫生站量血压，与工作人员熟悉，视社区卫生站为其主要基层医疗联系点。",
+          "source_event_ids": [
+            "event-0000_sample4-9"
+          ],
+          "source_need_item_ids": [
+            "need-0000_sample4-2"
+          ],
+          "source_turn_ids": [],
+          "first_seen": "2025-03-10",
+          "last_seen": "2025-03-10",
+          "confidence": 0.85,
+          "status": "active",
+          "supersedes": [],
+          "updated_at": "2025-03-10T21:30:00Z"
+        }
+      ],
+      "summary_source_claim_ids": [
+        "claim-3a90bf8adbf04b65"
+      ],
+      "updated_at": "2025-03-10T21:30:00Z"
+    },
+    "family": {
+      "summary": "用户女儿参与血糖数据管理，小女儿会安排就医，但用户担心给子女添负担，不敢轻易倾诉。最近用户还计划由女儿陪同检查脚部，并接受每周探访时帮助检查脚部。",
+      "claims": [
+        {
+          "claim_id": "claim-0d60281cd10144ff",
+          "category": "family",
+          "claim_type": "care_context",
+          "content": "用户女儿将血糖本子拍照发到家庭微信群，参与其血糖数据管理。",
+          "source_event_ids": [
+            "event-0000_sample0-5",
+            "event-0000_sample1-2",
+            "event-0000_sample3-1",
+            "event-0000_sample4-2"
+          ],
+          "source_need_item_ids": [
+            "need-0000_sample0-4",
+            "need-0000_sample1-2",
+            "need-0000_sample3-1",
+            "need-0000_sample4-1"
+          ],
+          "source_turn_ids": [],
+          "first_seen": "2025-02-06",
+          "last_seen": "2025-03-10",
+          "confidence": 0.75,
+          "status": "active",
+          "supersedes": [],
+          "updated_at": "2025-03-10T21:30:00Z"
+        },
+        {
+          "claim_id": "claim-e1bd9f6f94d94978",
+          "category": "family",
+          "claim_type": "care_context",
+          "content": "用户小女儿会安排其就医复查。",
+          "source_event_ids": [
+            "event-0000_sample1-2",
+            "event-0000_sample3-1"
+          ],
+          "source_need_item_ids": [
+            "need-0000_sample1-2",
+            "need-0000_sample3-1"
+          ],
+          "source_turn_ids": [],
+          "first_seen": "2025-02-18",
+          "last_seen": "2025-02-28",
+          "confidence": 0.8,
+          "status": "active",
+          "supersedes": [],
+          "updated_at": "2025-02-28T14:00:00Z"
+        },
+        {
+          "claim_id": "claim-1fd3bd91be52417d",
+          "category": "family",
+          "claim_type": "care_context",
+          "content": "用户担心向子女倾诉会增加负担，倾向于隐瞒自己状况，不敢轻易倾诉。",
+          "source_event_ids": [
+            "event-0000_sample1-7",
+            "event-0000_sample2-2",
+            "event-0000_sample3-2"
+          ],
+          "source_need_item_ids": [
+            "need-0000_sample1-3",
+            "need-0000_sample2-1",
+            "need-0000_sample3-1"
+          ],
+          "source_turn_ids": [],
+          "first_seen": "2025-02-18",
+          "last_seen": "2025-02-28",
+          "confidence": 0.85,
+          "status": "active",
+          "supersedes": [],
+          "updated_at": "2025-02-28T14:00:00Z"
+        }
+      ],
+      "summary_source_claim_ids": [
+        "claim-0d60281cd10144ff",
+        "claim-e1bd9f6f94d94978",
+        "claim-1fd3bd91be52417d"
+      ],
+      "updated_at": "2025-03-10T21:30:00Z"
+    },
+    "health": {
+      "summary": "用户有2型糖尿病和高血脂，因老花眼视力下降影响记录和日常活动；记性越来越差，有时忘记服药；晚餐常吃米饭面条；偏好简单低技术的记录和提醒方式（如台历打勾），手机使用限于电话和语音；独居，自我健康管理困难，需要外部支持。",
+      "claims": [
+        {
+          "claim_id": "claim-4b7f0c5b2c894bcd",
+          "category": "health",
+          "claim_type": "long_term_constraint",
+          "content": "用户有长期糖尿病史和高血脂，医生曾提醒注意脚和眼睛；因老花眼导致看小字费劲，影响血糖等记录阅读；同时视力下降导致无法做针线活。",
+          "source_event_ids": [
+            "event-0000_sample0-3",
+            "event-0000_sample1-5",
+            "event-0000_sample1-6",
+            "event-0000_sample2-5",
+            "event-0000_sample3-1",
+            "event-0000_sample3-10",
+            "event-0000_sample4-3"
+          ],
+          "source_need_item_ids": [],
+          "source_turn_ids": [],
+          "first_seen": "2025-02-06",
+          "last_seen": "2025-03-10",
+          "confidence": 0.96,
+          "status": "active",
+          "supersedes": [],
+          "updated_at": "2025-03-10T21:30:00Z"
+        },
+        {
+          "claim_id": "claim-5d364ab1bef341cf",
+          "category": "health",
+          "claim_type": "recurring_pattern",
+          "content": "用户日常晚餐常吃米饭、面条等主食，有时图省事煮汤面。",
+          "source_event_ids": [
+            "event-0000_sample0-4",
+            "event-0000_sample3-5",
+            "event-0000_sample3-8"
+          ],
+          "source_need_item_ids": [],
+          "source_turn_ids": [],
+          "first_seen": "2025-02-06",
+          "last_seen": "2025-02-28",
+          "confidence": 0.85,
+          "status": "active",
+          "supersedes": [],
+          "updated_at": "2025-02-28T14:00:00Z"
+        },
+        {
+          "claim_id": "claim-b7f227f374104b22",
+          "category": "health",
+          "claim_type": "long_term_preference",
+          "content": "用户曾用本子记录血糖但觉得麻烦，偏好简单方便的记录方式；尝试手机提醒和日历但操作复杂且易误关，无法稳定使用。手机使用能力仅限于打电话和发语音，无法使用复杂App。对于服药和试纸补货，用户偏好物理可见的低技术提醒方式（如台历打勾、贴纸条），并倾向于自动化补货（如周期购）以减少手动操作。",
+          "source_event_ids": [
+            "event-0000_sample0-8",
+            "event-0000_sample1-4",
+            "event-0000_sample2-6",
+            "event-0000_sample3-6",
+            "event-0000_sample3-7",
+            "event-0000_sample4-1",
+            "event-0000_sample4-2",
+            "event-0000_sample4-7",
+            "event-0000_sample4-8"
+          ],
+          "source_need_item_ids": [
+            "need-0000_sample0-1",
+            "need-0000_sample0-3",
+            "need-0000_sample1-2",
+            "need-0000_sample2-1",
+            "need-0000_sample2-2",
+            "need-0000_sample3-2",
+            "need-0000_sample4-1",
+            "need-0000_sample4-4"
+          ],
+          "source_turn_ids": [],
+          "first_seen": "2025-02-06",
+          "last_seen": "2025-03-10",
+          "confidence": 0.9,
+          "status": "active",
+          "supersedes": [],
+          "updated_at": "2025-03-10T21:30:00Z"
+        },
+        {
+          "claim_id": "claim-429931c7ac834aa6",
+          "category": "health",
+          "claim_type": "long_term_constraint",
+          "content": "用户自述记性越来越差，常记混大女儿和小女儿分别问的事情，有时会忘记服药。",
+          "source_event_ids": [
+            "event-0000_sample1-3",
+            "event-0000_sample2-3",
+            "event-0000_sample3-4"
+          ],
+          "source_need_item_ids": [
+            "need-0000_sample1-2",
+            "need-0000_sample2-2",
+            "need-0000_sample3-1",
+            "need-0000_sample4-4"
+          ],
+          "source_turn_ids": [],
+          "first_seen": "2025-02-18",
+          "last_seen": "2025-03-10",
+          "confidence": 0.85,
+          "status": "active",
+          "supersedes": [],
+          "updated_at": "2025-03-10T21:30:00Z"
+        },
+        {
+          "claim_id": "claim-7ee3d647183743f1",
+          "category": "health",
+          "claim_type": "long_term_preference",
+          "content": "用户偏好自然随意的倾诉方式，将AI视为安全倾诉对象，接受自然聊天陪伴，拒绝指示性放松任务。",
+          "source_event_ids": [
+            "event-0000_sample1-7",
+            "event-0000_sample3-2"
+          ],
+          "source_need_item_ids": [
+            "need-0000_sample1-3",
+            "need-0000_sample3-1"
+          ],
+          "source_turn_ids": [],
+          "first_seen": "2025-02-18",
+          "last_seen": "2025-02-28",
+          "confidence": 0.85,
+          "status": "active",
+          "supersedes": [],
+          "updated_at": "2025-02-28T14:00:00Z"
+        },
+        {
+          "claim_id": "claim-4bb2fbfc67dc4e34",
+          "category": "health",
+          "claim_type": "long_term_constraint",
+          "content": "用户独居，个人健康管理难以坚持，需要外部支持。",
+          "source_event_ids": [
+            "event-0000_sample3-2",
+            "event-0000_sample4-1",
+            "event-0000_sample4-2"
+          ],
+          "source_need_item_ids": [
+            "need-0000_sample3-1",
+            "need-0000_sample4-1",
+            "need-0000_sample4-4"
+          ],
+          "source_turn_ids": [],
+          "first_seen": "2025-02-28",
+          "last_seen": "2025-03-10",
+          "confidence": 0.8,
+          "status": "active",
+          "supersedes": [],
+          "updated_at": "2025-03-10T21:30:00Z"
+        }
+      ],
+      "summary_source_claim_ids": [
+        "claim-4b7f0c5b2c894bcd",
+        "claim-5d364ab1bef341cf",
+        "claim-b7f227f374104b22",
+        "claim-429931c7ac834aa6",
+        "claim-7ee3d647183743f1",
+        "claim-4bb2fbfc67dc4e34"
+      ],
+      "updated_at": "2025-03-10T21:30:00Z"
+    },
+    "leisure": {
+      "summary": "用户因视力下降放弃针线活，平时主要听戏和叠纸鹤，并喜欢尝试低视力手部活动，不喜欢社交，偏好独处。",
+      "claims": [
+        {
+          "claim_id": "claim-1f02b91ed1054c52",
+          "category": "leisure",
+          "claim_type": "long_term_preference",
+          "content": "用户因视力下降已放弃针线活，目前主要靠听戏和叠纸鹤打发时间，并喜欢尝试低视力要求的手部活动（如触摸石子、扑克牌排序），且不喜欢社交，偏好独自在家活动。",
+          "source_event_ids": [
+            "event-0000_sample1-5",
+            "event-0000_sample1-6",
+            "event-0000_sample2-7",
+            "event-0000_sample2-8",
+            "event-0000_sample2-9",
+            "event-0000_sample2-10",
+            "event-0000_sample3-9",
+            "event-0000_sample3-11"
+          ],
+          "source_need_item_ids": [
+            "need-0000_sample2-4",
+            "need-0000_sample3-3"
+          ],
+          "source_turn_ids": [],
+          "first_seen": "2025-02-18",
+          "last_seen": "2025-02-28",
+          "confidence": 0.96,
+          "status": "active",
+          "supersedes": [],
+          "updated_at": "2025-02-28T14:00:00Z"
+        }
+      ],
+      "summary_source_claim_ids": [
+        "claim-1f02b91ed1054c52"
+      ],
+      "updated_at": "2025-03-10T21:30:00Z"
+    }
+  },
+  "recent_status": {
+    "health_status": "2型糖尿病合并高血脂，脚麻、视力模糊、下午疲劳；担心药物副作用致无力腿麻；计划下周女儿陪同检查脚部；常去社区卫生站咨询购药政策，打算用台历打勾法记录服药。",
+    "self_management_status": "饮食尝试魔芋丝、蒸南瓜替代主食；偶尔记录晚餐和血糖；手机提醒常失灵，计划用台历打勾记录服药；接受女儿每周协助检查脚部；试纸有断供风险，打算用周期购自动购买。",
+    "mental_status": "服药后无力和腿麻，担心是药物副作用，决定观察。",
+    "family_social_status": "女儿陪同检查并协助管理，但女儿设的手机提醒常被按错；接受女儿每周探访检查脚部。",
+    "interest_changes": [
+      "听戏",
+      "叠纸鹤",
+      "跟着戏曲拍腿活动"
+    ],
+    "risk_flags": [
+      "血糖试纸断供风险",
+      "手机提醒失灵易忘服药",
+      "担心药物副作用可能延误就医"
+    ],
+    "window_start": "2025-02-28T12:00:00+00:00",
+    "window_end": "2025-03-10T21:00:00+00:00",
+    "field_source_event_ids": {
+      "health_status": [
+        "event-0000_sample3-1",
+        "event-0000_sample3-4",
+        "event-0000_sample3-6",
+        "event-0000_sample3-10",
+        "event-0000_sample4-1",
+        "event-0000_sample4-3",
+        "event-0000_sample4-4",
+        "event-0000_sample4-6",
+        "event-0000_sample4-7",
+        "event-0000_sample4-9"
+      ],
+      "self_management_status": [
+        "event-0000_sample3-2",
+        "event-0000_sample3-3",
+        "event-0000_sample3-4",
+        "event-0000_sample3-5",
+        "event-0000_sample3-6",
+        "event-0000_sample3-7",
+        "event-0000_sample3-8",
+        "event-0000_sample3-11",
+        "event-0000_sample4-1",
+        "event-0000_sample4-2",
+        "event-0000_sample4-5",
+        "event-0000_sample4-7"
+      ],
+      "mental_status": [
+        "event-0000_sample4-4"
+      ],
+      "family_social_status": [
+        "event-0000_sample3-1",
+        "event-0000_sample3-3",
+        "event-0000_sample4-2"
+      ],
+      "interest_changes": [
+        "event-0000_sample3-9",
+        "event-0000_sample3-11"
+      ],
+      "risk_flags": [
+        "event-0000_sample4-1",
+        "event-0000_sample4-2",
+        "event-0000_sample4-4"
+      ]
+    }
+  },
+  "need_preferences": [
+    {
+      "cluster_id": "cluster-diet_glucose_management",
+      "need_domain": "diet_glucose_management",
+      "preference_principle": "用户偏好家常食材、极简步骤、无需额外采购或加工的主食替代方案，且愿意利用已有记录习惯验证效果。",
+      "member_item_ids": [
+        "need-0000_sample0-1",
+        "need-0000_sample3-2"
+      ],
+      "size": 2,
+      "updated_at": "2025-02-28T12:00:00+00:00"
+    },
+    {
+      "cluster_id": "cluster-glucose_monitoring_recording",
+      "need_domain": "glucose_monitoring_recording",
+      "preference_principle": "用户偏好简单、低负担、一次只聚焦一个健康维度的记录方式。",
+      "member_item_ids": [
+        "need-0000_sample0-2",
+        "need-0000_sample0-3",
+        "need-0000_sample0-5"
+      ],
+      "size": 3,
+      "updated_at": "2025-02-06T13:00:00+00:00"
+    },
+    {
+      "cluster_id": "cluster-family_caregiver_collaboration",
+      "need_domain": "family_caregiver_collaboration",
+      "preference_principle": "用户偏好低打扰、无需主动操作的自动数据同步方式，避免增加记忆或操作负担。",
+      "member_item_ids": [
+        "need-0000_sample0-4",
+        "need-0000_sample1-2",
+        "need-0000_sample3-1"
+      ],
+      "size": 3,
+      "updated_at": "2025-02-28T12:00:00+00:00"
+    },
+    {
+      "cluster_id": "cluster-symptom_risk_triage",
+      "need_domain": "symptom_risk_triage",
+      "preference_principle": "用户偏好低负担的自我监测，拒绝额外记录，接受简化观察和明确的就医触发条件。",
+      "member_item_ids": [
+        "need-0000_sample1-1",
+        "need-0000_sample2-3",
+        "need-0000_sample4-3"
+      ],
+      "size": 3,
+      "updated_at": "2025-03-10T21:00:00+00:00"
+    },
+    {
+      "cluster_id": "cluster-emotional_motivation",
+      "need_domain": "emotional_motivation",
+      "preference_principle": "用户偏好自然、无压力的聊天陪伴，不喜欢任务式的放松指导。",
+      "member_item_ids": [
+        "need-0000_sample1-3"
+      ],
+      "size": 1,
+      "updated_at": "2025-02-18T13:00:00+00:00"
+    },
+    {
+      "cluster_id": "cluster-healthcare_navigation",
+      "need_domain": "healthcare_navigation",
+      "preference_principle": "用户偏好当面咨询、无需依赖他人、无需复杂操作的简单方式。",
+      "member_item_ids": [
+        "need-0000_sample2-1",
+        "need-0000_sample4-2"
+      ],
+      "size": 2,
+      "updated_at": "2025-03-10T21:00:00+00:00"
+    },
+    {
+      "cluster_id": "cluster-medication_adherence",
+      "need_domain": "medication_adherence",
+      "preference_principle": "用户偏好物理、低技术、与日常习惯（如餐桌）绑定的服药提醒方式。",
+      "member_item_ids": [
+        "need-0000_sample2-2",
+        "need-0000_sample4-4"
+      ],
+      "size": 2,
+      "updated_at": "2025-03-10T21:00:00+00:00"
+    },
+    {
+      "cluster_id": "cluster-activity_safety",
+      "need_domain": "activity_safety",
+      "preference_principle": "用户偏好低视力要求、简单、非任务型、能融入兴趣节奏的静态居家活动，且独自进行。",
+      "member_item_ids": [
+        "need-0000_sample2-4",
+        "need-0000_sample3-3"
+      ],
+      "size": 2,
+      "updated_at": "2025-02-28T12:00:00+00:00"
+    },
+    {
+      "cluster_id": "cluster-supplies_device_management",
+      "need_domain": "supplies_device_management",
+      "preference_principle": "用户偏好省心、低技术依赖、物理直观或自动化的补货提醒方式。",
+      "member_item_ids": [
+        "need-0000_sample4-1"
+      ],
+      "size": 1,
+      "updated_at": "2025-03-10T21:00:00+00:00"
+    }
+  ],
+  "updated_at": "2025-03-10T21:00:00+00:00"
+}
