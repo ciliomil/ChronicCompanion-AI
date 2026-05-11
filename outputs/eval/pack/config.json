@@ -1,0 +1,20 @@
+{
+  "input_path": "/data2/centrai/wanzifei_intern/ChronicCompanion-AI/data/ChronicCompanion-set/dialogue/history/input.json",
+  "memory_path": "/data2/centrai/wanzifei_intern/ChronicCompanion-AI/tmp/mem-test0506-v2",
+  "output_dir": "/data2/centrai/wanzifei_intern/ChronicCompanion-AI/outputs/eval/pack",
+  "api_file": "/data2/centrai/wanzifei_intern/ChronicCompanion-AI/conf.yaml",
+  "tasks": [
+    "requirement_restatement",
+    "solution_generation",
+    "solution_selection"
+  ],
+  "user_ids": [
+    "0000"
+  ],
+  "memory_strategy": "pack",
+  "model": null,
+  "temperature": 0.0,
+  "max_samples": null,
+  "resume": false,
+  "started_at": "2026-05-10T07:06:41+0800"
+}

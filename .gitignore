@@ -135,6 +135,8 @@ celerybeat.pid
 *.sage.py
 
 # Environments
+# Local API keys and overrides (keep a conf.example.yaml or similar in repo if needed)
+conf.yaml
 .env
 .envrc
 .venv

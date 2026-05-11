@@ -1,0 +1,15 @@
+{
+  "n_total": 12,
+  "n_errors": 0,
+  "n_invalid_response": 0,
+  "n_valid": 12,
+  "mean_selection_score": 62.5,
+  "mean_hit_pos_count": 1.25,
+  "exact_match_rate": 0.4166666666666667,
+  "selected_feedback_distribution": {
+    "pos": 15,
+    "neu": 6,
+    "neg": 3,
+    "other": 0
+  }
+}

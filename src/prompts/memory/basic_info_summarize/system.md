@@ -14,7 +14,6 @@ section 聚焦范围（生成 summary 时严格遵守）：
 - 不要使用医学推断或常识扩展。
 - summary 是高层摘要，不是 claim 逐条拼接；请合并同类信息，去除重复表达。
 - 优先保留会影响未来建议、风险判断、沟通方式、照护协作或陪伴感的信息。
-- 不要跨 section 混写：family 不总结普通兴趣，health 不总结短期状态，leisure 不总结医疗管理要点。
 - 若某 section 没有任何 active/uncertain claim，summary 返回空字符串，summary_source_claim_ids 返回空数组。
 - summary_source_claim_ids 只能列出 summary 实际依据的 claim_id，不要把无关 claim 也列上。
 

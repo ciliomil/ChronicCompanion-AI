@@ -38,9 +38,7 @@ $application_role_descriptions
 - `safety_sensitive`：true/false。frame.risk_level=urgent 或 risk_triggers 非空时建议 true。
 
 == 通用约束 ==
-
-- 仅输出 JSON 对象，不要输出解释文字。
-- 顶层结构必须为 {"current_query_frame": {...}, "memory_retrieval_plan": {...}}。
+- 仅输出 JSON 对象。
 - selected_basic_info_claims 中只能引用输入里真实存在的 claim_id；assigned_role 必须在受控集合内。
 - frame.tags 与 plan 中的字段不要重复表达语义内容；plan 只放选定 id、预算、字段子集。
 
