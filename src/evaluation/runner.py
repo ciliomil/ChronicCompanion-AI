@@ -45,6 +45,7 @@ class RunConfig:
     temperature: float
     max_samples: int | None
     resume: bool
+    mem0_run_id: str = ""
 
     def predictions_path(self, task: TaskName, user_id: str) -> Path:
         return self.output_dir / "predictions" / task / f"{user_id}.jsonl"
@@ -233,6 +234,7 @@ def run_evaluation(
             cfg.memory_strategy,
             memory_root=cfg.memory_path,
             llm=llm,
+            mem0_run_id=cfg.mem0_run_id,
         )
 
     task1 = RequirementRestatementTask(llm, provider, temperature=cfg.temperature)
@@ -347,6 +349,7 @@ def _write_config_snapshot(cfg: RunConfig) -> None:
         "temperature": cfg.temperature,
         "max_samples": cfg.max_samples,
         "resume": cfg.resume,
+        "mem0_run_id": cfg.mem0_run_id,
         "started_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
     }
     cfg.config_path.parent.mkdir(parents=True, exist_ok=True)

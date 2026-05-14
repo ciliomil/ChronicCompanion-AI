@@ -11,8 +11,8 @@ Four strategies:
   status as text. Same content for task 1 and tasks 2/3.
 - ``no_memory``: emit a ``"(无记忆)"`` placeholder. Establishes the zero-shot
   lower bound.
-- ``mem0``: deferred — raises :class:`NotImplementedError` until we wire up
-  mem0's own retrieval bucket.
+- ``mem0``: use the naive_mem0 bucket retrieval baseline and render retrieved
+  memories as user profile / semantic memory / SOP sections.
 
 Both task-1 and task-23 entry points are cached per ``(user_id, query)`` so
 the planner LLM call (only invoked under ``pack``) is amortized across the
@@ -66,6 +66,7 @@ def make_provider(
     memory_root: str | Path,
     llm: LLMClient | None = None,
     embedder: Embedder | None = None,
+    mem0_run_id: str = "",
 ) -> MemoryContextProvider:
     s = strategy.strip().lower()
     if s == "pack":
@@ -75,7 +76,7 @@ def make_provider(
     if s in {"no_memory", "no-memory", "none"}:
         return NoMemoryProvider()
     if s == "mem0":
-        return Mem0MemoryProvider()
+        return Mem0MemoryProvider(run_id=mem0_run_id)
     raise ValueError(
         f"Unknown memory_strategy={strategy!r}; "
         f"choose one of pack / full / no_memory / mem0."
@@ -482,26 +483,128 @@ class NoMemoryProvider:
 
 
 # ---------------------------------------------------------------------------
-# mem0 strategy — deferred
+# mem0 strategy
 # ---------------------------------------------------------------------------
 
 
+def _mem0_safe_json_loads(text: str) -> Any:
+    import json
+
+    try:
+        return json.loads(text)
+    except Exception:  # noqa: BLE001 - malformed memory text should not break eval
+        return None
+
+
+def _extract_mem0_memories_for_prompt(
+    memory_results: list[dict[str, Any]],
+) -> dict[str, list[str]]:
+    grouped: dict[str, list[str]] = {
+        "user_profile": [],
+        "semantic_memory": [],
+        "sop": [],
+        "other": [],
+    }
+
+    for item in memory_results:
+        result_obj = item.get("result", {})
+        for mem in result_obj.get("results", []):
+            memory_text = (mem.get("memory") or "").strip()
+            if not memory_text:
+                continue
+            metadata = mem.get("metadata") or {}
+            category = str(metadata.get("catagory") or metadata.get("category") or "").lower()
+            parsed_json = _mem0_safe_json_loads(memory_text)
+
+            if category == "user_profile":
+                grouped["user_profile"].append(memory_text)
+            elif category == "semantic_memory":
+                grouped["semantic_memory"].append(memory_text)
+            elif category == "sop":
+                if isinstance(parsed_json, dict) and {"scenario", "steps", "rationale"} <= set(parsed_json.keys()):
+                    steps = parsed_json.get("steps") or []
+                    steps_text = "；".join([str(step).strip() for step in steps if str(step).strip()])
+                    grouped["sop"].append(
+                        f"场景：{parsed_json.get('scenario', '')}；步骤：{steps_text}；原理：{parsed_json.get('rationale', '')}"
+                    )
+                else:
+                    grouped["sop"].append(memory_text)
+            else:
+                grouped["other"].append(memory_text)
+    return grouped
+
+
+def _dedupe_keep_order(items: list[str]) -> list[str]:
+    out: list[str] = []
+    seen: set[str] = set()
+    for item in items:
+        if item not in seen:
+            seen.add(item)
+            out.append(item)
+    return out
+
+
+def _to_bullet_block(items: list[str], fallback: str) -> str:
+    final_items = _dedupe_keep_order([item for item in items if item.strip()])
+    if not final_items:
+        return "- " + fallback
+    return "\n".join([f'- "{item}"' for item in final_items[:12]])
+
+
+def _build_mem0_memory_block(memory_results: list[dict[str, Any]]) -> str:
+    grouped = _extract_mem0_memories_for_prompt(memory_results)
+    profiles = _to_bullet_block(grouped["user_profile"], "暂无明显用户画像记忆。")
+    semantics = _to_bullet_block(grouped["semantic_memory"], "暂无明显事实记忆。")
+    sops = _to_bullet_block(grouped["sop"], "暂无明显SOP记忆。")
+    return (
+        "## 用户画像记忆\n"
+        f"{profiles}\n\n"
+        "## 事实记忆\n"
+        f"{semantics}\n\n"
+        "## SOP记忆\n"
+        f"{sops}"
+    )
+
+
 class Mem0MemoryProvider:
-    """Placeholder for mem0's bucket retrieval. Not implemented yet."""
+    """naive_mem0-compatible retrieval provider."""
 
     strategy = "mem0"
 
-    def for_task1(self, *args: Any, **kwargs: Any) -> str:  # noqa: D401
-        raise NotImplementedError(
-            "memory_strategy='mem0' is reserved for the mem0-backed retrieval "
-            "and is not implemented yet."
-        )
+    def __init__(self, *, run_id: str = "") -> None:
+        self._run_id = run_id.strip()
+        self._cache: dict[tuple[str, str], str] = {}
 
-    def for_task23(self, *args: Any, **kwargs: Any) -> str:  # noqa: D401
-        raise NotImplementedError(
-            "memory_strategy='mem0' is reserved for the mem0-backed retrieval "
-            "and is not implemented yet."
-        )
+    def _memory_context(self, user_id: str, query: str) -> str:
+        key = (user_id, query)
+        if key not in self._cache:
+            from src.experiments.naive_mem0.mem_client import mem0_search_sync
+
+            memory_results = mem0_search_sync(
+                [query],
+                user_id=user_id,
+                run_id=self._run_id,
+            )
+            self._cache[key] = _build_mem0_memory_block(memory_results)
+        return self._cache[key]
+
+    def for_task1(
+        self,
+        user_id: str,
+        *,
+        user_query: str,
+        dialogue_context: str = "",
+    ) -> str:
+        return self._memory_context(user_id, user_query)
+
+    def for_task23(
+        self,
+        user_id: str,
+        *,
+        query: str,
+        dialogue_context: str = "",
+    ) -> str:
+        return self._memory_context(user_id, query)
 
 
 __all__ = [

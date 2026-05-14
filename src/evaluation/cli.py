@@ -5,7 +5,6 @@ from __future__ import annotations
 import argparse
 import json
 import logging
-import sys
 from pathlib import Path
 from typing import Any
 
@@ -15,8 +14,9 @@ from src.evaluation.runner import RunConfig, run_evaluation
 from src.evaluation.tasks import TASK_NAMES
 
 _REPO_ROOT = Path(__file__).resolve().parents[2]
-_DEFAULT_INPUT = _REPO_ROOT / "data" / "ChronicCompanion-set" / "dialogue" / "history" / "input.json"
-_DEFAULT_MEMORY = _REPO_ROOT / "tmp" / "mem-test0506-v2"
+_WORK_ROOT = _REPO_ROOT.parent
+_DEFAULT_INPUT = _WORK_ROOT / "data" / "ChronicCompanion-Set" / "input.json"
+_DEFAULT_MEMORY = _WORK_ROOT / "data" / "memory"
 _DEFAULT_API_FILE = _REPO_ROOT / "conf.yaml"
 _DEFAULT_OUTPUT = _REPO_ROOT / "outputs" / "eval"
 
@@ -62,7 +62,15 @@ def build_arg_parser() -> argparse.ArgumentParser:
         default="pack",
         help=(
             "pack（默认，走 frame+plan 检索 pipeline）；full（不检索，直接全量给 LLM）；"
-            "no_memory（零样本基线）；mem0（占位，未实现）。"
+            "no_memory（零样本基线）；mem0（naive_mem0 检索基线）。"
+        ),
+    )
+    p.add_argument(
+        "--mem0_run_id",
+        default="",
+        help=(
+            "memory_strategy=mem0 时使用的 run_id；空字符串表示 default，"
+            "读取 work/data/mem0/<run_id>/<user_id>/。"
         ),
     )
 
@@ -103,18 +111,13 @@ def main(argv: list[str] | None = None) -> int:
         datefmt="%H:%M:%S",
     )
 
-    if args.memory_strategy == "mem0":
-        sys.stderr.write(
-            "memory_strategy=mem0 还未实现；请先用 pack / full / no_memory 评测。\n"
-        )
-        return 2
-
     install_eval_conf(args.api_file, model_override=args.model)
     llm = EvalLLMClient(temperature=args.temperature)
     provider = make_provider(
         args.memory_strategy,
         memory_root=args.memory_path,
         llm=llm,
+        mem0_run_id=args.mem0_run_id,
     )
     strategy_output_dir = _resolve_output_dir(args.output_dir, args.memory_strategy)
     logging.getLogger(__name__).info(
@@ -134,6 +137,7 @@ def main(argv: list[str] | None = None) -> int:
         temperature=args.temperature,
         max_samples=args.max_samples,
         resume=bool(args.resume),
+        mem0_run_id=args.mem0_run_id,
     )
 
     summary = run_evaluation(cfg, llm=llm, provider=provider)

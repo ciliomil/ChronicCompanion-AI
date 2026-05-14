@@ -210,7 +210,7 @@ def main() -> None:
         "--run-id",
         type=str,
         default="chat",
-        help="向量库隔离目录：vector_stores/<run_id>/<user_id>/",
+        help="向量库隔离目录：work/data/mem0/<run_id>/<user_id>/（仓库需在 work/ChronicCompanion-AI）",
     )
     parser.add_argument(
         "--debug",

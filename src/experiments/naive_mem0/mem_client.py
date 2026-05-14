@@ -18,7 +18,9 @@ from mem0 import Memory
 _NAIVE_MEM0_ROOT = Path(__file__).resolve().parent
 # mem_client.py 位于 .../src/experiments/naive_mem0/；parents[3] 为 ChronicCompanion-AI 仓库根
 _REPO_ROOT = Path(__file__).resolve().parents[3]
-_VECTOR_ROOT = _NAIVE_MEM0_ROOT / "vector_stores"
+# 与 conf.yaml 默认 path 一致：仓库父目录下的 data/mem0；其下再按 run_id × user_id 分子目录
+_WORKSPACE_ROOT = _REPO_ROOT.parent
+_VECTOR_ROOT = _WORKSPACE_ROOT / "data" / "mem0"
 
 # 按 (run_id, user_id) 复用同步 Memory，避免重复加载 embedder
 _memory_by_scope: Dict[Tuple[str, str], Memory] = {}
@@ -69,7 +71,7 @@ def _sanitize_segment(s: str) -> str:
 
 
 def vector_store_dir_for_run_user(run_id: str, user_id: str) -> Path:
-    """每个 run_id × user_id 独立目录，避免共用 qdrant_memory 路径冲突。"""
+    """每个 run_id × user_id 独立目录，避免共用同一 Qdrant 路径冲突。"""
     run_slug = _sanitize_segment(run_id)
     user_slug = _sanitize_segment(user_id)
     return _VECTOR_ROOT / run_slug / user_slug
@@ -77,7 +79,7 @@ def vector_store_dir_for_run_user(run_id: str, user_id: str) -> Path:
 
 def get_mem0_config_for_run_user(run_id: str, user_id: str) -> Dict[str, Any]:
     """
-    在 MEM_MODEL 上覆盖 vector_store.path 为 vector_stores/<run>/<user>/ 。
+    在 MEM_MODEL 上覆盖 vector_store.path 为 <repo 父目录>/data/mem0/<run>/<user>/ 。
     run_id 为空时使用子目录 default。
     """
     raw = get_mem0_config()
@@ -159,7 +161,7 @@ def mem0_search_sync(
     run_id: str = "",
 ) -> List[Dict[str, Any]]:
     """
-    同步封装。默认 run_id 为空串，对应 vector_stores/default/<user>/ 。
+    同步封装。默认 run_id 为空串，对应 data/mem0/default/<user>/ 。
     """
     return asyncio.run(mem0_search(queries, user_id=user_id, run_id=run_id))
 

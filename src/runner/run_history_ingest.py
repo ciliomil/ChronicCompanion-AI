@@ -8,13 +8,13 @@ at run time).
 Usage::
 
     PYTHONPATH=. python -m src.runner.run_history_ingest \
-        --dataset ./data/ChronicCompanion-set/dialogue/history/input.json \
-        --data-dir ./tmp/mem-test0506-v2 \
+        --dataset ./data/ChronicCompanion-set/input.json \
+        --data-dir ./data/memory \
         --use-gold-topics \
         --max-samples-per-user 10 \
         --user 0000 \
         --debug \
-        2>ingest-debug-v2-u0000-0506.log
+        2>ingest-debug.log
 
 
 Append ``--debug`` to mirror flattening tables, segmentation JSON, extractor
